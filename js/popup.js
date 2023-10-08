@@ -3,7 +3,7 @@ document.addEventListener("click", (e) => {
     e.target.closest(".popup").classList.remove("popup_opened");
 
     if (e.target.closest(".change-location-parrent")) {
-      document.querySelector("body").style.overflow = "visible";
+      closeLocModal();
     }
   }
 
@@ -22,10 +22,7 @@ document.addEventListener("click", (e) => {
     e.target.classList.contains("change-location-parrent") &&
     !e.target.closest(".change-location")
   ) {
-    document
-      .querySelector(".change-location-parrent")
-      .classList.remove("popup_opened");
-    document.querySelector("body").style.overflow = "visible";
+    closeLocModal();
   }
 });
 
@@ -41,10 +38,18 @@ document.addEventListener("keydown", function (event) {
       .classList.contains("popup_opened")
   ) {
     if (event.key == "Escape") {
-      document
-        .querySelector(".change-location-parrent")
-        .classList.remove("popup_opened");
-      document.querySelector("body").style.overflow = "visible";
+      closeLocModal();
     }
   }
 });
+
+function closeLocModal() {
+  document
+    .querySelector(".change-location-parrent")
+    .classList.remove("popup_opened");
+  if (document.querySelector(".catalog").classList.contains("active")) {
+    document.querySelector("body").style.overflow = "hidden";
+  } else {
+    document.querySelector("body").style.overflow = "visible";
+  }
+}
