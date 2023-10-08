@@ -59,3 +59,5 @@ function checkBlogSlider() {
     }
   }
 }
+
+console.log("test comment");
