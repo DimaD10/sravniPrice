@@ -1,42 +1,23 @@
-// Получите все слайдеры на странице
-const sliders = document.querySelectorAll(".slider-init");
+document.addEventListener("touchend", (e) => {
+  if (e.target.closest(".slider-init")) {
+    let slider = e.target.closest(".slider-init");
 
-sliders.forEach((slider) => {
-  const carousel = slider.querySelector(".slider-wrapper");
-  const firstCardWidth = carousel.querySelector(".slider-slide").offsetWidth;
+    checkCurrentSlide(slider);
 
-  let isDragging = false,
-    startX,
-    startScrollLeft,
-    timeoutId;
+    window.setTimeout(() => {
+      checkCurrentSlide(slider);
+    }, 300);
+    window.setTimeout(() => {
+      checkCurrentSlide(slider);
+    }, 600);
 
-  carousel.classList.add("no-transition");
-  carousel.scrollLeft = carousel.offsetWidth;
-  carousel.classList.remove("no-transition");
+    let observerOptions = {
+      attributes: true,
+      attributeFilter: ["data-current-slide"],
+    };
 
-  const dragStart = (e) => {
-    isDragging = true;
-    carousel.classList.add("dragging");
-    startX = e.pageX;
-    startScrollLeft = carousel.scrollLeft;
-  };
-
-  const dragging = (e) => {
-    if (!isDragging) return;
-    carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-  };
-
-  const dragStop = () => {
-    isDragging = false;
-    carousel.classList.remove("dragging");
-  };
-
-  carousel.addEventListener("mousedown", dragStart);
-  carousel.addEventListener("mousemove", dragging);
-  document.addEventListener("mouseup", dragStop);
-
-  if (slider) {
-    slider.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+    let observer = new MutationObserver(attributeChangeCallback);
+    observer.observe(slider, observerOptions);
   }
 });
 
@@ -46,7 +27,7 @@ window.addEventListener("resize", () => {
 window.addEventListener("load", () => {
   checkBlogSliders();
 
-  document.querySelector('.hero-slider').classList.add('slider-init')
+  document.querySelector(".hero-slider").classList.add("slider-init");
 });
 
 function checkBlogSliders() {
@@ -58,4 +39,34 @@ function checkBlogSliders() {
   } else {
     homeBlogSlider.classList.remove("slider-init");
   }
+}
+
+function attributeChangeCallback(mutationsList, observer) {
+  for (let mutation of mutationsList) {
+    if (
+      mutation.type === "attributes" &&
+      mutation.attributeName === "data-current-slide"
+    ) {
+      // Выполните ваш функционал здесь, когда атрибут изменится
+      console.log(
+        "Атрибут изменен:",
+        mutation.target.getAttribute("data-current-slide")
+      );
+    }
+  }
+}
+
+function checkCurrentSlide(slider) {
+  let pos = slider
+    .querySelectorAll(".slider-slide")
+    [
+      slider.querySelectorAll(".slider-slide").length - 1
+    ].getBoundingClientRect().left;
+
+  let slideWidth = slider.querySelectorAll(".slider-slide")[0].offsetWidth;
+  let currentSlide =
+    slider.querySelectorAll(".slider-slide").length -
+    1 -
+    Math.floor(pos / slideWidth);
+  slider.setAttribute("data-current-slide", currentSlide);
 }

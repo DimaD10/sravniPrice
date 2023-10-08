@@ -1436,6 +1436,7 @@
 .hero-image-slide {
   width: 100%;
   min-width: 575px;
+  padding: 0 !important;
   @media (max-width: 1200px) {
     min-width: calc(
       350px + (575 - 350) * ((100vw - 767.98px) / (1200 - 767.98))

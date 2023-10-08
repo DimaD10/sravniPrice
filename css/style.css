@@ -2044,6 +2044,7 @@ button,
 .hero-image-slide {
   width: 100%;
   min-width: 575px;
+  padding: 0 !important;
   aspect-ratio: 23/14;
 }
 @media (max-width: 1200px) {
