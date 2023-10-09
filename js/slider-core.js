@@ -1,9 +1,14 @@
+let isAutoplay = true;
+
 document.addEventListener("touchend", (e) => {
   if (e.target.closest(".slider-init")) {
     let slider = e.target.closest(".slider-init");
 
     checkCurrentSlide(slider);
 
+    window.setTimeout(() => {
+      checkCurrentSlide(slider);
+    }, 100);
     window.setTimeout(() => {
       checkCurrentSlide(slider);
     }, 300);
@@ -20,6 +25,49 @@ document.addEventListener("touchend", (e) => {
     observer.observe(slider, observerOptions);
   }
 });
+document.addEventListener("touchmove", (e) => {
+  if (e.target.closest(".slider-init")) {
+    let slider = e.target.closest(".slider-init");
+    checkCurrentSlide(slider);
+  }
+});
+document.addEventListener("touchstart", (e) => {
+  if (
+    e.target.closest(".slider-init") &&
+    e.target.closest(".slider-init").classList.contains("hero-slider")
+  ) {
+    isAutoplay = false;
+  }
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("slider-bullet")) {
+    let slider = e.target.closest(".hero").querySelector(".slider-init");
+    let slideWidth = slider.querySelectorAll(".slider-slide")[0].offsetWidth;
+
+    if (slider) {
+      let bullets = e.target
+        .closest(".hero__bullets")
+        .querySelectorAll(".slider-bullet");
+      let clickedBulletIndex = Array.from(bullets).indexOf(e.target);
+      slider.setAttribute("data-current-slide", clickedBulletIndex);
+
+      slider
+        .querySelector(".slider-wrapper")
+        .scrollTo(parseInt(slideWidth) * parseInt(clickedBulletIndex), 0);
+
+      e.target
+        .closest(".hero__bullets")
+        .querySelectorAll(".slider-bullet")
+        .forEach((el) => {
+          el.classList.remove("slider-bullet_active");
+        });
+      e.target.classList.add("slider-bullet_active");
+
+      isAutoplay = false;
+    }
+  }
+});
 
 window.addEventListener("resize", () => {
   checkBlogSliders();
@@ -27,7 +75,28 @@ window.addEventListener("resize", () => {
 window.addEventListener("load", () => {
   checkBlogSliders();
 
-  document.querySelector(".hero-slider").classList.add("slider-init");
+  if (document.querySelector(".hero-slider")) {
+    document.querySelector(".hero-slider").classList.add("slider-init");
+
+    let heroSlider = document.querySelector(".hero-slider");
+
+    let bullets = document.querySelector(".hero__bullets");
+
+    for (
+      let i = 0;
+      i < heroSlider.querySelectorAll(".slider-slide").length;
+      i++
+    ) {
+      let bullet = document.createElement("div");
+      bullet.className = "slider-bullet";
+      bullets.appendChild(bullet);
+    }
+    bullets
+      .querySelectorAll(".slider-bullet")[0]
+      .classList.add("slider-bullet_active");
+
+    autoPlay(heroSlider);
+  }
 });
 
 function checkBlogSliders() {
@@ -45,13 +114,17 @@ function attributeChangeCallback(mutationsList, observer) {
   for (let mutation of mutationsList) {
     if (
       mutation.type === "attributes" &&
-      mutation.attributeName === "data-current-slide"
+      mutation.attributeName === "data-current-slide" &&
+      mutation.target.classList.contains("hero-slider")
     ) {
-      // Выполните ваш функционал здесь, когда атрибут изменится
-      console.log(
-        "Атрибут изменен:",
-        mutation.target.getAttribute("data-current-slide")
-      );
+      let currentSlide = mutation.target.getAttribute("data-current-slide");
+      let bullets = document
+        .querySelector(".hero__bullets")
+        .querySelectorAll(".slider-bullet");
+      bullets.forEach((el) => {
+        el.classList.remove("slider-bullet_active");
+      });
+      bullets[parseInt(currentSlide)].classList.add("slider-bullet_active");
     }
   }
 }
@@ -68,5 +141,49 @@ function checkCurrentSlide(slider) {
     slider.querySelectorAll(".slider-slide").length -
     1 -
     Math.floor(pos / slideWidth);
-  slider.setAttribute("data-current-slide", currentSlide);
+
+  if (slider.classList.contains("hero-slider")) {
+    if (window.innerWidth < 767.98) {
+      slider.setAttribute("data-current-slide", currentSlide);
+    } else {
+      slider.setAttribute(
+        "data-current-slide",
+        currentSlide + 1 <= slider.querySelectorAll(".slider-slide").length - 1
+          ? currentSlide + 1
+          : slider.querySelectorAll(".slider-slide").length - 1
+      );
+    }
+  } else {
+    slider.setAttribute("data-current-slide", currentSlide);
+  }
 }
+
+const autoPlay = (slider) => {
+  let autoplaySpeed =
+    !slider.getAttribute("data-autoplay-speed")
+      ? 4000
+      : slider.getAttribute("data-autoplay-speed");
+  let slideWidth = slider.querySelectorAll(".slider-slide")[0].offsetWidth;
+  let bullets = slider.closest(".hero").querySelectorAll(".slider-bullet");
+  let currentSlide = 0;
+
+  const heroAutoplay = setInterval(() => {
+    if (isAutoplay) {
+      if (
+        currentSlide + 1 <=
+        slider.querySelectorAll(".slider-slide").length - 1
+      ) {
+        currentSlide = currentSlide + 1;
+      } else {
+        currentSlide = 0;
+      }
+      slider.setAttribute("data-current-slide", currentSlide);
+      bullets.forEach((el) => [el.classList.remove("slider-bullet_active")]);
+      bullets[currentSlide].classList.add("slider-bullet_active");
+
+      slider
+        .querySelector(".slider-wrapper")
+        .scrollTo(slideWidth * currentSlide, 0);
+    }
+  }, autoplaySpeed);
+};

@@ -1416,9 +1416,14 @@
       transition: transform ease 0.2s;
     }
   }
-  // .hero__pagination
+  // .hero__bullets
 
-  &__pagination {
+  &__bullets {
+    display: flex;
+    gap: 30px;
+    @media (max-width: 1200px) {
+      gap: calc(8px + (30 - 8) * ((100vw - 320px) / (1200 - 320)));
+    }
   }
 }
 .hero-slider {

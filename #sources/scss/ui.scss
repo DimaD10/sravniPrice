@@ -54,7 +54,7 @@ body {
 a,
 button,
 .catalog-category,
-.open-popup-location {
+.open-popup-location, .slider-bullet {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -214,5 +214,34 @@ button,
   .slider-slide {
     scroll-snap-align: start;
     padding-left: 10px;
+  }
+}
+.slider-bullet {
+  height: 2px;
+  flex: 1 1 auto;
+  border-radius: 2px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color ease $animSpeed;
+  &:hover {
+    background-color: #ccc;
+  }
+
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    transform: translateY(-50%);
+  }
+
+  &_active {
+    background-color: $dark;
+    &:hover {
+      background-color: $dark;
+    }
   }
 }
