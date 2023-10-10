@@ -6,6 +6,7 @@ const catalogMenu = document.getElementById("CatalogMenu");
 document.addEventListener("click", (e) => {
   if (e.target.closest(".open-catalog")) {
     catalog.classList.toggle("active");
+    header.classList.remove("hidden");
 
     document
       .getElementById("MobileCatalogBtn")

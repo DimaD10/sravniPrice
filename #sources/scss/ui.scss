@@ -2,6 +2,11 @@
 @import "./var";
 @import "./fonts";
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 [class*="__container"] {
   max-width: 1220px;
   padding: 0 10px;
@@ -54,7 +59,7 @@ body {
 a,
 button,
 .catalog-category,
-.open-popup-location, .slider-bullet {
+.open-popup-location, .slider-bullet, .slider-btn {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -243,5 +248,58 @@ button,
     &:hover {
       background-color: $dark;
     }
+  }
+}
+
+.slider-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 0px 18px 0px rgba(38, 71, 188, 0.06);
+  transition: background-color ease $animSpeed, opacity ease $animSpeed;
+  user-select: none;
+
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+
+  @media (max-width: 991.98px) {
+    display: none;
+  }
+
+  cursor: pointer;
+
+  &.disable {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: $darkGrey;
+
+    path {
+      fill: #fff;
+    }
+  }
+
+  svg {
+    width: 18px !important;
+    pointer-events: none;
+
+    path {
+      fill: $darkGrey;
+      transition: fill ease $animSpeed;
+    }
+  }
+
+  &__prev {
+    right: auto;
+    left: 10px;
+    transform: translateY(-50%) rotate(180deg);
   }
 }
