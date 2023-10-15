@@ -113,267 +113,195 @@
         </div>
       </header>
       <main class="main">
-        <div class="main__search search">
-          <div class="search__container">
-            <div class="header-search search-field">
-              <input
-                type="text"
-                class="search-field__input"
-                placeholder="Например, ноутбук Assus" />
-              <button class="search-field__button">
-                <img src="./img/icons/search-icon.svg" alt="search" />
-              </button>
+        <div class="main__breadcrumbs breadcrumbs">
+          <div class="breadcrumbs__container">
+            <div class="breadcrumbs__wrapper">
+              <span class="breadcrumbs__crumb">
+                <a href="index.html">Главная</a>
+              </span>
+              <span class="breadcrumbs__crumb">
+                <a href="category.html">Категория</a>
+              </span>
+              <span class="breadcrumbs__crumb breadcrumbs__crumb_current"
+                >Подкатегория с товарами</span
+              >
             </div>
           </div>
         </div>
 
-        <section class="main__hero hero">
-          <div class="hero__container">
-            <div class="hero__wrapper">
-              <div class="hero__body">
-                <div class="hero__article">
-                  <h1 class="hero__title title title_first">Apple Iphone 15</h1>
-                  <p class="hero__paragraph paragraph">
-                    С 20 сентября на всех площадках
-                  </p>
+        <section class="main__subcategory subcategory">
+          <div class="subcategory__container">
+            <div class="subcategory__wrapper">
+              <h1 class="subcategory__title title title_first">Подкатегория</h1>
 
-                  <button class="hero__button button open-catalog">
-                    <span>Перейти в каталог</span>
-                    <img src="./img/icons/arrow-right-white.svg" alt="" />
-                  </button>
+              <div class="subcategory__main">
+                <div class="subcategory-aside">
+                  <div class="subcategory-aside__header">
+                    <h2 class="subcategory-aside__title">
+                      <img src="./img/icons/filter-icon.svg" alt="">
+                      <span>Фильтр</span>
+                    </h2>
+
+                    <button class="subcategory-aside__close-btn">
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </div>
+
+                  <div class="subcategory-aside__body">
+                    <div class="search-field">
+                      <input
+                        type="text"
+                        class="search-field__input"
+                        placeholder="Поиск по фильтру" />
+                      <button class="search-field__button">
+                        <img src="./img/icons/search-icon.svg" alt="search" />
+                      </button>
+                    </div>
+
+                    <div class="subcategory-aside__spoiler spoiler active">
+                      <div class="spoiler__header">
+                        <h3 class="spoiler__title">Цена</h3>
+
+                        <div class="spoiler__icon">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.8334 11.7667L9.00841 15.5917C8.85228 15.7469 8.64107 15.834 8.42091 15.834C8.20076 15.834 7.98955 15.7469 7.83341 15.5917C7.75531 15.5142 7.69331 15.422 7.651 15.3205C7.6087 15.2189 7.58691 15.11 7.58691 15C7.58691 14.89 7.6087 14.7811 7.651 14.6795C7.69331 14.578 7.75531 14.4858 7.83341 14.4083L11.6667 10.5917C11.7449 10.5142 11.8068 10.422 11.8492 10.3205C11.8915 10.2189 11.9132 10.11 11.9132 9.99999C11.9132 9.88998 11.8915 9.78106 11.8492 9.67951C11.8068 9.57796 11.7449 9.48579 11.6667 9.40832L7.83341 5.59165C7.67649 5.43584 7.5879 5.22407 7.58712 5.00294C7.58633 4.7818 7.67343 4.56941 7.82925 4.41249C7.98506 4.25557 8.19683 4.16697 8.41797 4.16619C8.6391 4.16541 8.85149 4.25251 9.00841 4.40832L12.8334 8.23332C13.3016 8.70207 13.5645 9.33749 13.5645 9.99999C13.5645 10.6625 13.3016 11.2979 12.8334 11.7667V11.7667Z" fill="#A5ABB7"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="spoiler__body">
+                        content
+                      </div>
+                    </div>
+
+                    <div class="subcategory-aside__spoiler spoiler active">
+                      <div class="spoiler__header">
+                        <h3 class="spoiler__title">Чекбоксы</h3>
+
+                        <div class="spoiler__icon">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.8334 11.7667L9.00841 15.5917C8.85228 15.7469 8.64107 15.834 8.42091 15.834C8.20076 15.834 7.98955 15.7469 7.83341 15.5917C7.75531 15.5142 7.69331 15.422 7.651 15.3205C7.6087 15.2189 7.58691 15.11 7.58691 15C7.58691 14.89 7.6087 14.7811 7.651 14.6795C7.69331 14.578 7.75531 14.4858 7.83341 14.4083L11.6667 10.5917C11.7449 10.5142 11.8068 10.422 11.8492 10.3205C11.8915 10.2189 11.9132 10.11 11.9132 9.99999C11.9132 9.88998 11.8915 9.78106 11.8492 9.67951C11.8068 9.57796 11.7449 9.48579 11.6667 9.40832L7.83341 5.59165C7.67649 5.43584 7.5879 5.22407 7.58712 5.00294C7.58633 4.7818 7.67343 4.56941 7.82925 4.41249C7.98506 4.25557 8.19683 4.16697 8.41797 4.16619C8.6391 4.16541 8.85149 4.25251 9.00841 4.40832L12.8334 8.23332C13.3016 8.70207 13.5645 9.33749 13.5645 9.99999C13.5645 10.6625 13.3016 11.2979 12.8334 11.7667V11.7667Z" fill="#A5ABB7"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="spoiler__body">
+                        content
+                      </div>
+                    </div>
+                    
+                    <div class="subcategory-aside__spoiler spoiler active">
+                      <div class="spoiler__header">
+                        <h3 class="spoiler__title">Радиокнопка</h3>
+
+                        <div class="spoiler__icon">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.8334 11.7667L9.00841 15.5917C8.85228 15.7469 8.64107 15.834 8.42091 15.834C8.20076 15.834 7.98955 15.7469 7.83341 15.5917C7.75531 15.5142 7.69331 15.422 7.651 15.3205C7.6087 15.2189 7.58691 15.11 7.58691 15C7.58691 14.89 7.6087 14.7811 7.651 14.6795C7.69331 14.578 7.75531 14.4858 7.83341 14.4083L11.6667 10.5917C11.7449 10.5142 11.8068 10.422 11.8492 10.3205C11.8915 10.2189 11.9132 10.11 11.9132 9.99999C11.9132 9.88998 11.8915 9.78106 11.8492 9.67951C11.8068 9.57796 11.7449 9.48579 11.6667 9.40832L7.83341 5.59165C7.67649 5.43584 7.5879 5.22407 7.58712 5.00294C7.58633 4.7818 7.67343 4.56941 7.82925 4.41249C7.98506 4.25557 8.19683 4.16697 8.41797 4.16619C8.6391 4.16541 8.85149 4.25251 9.00841 4.40832L12.8334 8.23332C13.3016 8.70207 13.5645 9.33749 13.5645 9.99999C13.5645 10.6625 13.3016 11.2979 12.8334 11.7667V11.7667Z" fill="#A5ABB7"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="spoiler__body">
+                        content
+                      </div>
+                    </div>
+
+                    <div class="subcategory-aside__spoiler spoiler">
+                      <div class="spoiler__header">
+                        <h3 class="spoiler__title">Пункт фильтра</h3>
+
+                        <div class="spoiler__icon">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.8334 11.7667L9.00841 15.5917C8.85228 15.7469 8.64107 15.834 8.42091 15.834C8.20076 15.834 7.98955 15.7469 7.83341 15.5917C7.75531 15.5142 7.69331 15.422 7.651 15.3205C7.6087 15.2189 7.58691 15.11 7.58691 15C7.58691 14.89 7.6087 14.7811 7.651 14.6795C7.69331 14.578 7.75531 14.4858 7.83341 14.4083L11.6667 10.5917C11.7449 10.5142 11.8068 10.422 11.8492 10.3205C11.8915 10.2189 11.9132 10.11 11.9132 9.99999C11.9132 9.88998 11.8915 9.78106 11.8492 9.67951C11.8068 9.57796 11.7449 9.48579 11.6667 9.40832L7.83341 5.59165C7.67649 5.43584 7.5879 5.22407 7.58712 5.00294C7.58633 4.7818 7.67343 4.56941 7.82925 4.41249C7.98506 4.25557 8.19683 4.16697 8.41797 4.16619C8.6391 4.16541 8.85149 4.25251 9.00841 4.40832L12.8334 8.23332C13.3016 8.70207 13.5645 9.33749 13.5645 9.99999C13.5645 10.6625 13.3016 11.2979 12.8334 11.7667V11.7667Z" fill="#A5ABB7"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="spoiler__body">
+                        content
+                      </div>
+                    </div>
+
+                    <div class="subcategory-aside__spoiler spoiler">
+                      <div class="spoiler__header">
+                        <h3 class="spoiler__title">Пункт фильтра</h3>
+
+                        <div class="spoiler__icon">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.8334 11.7667L9.00841 15.5917C8.85228 15.7469 8.64107 15.834 8.42091 15.834C8.20076 15.834 7.98955 15.7469 7.83341 15.5917C7.75531 15.5142 7.69331 15.422 7.651 15.3205C7.6087 15.2189 7.58691 15.11 7.58691 15C7.58691 14.89 7.6087 14.7811 7.651 14.6795C7.69331 14.578 7.75531 14.4858 7.83341 14.4083L11.6667 10.5917C11.7449 10.5142 11.8068 10.422 11.8492 10.3205C11.8915 10.2189 11.9132 10.11 11.9132 9.99999C11.9132 9.88998 11.8915 9.78106 11.8492 9.67951C11.8068 9.57796 11.7449 9.48579 11.6667 9.40832L7.83341 5.59165C7.67649 5.43584 7.5879 5.22407 7.58712 5.00294C7.58633 4.7818 7.67343 4.56941 7.82925 4.41249C7.98506 4.25557 8.19683 4.16697 8.41797 4.16619C8.6391 4.16541 8.85149 4.25251 9.00841 4.40832L12.8334 8.23332C13.3016 8.70207 13.5645 9.33749 13.5645 9.99999C13.5645 10.6625 13.3016 11.2979 12.8334 11.7667V11.7667Z" fill="#A5ABB7"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="spoiler__body">
+                        content
+                      </div>
+                    </div>
+                    
+                    <div class="subcategory-aside__spoiler spoiler">
+                      <div class="spoiler__header">
+                        <h3 class="spoiler__title">Пункт фильтра</h3>
+
+                        <div class="spoiler__icon">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.8334 11.7667L9.00841 15.5917C8.85228 15.7469 8.64107 15.834 8.42091 15.834C8.20076 15.834 7.98955 15.7469 7.83341 15.5917C7.75531 15.5142 7.69331 15.422 7.651 15.3205C7.6087 15.2189 7.58691 15.11 7.58691 15C7.58691 14.89 7.6087 14.7811 7.651 14.6795C7.69331 14.578 7.75531 14.4858 7.83341 14.4083L11.6667 10.5917C11.7449 10.5142 11.8068 10.422 11.8492 10.3205C11.8915 10.2189 11.9132 10.11 11.9132 9.99999C11.9132 9.88998 11.8915 9.78106 11.8492 9.67951C11.8068 9.57796 11.7449 9.48579 11.6667 9.40832L7.83341 5.59165C7.67649 5.43584 7.5879 5.22407 7.58712 5.00294C7.58633 4.7818 7.67343 4.56941 7.82925 4.41249C7.98506 4.25557 8.19683 4.16697 8.41797 4.16619C8.6391 4.16541 8.85149 4.25251 9.00841 4.40832L12.8334 8.23332C13.3016 8.70207 13.5645 9.33749 13.5645 9.99999C13.5645 10.6625 13.3016 11.2979 12.8334 11.7667V11.7667Z" fill="#A5ABB7"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="spoiler__body">
+                        content
+                      </div>
+                    </div>
+                  </div>
+
+                  <button class="subcategory-aside__search">Показать 1200 товаров</button>
                 </div>
-                <div
-                  class="hero-slider slider slider-init"
-                  data-current-slide="1"
-                  data-autoplay-speed="4000">
-                  <div class="slider-wrapper">
-                    <div class="slider-slide hero-image-slide">
-                      <img
-                        src="./img/imgs/hero-preview.png"
-                        alt="Apple Iphone 15" />
+                <div class="subcategory-main">
+                  <div class="subcategory-main__header">
+                    <button class="filter-button open-filter">
+                      <span class="filter-button__icon">
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 15 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1_4710)">
+                            <path
+                              d="M0.625905 2.96921H2.33573C2.6732 4.21086 3.95332 4.94385 5.19497 4.60639C5.99244 4.38964 6.61541 3.76667 6.83215 2.96921H14.3745C14.7197 2.96921 14.9995 2.68942 14.9995 2.34428C14.9995 1.99914 14.7197 1.71935 14.3745 1.71935H6.83215C6.49469 0.477667 5.21457 -0.255327 3.97292 0.0821398C3.17545 0.298886 2.55248 0.921851 2.33573 1.71932H0.625905C0.280763 1.71932 0.000976562 1.99911 0.000976562 2.34425C0.000976562 2.68939 0.280763 2.96921 0.625905 2.96921Z"
+                              fill="#363436" />
+                            <path
+                              d="M14.3745 6.87533H12.6647C12.3279 5.63385 11.0485 4.90045 9.80701 5.23721C9.0089 5.45373 8.3854 6.07719 8.16889 6.87533H0.625905C0.280763 6.87533 0.000976562 7.15512 0.000976562 7.50026C0.000976562 7.8454 0.280763 8.12519 0.625905 8.12519H8.16889C8.50569 9.36667 9.7851 10.1001 11.0266 9.76331C11.8247 9.54679 12.4482 8.92333 12.6647 8.12519H14.3745C14.7197 8.12519 14.9995 7.8454 14.9995 7.50026C14.9995 7.15512 14.7197 6.87533 14.3745 6.87533Z"
+                              fill="#363436" />
+                            <path
+                              d="M14.3745 12.0308H6.83215C6.49469 10.7892 5.21457 10.0562 3.97291 10.3937C3.17545 10.6104 2.55248 11.2334 2.33573 12.0308H0.625905C0.280763 12.0308 0.000976562 12.3106 0.000976562 12.6558C0.000976562 13.0009 0.280763 13.2807 0.625905 13.2807H2.33573C2.6732 14.5223 3.95332 15.2553 5.19497 14.9179C5.99244 14.7011 6.61541 14.0782 6.83215 13.2807H14.3745C14.7197 13.2807 14.9995 13.0009 14.9995 12.6558C14.9995 12.3106 14.7197 12.0308 14.3745 12.0308Z"
+                              fill="#363436" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1_4710">
+                              <rect width="15" height="15" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </span>
+                      <span class="filter-button__text">Фильтр</span>
+                    </button>
+                    <div class="subcategory-dropdown dropdown">
+                      <div class="dropdown__header">
+                        <span>Сортировка:</span>
+                        <div class="dropdown__current">сначала недорогие</div>
+                        <img
+                          src="./img/icons/spoiler-icon-grey.svg"
+                          alt=""
+                          class="dropdown__icon" />
+                      </div>
+                      <div class="dropdown__body">
+                        <div class="dropdown__item">сначала недорогие</div>
+                        <div class="dropdown__item">сначала дорогие</div>
+                        <div class="dropdown__item">сначала новые</div>
+                        <div class="dropdown__item">сначала старые</div>
+                      </div>
                     </div>
-                    <div class="slider-slide hero-image-slide">
-                      <img
-                        src="./img/imgs/hero-preview.png"
-                        alt="Apple Iphone 15" />
-                    </div>
-                    <div class="slider-slide hero-image-slide">
-                      <img
-                        src="./img/imgs/hero-preview.png"
-                        alt="Apple Iphone 15" />
-                    </div>
-                    <div class="slider-slide hero-image-slide">
-                      <img
-                        src="./img/imgs/hero-preview.png"
-                        alt="Apple Iphone 15" />
-                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="hero__bullets"></div>
-            </div>
-          </div>
-        </section>
-
-        <div class="main__categories categories">
-          <div class="categories__container">
-            <div class="categories__wrapper slider-parent">
-              <div
-                class="categories-slider slider slider-init"
-                data-current-slide="0">
-                <div class="slider-wrapper">
-                  <div class="slider-slide">
-                    <a href="#" class="category-card">
-                      <div class="category-card__title">Бытовая техника</div>
-                      <div class="category-card__icon">
-                        <img
-                          src="./img/category-icons/Appliances3d.png"
-                          alt="Бытовая техника" />
-                      </div>
-                    </a>
-                  </div>
-                  <div class="slider-slide">
-                    <a href="#" class="category-card">
-                      <div class="category-card__title">Красота и здоровье</div>
-                      <div class="category-card__icon">
-                        <img
-                          src="./img/category-icons/beautyNhealth3d.png"
-                          alt="Красота и здоровье" />
-                      </div>
-                    </a>
-                  </div>
-                  <div class="slider-slide">
-                    <a href="#" class="category-card">
-                      <div class="category-card__title">
-                        Смартфоны и фототехника
-                      </div>
-                      <div class="category-card__icon">
-                        <img
-                          src="./img/category-icons/smartphones3d.png"
-                          alt="Смартфоны и фототехника" />
-                      </div>
-                    </a>
-                  </div>
-                  <div class="slider-slide">
-                    <a href="#" class="category-card">
-                      <div class="category-card__title">
-                        ТВ, консоли и аудио
-                      </div>
-                      <div class="category-card__icon">
-                        <img
-                          src="./img/category-icons/tv3d.png"
-                          alt="ТВ, консоли и аудио" />
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="slider-slide">
-                    <a href="#" class="category-card">
-                      <div class="category-card__title">
-                        ПК, ноутбуки, перифер
-                      </div>
-                      <div class="category-card__icon">
-                        <img
-                          src="./img/category-icons/pc3d.png"
-                          alt="ПК, ноутбуки, перифер" />
-                      </div>
-                    </a>
-                  </div>
-                  <div class="slider-slide">
-                    <a href="#" class="category-card">
-                      <div class="category-card__title">
-                        Комплектующие для ПК
-                      </div>
-                      <div class="category-card__icon">
-                        <img
-                          src="./img/category-icons/pc-components3d.png"
-                          alt="Комплектующие для ПК" />
-                      </div>
-                    </a>
-                  </div>
-                  <div class="slider-slide">
-                    <a href="#" class="category-card">
-                      <div class="category-card__title">Офис и мебель</div>
-                      <div class="category-card__icon">
-                        <img
-                          src="./img/category-icons/office3d.png"
-                          alt="Офис и мебель" />
-                      </div>
-                    </a>
-                  </div>
-                  <div class="slider-slide">
-                    <a href="#" class="category-card">
-                      <div class="category-card__title">
-                        Сетевое оборудование
-                      </div>
-                      <div class="category-card__icon">
-                        <img
-                          src="./img/category-icons/network3d.png"
-                          alt="Сетевое оборудование" />
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="slider-slide">
-                    <a href="#" class="category-card">
-                      <div class="category-card__title">
-                        Отдых и развлечения
-                      </div>
-                      <div class="category-card__icon">
-                        <img
-                          src="./img/category-icons/entertainment3d.png"
-                          alt="Отдых и развлечения" />
-                      </div>
-                    </a>
-                  </div>
-                  <div class="slider-slide">
-                    <a href="#" class="category-card">
-                      <div class="category-card__title">Автотовары</div>
-                      <div class="category-card__icon">
-                        <img
-                          src="./img/category-icons/car3d.png"
-                          alt="Автотовары" />
-                      </div>
-                    </a>
-                  </div>
-                  <div class="slider-slide">
-                    <a href="#" class="category-card">
-                      <div class="category-card__title">
-                        Аксессуары и услуги
-                      </div>
-                      <div class="category-card__icon">
-                        <img
-                          src="./img/category-icons/accessories3d.png"
-                          alt="Аксессуары и услуги" />
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="slider-btn slider-btn__prev disable">
-                <svg
-                  width="21"
-                  height="10"
-                  viewBox="0 0 21 10"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M20.3265 5.32997C20.5649 5.09158 20.5649 4.70506 20.3265 4.46666L16.4416 0.581731C16.2032 0.343333 15.8167 0.343333 15.5783 0.581731C15.3399 0.82013 15.3399 1.20665 15.5783 1.44505L19.0315 4.89832L15.5783 8.35158C15.3399 8.58998 15.3399 8.9765 15.5783 9.2149C15.8167 9.4533 16.2032 9.4533 16.4416 9.2149L20.3265 5.32997ZM0.939514 5.50877H19.8949V4.28786H0.939514V5.50877Z"
-                    fill="#F9F9F9" />
-                </svg>
-              </div>
-              <div class="slider-btn slider-btn__next">
-                <svg
-                  width="21"
-                  height="10"
-                  viewBox="0 0 21 10"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M20.3265 5.32997C20.5649 5.09158 20.5649 4.70506 20.3265 4.46666L16.4416 0.581731C16.2032 0.343333 15.8167 0.343333 15.5783 0.581731C15.3399 0.82013 15.3399 1.20665 15.5783 1.44505L19.0315 4.89832L15.5783 8.35158C15.3399 8.58998 15.3399 8.9765 15.5783 9.2149C15.8167 9.4533 16.2032 9.4533 16.4416 9.2149L20.3265 5.32997ZM0.939514 5.50877H19.8949V4.28786H0.939514V5.50877Z"
-                    fill="#F9F9F9" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <section class="main__popular-products popular-products">
-          <div class="popular-products__wrapper">
-            <div class="popular-products__container">
-              <div class="popular-products__header">
-                <h2 class="popular-products__title title title_second">
-                  Популярные товары
-                </h2>
-                <a href="#" class="popular-products__link">
-                  <span>Все товары</span>
-                  <svg
-                    width="21"
-                    height="10"
-                    viewBox="0 0 21 10"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M20.3265 5.32997C20.5649 5.09158 20.5649 4.70506 20.3265 4.46666L16.4416 0.581731C16.2032 0.343333 15.8167 0.343333 15.5783 0.581731C15.3399 0.82013 15.3399 1.20665 15.5783 1.44505L19.0315 4.89832L15.5783 8.35158C15.3399 8.58998 15.3399 8.9765 15.5783 9.2149C15.8167 9.4533 16.2032 9.4533 16.4416 9.2149L20.3265 5.32997ZM0.939514 5.50877H19.8949V4.28786H0.939514V5.50877Z"
-                      fill="#A5ABB7" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div class="popular-products__main slider-parent">
-              <div
-                class="popular-slider slider slider-init"
-                data-current-slide="0">
-                <div class="slider-wrapper">
-                  <div class="slider-slide">
-                    <div class="product-card">
-                      <div class="product-card__top">
-                        <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" />
-                        </a>
-
+                  <div class="subcategory-main__list">
+                    <div class="product product-banner">
+                      <div class="product-banner__preview">
                         <div class="product-status">
                           <div
                             class="product-status__label product-status__label_green">
@@ -384,79 +312,25 @@
                             хит
                           </div>
                         </div>
-                        <div class="product-actions">
-                          <button class="product-actions__button fav-button active">
-                            <svg
-                              width="23"
-                              height="21"
-                              viewBox="0 0 23 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
-                                fill="#A5ABB7" />
-                            </svg>
-                          </button>
-                          <button
-                            class="product-actions__button comprasion-button">
-                            <svg
-                              width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <g >
-                                <rect
-                                  y="4.03986"
-                                  width="5.45455"
-                                  height="16.3636"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="7.27271"
-                                  y="9.49438"
-                                  width="5.45455"
-                                  height="10.9091"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="14.5454"
-                                  y="0.403503"
-                                  width="5.45455"
-                                  height="20"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                              </g>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="product-card__body">
-                        <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
-                        >
-                        <p class="product-card__label paragraph">Наушники</p>
-                      </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
 
-                        <div class="product-rate">
-                          <img
-                            src="./img/icons/star-rate.svg"
-                            alt=""
-                            class="product-rate__icon" />
-                          <span class="product-rate__rating">4.8</span>
+                        <div class="product-banner__slider slider slider-init" data-current-slide="0">
+                          <div class="slider-wrapper">
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  </div>
 
-                  <div class="slider-slide">
-                    <div class="product-card">
-                      <div class="product-card__top">
-                        <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" />
-                        </a>
+                        <div class="product-banner__bullets"></div>
 
                         <div class="product-actions">
                           <button class="product-actions__button fav-button">
@@ -505,32 +379,97 @@
                           </button>
                         </div>
                       </div>
-                      <div class="product-card__body">
-                        <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
-                        >
-                        <p class="product-card__label paragraph">Наушники</p>
-                      </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
 
-                        <div class="product-rate">
-                          <img
-                            src="./img/icons/star-rate.svg"
-                            alt=""
-                            class="product-rate__icon" />
-                          <span class="product-rate__rating">4.8</span>
+                      <div class="product-banner__main">
+                        <h3 class="product-banner__headline">
+                          <a href="#" class="product-banner__title">Наушники Honor Earbuds X3 белый</a>
+                          <div class="product-rate">
+                            <img
+                              src="./img/icons/star-rate.svg"
+                              alt=""
+                              class="product-rate__icon" />
+                            <span class="product-rate__rating">4.8</span>
+                          </div>
+                        </h3>
+
+                        <div class="product-banner__descr">
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Характеристики:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Детали:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Характеристики:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Детали:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="product-banner__info">
+                        <span class="product-banner__price">
+                          от 1 500 Р до 65 000 Р
+                        </span>
+
+                        <div class="sites-list">
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price sites-list__price_green">1 500 Р</div>
+                          </div>
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">65 500 Р</div>
+                          </div>
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">45 500 Р</div>
+                          </div>
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">25 500 Р</div>
+                          </div>
+                        </div>
+
+                        <div class="product-banner__info-actions">
+                          <button class="product-banner__button">Сравнить цены</button>
                         </div>
                       </div>
                     </div>
-                  </div>
+                    <div class="product product-banner">
+                      <div class="product-banner__preview">
 
-                  <div class="slider-slide">
-                    <div class="product-card">
-                      <div class="product-card__top">
-                        <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" />
-                        </a>
+                        <div class="product-banner__slider slider slider-init" data-current-slide="0">
+                          <div class="slider-wrapper">
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="product-banner__bullets"></div>
 
                         <div class="product-actions">
                           <button class="product-actions__button fav-button">
@@ -579,448 +518,78 @@
                           </button>
                         </div>
                       </div>
-                      <div class="product-card__body">
-                        <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
-                        >
-                        <p class="product-card__label paragraph">Наушники</p>
-                      </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
 
-                        <div class="product-rate">
-                          <img
-                            src="./img/icons/star-rate.svg"
-                            alt=""
-                            class="product-rate__icon" />
-                          <span class="product-rate__rating">4.8</span>
+                      <div class="product-banner__main">
+                        <h3 class="product-banner__headline">
+                          <a href="#" class="product-banner__title">Наушники Honor Earbuds X3 белый</a>
+                          <div class="product-rate">
+                            <img
+                              src="./img/icons/star-rate.svg"
+                              alt=""
+                              class="product-rate__icon" />
+                            <span class="product-rate__rating">4.8</span>
+                          </div>
+                        </h3>
+
+                        <div class="product-banner__descr">
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Характеристики:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Детали:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Характеристики:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Детали:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="product-banner__info">
+                        <span class="product-banner__price">
+                          от 1 500 Р до 65 000 Р
+                        </span>
+
+                        <div class="sites-list">
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price sites-list__price_green">1 500 Р</div>
+                          </div>
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">65 500 Р</div>
+                          </div>
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">45 500 Р</div>
+                          </div>
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">25 500 Р</div>
+                          </div>
+                        </div>
+
+                        <div class="product-banner__info-actions">
+                          <button class="product-banner__button">Сравнить цены</button>
                         </div>
                       </div>
                     </div>
-                  </div>
-
-                  <div class="slider-slide">
-                    <div class="product-card">
-                      <div class="product-card__top">
-                        <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" />
-                        </a>
-
-                        <div class="product-actions">
-                          <button class="product-actions__button fav-button">
-                            <svg
-                              width="23"
-                              height="21"
-                              viewBox="0 0 23 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
-                                fill="#A5ABB7" />
-                            </svg>
-                          </button>
-                          <button
-                            class="product-actions__button comprasion-button">
-                            <svg
-                              width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <g >
-                                <rect
-                                  y="4.03986"
-                                  width="5.45455"
-                                  height="16.3636"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="7.27271"
-                                  y="9.49438"
-                                  width="5.45455"
-                                  height="10.9091"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="14.5454"
-                                  y="0.403503"
-                                  width="5.45455"
-                                  height="20"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                              </g>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="product-card__body">
-                        <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
-                        >
-                        <p class="product-card__label paragraph">Наушники</p>
-                      </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
-
-                        <div class="product-rate">
-                          <img
-                            src="./img/icons/star-rate.svg"
-                            alt=""
-                            class="product-rate__icon" />
-                          <span class="product-rate__rating">4.8</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="slider-slide">
-                    <div class="product-card">
-                      <div class="product-card__top">
-                        <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" />
-                        </a>
-
-                        <div class="product-actions">
-                          <button class="product-actions__button fav-button">
-                            <svg
-                              width="23"
-                              height="21"
-                              viewBox="0 0 23 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
-                                fill="#A5ABB7" />
-                            </svg>
-                          </button>
-                          <button
-                            class="product-actions__button comprasion-button">
-                            <svg
-                              width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <g >
-                                <rect
-                                  y="4.03986"
-                                  width="5.45455"
-                                  height="16.3636"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="7.27271"
-                                  y="9.49438"
-                                  width="5.45455"
-                                  height="10.9091"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="14.5454"
-                                  y="0.403503"
-                                  width="5.45455"
-                                  height="20"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                              </g>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="product-card__body">
-                        <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
-                        >
-                        <p class="product-card__label paragraph">Наушники</p>
-                      </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
-
-                        <div class="product-rate">
-                          <img
-                            src="./img/icons/star-rate.svg"
-                            alt=""
-                            class="product-rate__icon" />
-                          <span class="product-rate__rating">4.8</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="slider-slide">
-                    <div class="product-card">
-                      <div class="product-card__top">
-                        <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" />
-                        </a>
-
-                        <div class="product-actions">
-                          <button class="product-actions__button fav-button">
-                            <svg
-                              width="23"
-                              height="21"
-                              viewBox="0 0 23 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
-                                fill="#A5ABB7" />
-                            </svg>
-                          </button>
-                          <button
-                            class="product-actions__button comprasion-button">
-                            <svg
-                              width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <g >
-                                <rect
-                                  y="4.03986"
-                                  width="5.45455"
-                                  height="16.3636"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="7.27271"
-                                  y="9.49438"
-                                  width="5.45455"
-                                  height="10.9091"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="14.5454"
-                                  y="0.403503"
-                                  width="5.45455"
-                                  height="20"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                              </g>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="product-card__body">
-                        <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
-                        >
-                        <p class="product-card__label paragraph">Наушники</p>
-                      </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
-
-                        <div class="product-rate">
-                          <img
-                            src="./img/icons/star-rate.svg"
-                            alt=""
-                            class="product-rate__icon" />
-                          <span class="product-rate__rating">4.8</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="slider-slide">
-                    <div class="product-card">
-                      <div class="product-card__top">
-                        <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" />
-                        </a>
-
-                        <div class="product-actions">
-                          <button class="product-actions__button fav-button">
-                            <svg
-                              width="23"
-                              height="21"
-                              viewBox="0 0 23 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
-                                fill="#A5ABB7" />
-                            </svg>
-                          </button>
-                          <button
-                            class="product-actions__button comprasion-button">
-                            <svg
-                              width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <g >
-                                <rect
-                                  y="4.03986"
-                                  width="5.45455"
-                                  height="16.3636"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="7.27271"
-                                  y="9.49438"
-                                  width="5.45455"
-                                  height="10.9091"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="14.5454"
-                                  y="0.403503"
-                                  width="5.45455"
-                                  height="20"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                              </g>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="product-card__body">
-                        <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
-                        >
-                        <p class="product-card__label paragraph">Наушники</p>
-                      </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
-
-                        <div class="product-rate">
-                          <img
-                            src="./img/icons/star-rate.svg"
-                            alt=""
-                            class="product-rate__icon" />
-                          <span class="product-rate__rating">4.8</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="slider-slide">
-                    <div class="product-card">
-                      <div class="product-card__top">
-                        <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" />
-                        </a>
-
-                        <div class="product-actions">
-                          <button class="product-actions__button fav-button">
-                            <svg
-                              width="23"
-                              height="21"
-                              viewBox="0 0 23 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
-                                fill="#A5ABB7" />
-                            </svg>
-                          </button>
-                          <button
-                            class="product-actions__button comprasion-button">
-                            <svg
-                              width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <g >
-                                <rect
-                                  y="4.03986"
-                                  width="5.45455"
-                                  height="16.3636"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="7.27271"
-                                  y="9.49438"
-                                  width="5.45455"
-                                  height="10.9091"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="14.5454"
-                                  y="0.403503"
-                                  width="5.45455"
-                                  height="20"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                              </g>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="product-card__body">
-                        <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
-                        >
-                        <p class="product-card__label paragraph">Наушники</p>
-                      </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
-
-                        <div class="product-rate">
-                          <img
-                            src="./img/icons/star-rate.svg"
-                            alt=""
-                            class="product-rate__icon" />
-                          <span class="product-rate__rating">4.8</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="slider-btn slider-btn__prev disable">
-                <svg
-                  width="21"
-                  height="10"
-                  viewBox="0 0 21 10"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M20.3265 5.32997C20.5649 5.09158 20.5649 4.70506 20.3265 4.46666L16.4416 0.581731C16.2032 0.343333 15.8167 0.343333 15.5783 0.581731C15.3399 0.82013 15.3399 1.20665 15.5783 1.44505L19.0315 4.89832L15.5783 8.35158C15.3399 8.58998 15.3399 8.9765 15.5783 9.2149C15.8167 9.4533 16.2032 9.4533 16.4416 9.2149L20.3265 5.32997ZM0.939514 5.50877H19.8949V4.28786H0.939514V5.50877Z"
-                    fill="#F9F9F9" />
-                </svg>
-              </div>
-              <div class="slider-btn slider-btn__next">
-                <svg
-                  width="21"
-                  height="10"
-                  viewBox="0 0 21 10"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M20.3265 5.32997C20.5649 5.09158 20.5649 4.70506 20.3265 4.46666L16.4416 0.581731C16.2032 0.343333 15.8167 0.343333 15.5783 0.581731C15.3399 0.82013 15.3399 1.20665 15.5783 1.44505L19.0315 4.89832L15.5783 8.35158C15.3399 8.58998 15.3399 8.9765 15.5783 9.2149C15.8167 9.4533 16.2032 9.4533 16.4416 9.2149L20.3265 5.32997ZM0.939514 5.50877H19.8949V4.28786H0.939514V5.50877Z"
-                    fill="#F9F9F9" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="main__recent recent">
-          <div class="recent__wrapper">
-            <div class="recent__container">
-              <div class="popular-products__header">
-                <h2 class="popular-products__title title title_second">
-                  Недавно смотрели
-                </h2>
-              </div>
-            </div>
-
-            <div class="recent__main slider-parent">
-              <div
-                class="popular-slider slider slider-init"
-                data-current-slide="0">
-                <div class="slider-wrapper">
-                  <div class="slider-slide">
-                    <div class="product-card">
-                      <div class="product-card__top">
-                        <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" />
-                        </a>
-
+                    <div class="product product-banner">
+                      <div class="product-banner__preview">
                         <div class="product-status">
                           <div
                             class="product-status__label product-status__label_green">
@@ -1031,6 +600,26 @@
                             хит
                           </div>
                         </div>
+
+                        <div class="product-banner__slider slider slider-init" data-current-slide="0">
+                          <div class="slider-wrapper">
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="product-banner__bullets"></div>
+
                         <div class="product-actions">
                           <button class="product-actions__button fav-button">
                             <svg
@@ -1078,624 +667,528 @@
                           </button>
                         </div>
                       </div>
-                      <div class="product-card__body">
-                        <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
-                        >
-                        <p class="product-card__label paragraph">Наушники</p>
-                      </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
 
-                        <div class="product-rate">
-                          <img
-                            src="./img/icons/star-rate.svg"
-                            alt=""
-                            class="product-rate__icon" />
-                          <span class="product-rate__rating">4.8</span>
+                      <div class="product-banner__main">
+                        <h3 class="product-banner__headline">
+                          <a href="#" class="product-banner__title">Наушники Honor Earbuds X3 белый</a>
+                          <div class="product-rate">
+                            <img
+                              src="./img/icons/star-rate.svg"
+                              alt=""
+                              class="product-rate__icon" />
+                            <span class="product-rate__rating">4.8</span>
+                          </div>
+                        </h3>
+
+                        <div class="product-banner__descr">
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Характеристики:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Детали:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Характеристики:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Детали:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="product-banner__info">
+                        <span class="product-banner__price">
+                          от 1 500 Р до 65 000 Р
+                        </span>
+
+                        <div class="sites-list">
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price sites-list__price_green">1 500 Р</div>
+                          </div>
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">65 500 Р</div>
+                          </div>
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">45 500 Р</div>
+                          </div>
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">25 500 Р</div>
+                          </div>
+                        </div>
+
+                        <div class="product-banner__info-actions">
+                          <button class="product-banner__button">Сравнить цены</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product product-banner">
+                      <div class="product-banner__preview">
+
+                        <div class="product-banner__slider slider slider-init" data-current-slide="0">
+                          <div class="slider-wrapper">
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="product-banner__bullets"></div>
+
+                        <div class="product-actions">
+                          <button class="product-actions__button fav-button">
+                            <svg
+                              width="23"
+                              height="21"
+                              viewBox="0 0 23 21"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
+                                fill="#A5ABB7" />
+                            </svg>
+                          </button>
+                          <button
+                            class="product-actions__button comprasion-button">
+                            <svg
+                              width="20"
+                              height="21"
+                              viewBox="0 0 20 21"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g >
+                                <rect
+                                  y="4.03986"
+                                  width="5.45455"
+                                  height="16.3636"
+                                  rx="2.72727"
+                                  fill="#A5ABB7" />
+                                <rect
+                                  x="7.27271"
+                                  y="9.49438"
+                                  width="5.45455"
+                                  height="10.9091"
+                                  rx="2.72727"
+                                  fill="#A5ABB7" />
+                                <rect
+                                  x="14.5454"
+                                  y="0.403503"
+                                  width="5.45455"
+                                  height="20"
+                                  rx="2.72727"
+                                  fill="#A5ABB7" />
+                              </g>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="product-banner__main">
+                        <h3 class="product-banner__headline">
+                          <a href="#" class="product-banner__title">Наушники Honor Earbuds X3 белый</a>
+                          <div class="product-rate">
+                            <img
+                              src="./img/icons/star-rate.svg"
+                              alt=""
+                              class="product-rate__icon" />
+                            <span class="product-rate__rating">4.8</span>
+                          </div>
+                        </h3>
+
+                        <div class="product-banner__descr">
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Характеристики:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Детали:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Характеристики:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Детали:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="product-banner__info">
+                        <span class="product-banner__price">
+                          от 1 500 Р до 65 000 Р
+                        </span>
+
+                        <div class="sites-list">
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price sites-list__price_green">1 500 Р</div>
+                          </div>
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">65 500 Р</div>
+                          </div>
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">45 500 Р</div>
+                          </div>
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">25 500 Р</div>
+                          </div>
+                        </div>
+
+                        <div class="product-banner__info-actions">
+                          <button class="product-banner__button">Сравнить цены</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product product-banner">
+                      <div class="product-banner__preview">
+                        <div class="product-status">
+                          <div
+                            class="product-status__label product-status__label_green">
+                            new
+                          </div>
+                          <div
+                            class="product-status__label product-status__label_orange">
+                            хит
+                          </div>
+                        </div>
+
+                        <div class="product-banner__slider slider slider-init" data-current-slide="0">
+                          <div class="slider-wrapper">
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="product-banner__bullets"></div>
+
+                        <div class="product-actions">
+                          <button class="product-actions__button fav-button">
+                            <svg
+                              width="23"
+                              height="21"
+                              viewBox="0 0 23 21"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
+                                fill="#A5ABB7" />
+                            </svg>
+                          </button>
+                          <button
+                            class="product-actions__button comprasion-button">
+                            <svg
+                              width="20"
+                              height="21"
+                              viewBox="0 0 20 21"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g >
+                                <rect
+                                  y="4.03986"
+                                  width="5.45455"
+                                  height="16.3636"
+                                  rx="2.72727"
+                                  fill="#A5ABB7" />
+                                <rect
+                                  x="7.27271"
+                                  y="9.49438"
+                                  width="5.45455"
+                                  height="10.9091"
+                                  rx="2.72727"
+                                  fill="#A5ABB7" />
+                                <rect
+                                  x="14.5454"
+                                  y="0.403503"
+                                  width="5.45455"
+                                  height="20"
+                                  rx="2.72727"
+                                  fill="#A5ABB7" />
+                              </g>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="product-banner__main">
+                        <h3 class="product-banner__headline">
+                          <a href="#" class="product-banner__title">Наушники Honor Earbuds X3 белый</a>
+                          <div class="product-rate">
+                            <img
+                              src="./img/icons/star-rate.svg"
+                              alt=""
+                              class="product-rate__icon" />
+                            <span class="product-rate__rating">4.8</span>
+                          </div>
+                        </h3>
+
+                        <div class="product-banner__descr">
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Характеристики:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Детали:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Характеристики:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Детали:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="product-banner__info">
+                        <span class="product-banner__price">
+                          от 1 500 Р до 65 000 Р
+                        </span>
+
+                        <div class="sites-list">
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price sites-list__price_green">1 500 Р</div>
+                          </div>
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">65 500 Р</div>
+                          </div>
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">45 500 Р</div>
+                          </div>
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">25 500 Р</div>
+                          </div>
+                        </div>
+
+                        <div class="product-banner__info-actions">
+                          <button class="product-banner__button">Сравнить цены</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product product-banner">
+                      <div class="product-banner__preview">
+                        <div class="product-status">
+                          <div
+                            class="product-status__label product-status__label_green">
+                            new
+                          </div>
+                          <div
+                            class="product-status__label product-status__label_orange">
+                            хит
+                          </div>
+                        </div>
+
+                        <div class="product-banner__slider slider slider-init" data-current-slide="0">
+                          <div class="slider-wrapper">
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                            <a href="#" class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="product-banner__bullets"></div>
+
+                        <div class="product-actions">
+                          <button class="product-actions__button fav-button">
+                            <svg
+                              width="23"
+                              height="21"
+                              viewBox="0 0 23 21"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
+                                fill="#A5ABB7" />
+                            </svg>
+                          </button>
+                          <button
+                            class="product-actions__button comprasion-button">
+                            <svg
+                              width="20"
+                              height="21"
+                              viewBox="0 0 20 21"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g >
+                                <rect
+                                  y="4.03986"
+                                  width="5.45455"
+                                  height="16.3636"
+                                  rx="2.72727"
+                                  fill="#A5ABB7" />
+                                <rect
+                                  x="7.27271"
+                                  y="9.49438"
+                                  width="5.45455"
+                                  height="10.9091"
+                                  rx="2.72727"
+                                  fill="#A5ABB7" />
+                                <rect
+                                  x="14.5454"
+                                  y="0.403503"
+                                  width="5.45455"
+                                  height="20"
+                                  rx="2.72727"
+                                  fill="#A5ABB7" />
+                              </g>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="product-banner__main">
+                        <h3 class="product-banner__headline">
+                          <a href="#" class="product-banner__title">Наушники Honor Earbuds X3 белый</a>
+                          <div class="product-rate">
+                            <img
+                              src="./img/icons/star-rate.svg"
+                              alt=""
+                              class="product-rate__icon" />
+                            <span class="product-rate__rating">4.8</span>
+                          </div>
+                        </h3>
+
+                        <div class="product-banner__descr">
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Характеристики:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Детали:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Характеристики:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title">Детали:</span>
+                            <span class="product-banner__descr-value">1234</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="product-banner__info">
+                        <span class="product-banner__price">
+                          от 1 500 Р до 65 000 Р
+                        </span>
+
+                        <div class="sites-list">
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price sites-list__price_green">1 500 Р</div>
+                          </div>
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">65 500 Р</div>
+                          </div>
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">45 500 Р</div>
+                          </div>
+                          <div class="sites-list__row">
+                            <div class="sites-list__title">
+                              <a href="#">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">25 500 Р</div>
+                          </div>
+                        </div>
+
+                        <div class="product-banner__info-actions">
+                          <button class="product-banner__button">Сравнить цены</button>
                         </div>
                       </div>
                     </div>
                   </div>
-
-                  <div class="slider-slide">
-                    <div class="product-card">
-                      <div class="product-card__top">
-                        <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" />
-                        </a>
-
-                        <div class="product-actions">
-                          <button class="product-actions__button fav-button">
-                            <svg
-                              width="23"
-                              height="21"
-                              viewBox="0 0 23 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
-                                fill="#A5ABB7" />
-                            </svg>
-                          </button>
-                          <button
-                            class="product-actions__button comprasion-button">
-                            <svg
-                              width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <g >
-                                <rect
-                                  y="4.03986"
-                                  width="5.45455"
-                                  height="16.3636"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="7.27271"
-                                  y="9.49438"
-                                  width="5.45455"
-                                  height="10.9091"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="14.5454"
-                                  y="0.403503"
-                                  width="5.45455"
-                                  height="20"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                              </g>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="product-card__body">
-                        <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
-                        >
-                        <p class="product-card__label paragraph">Наушники</p>
-                      </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
-
-                        <div class="product-rate">
-                          <img
-                            src="./img/icons/star-rate.svg"
-                            alt=""
-                            class="product-rate__icon" />
-                          <span class="product-rate__rating">4.8</span>
-                        </div>
-                      </div>
+                  <button class="subcategory-main__button">Показать ещё</button>
+                  <div class="subcategory-main__pagination pagination">
+                    <div class="pagination__page pagination__page_current">
+                      1
                     </div>
-                  </div>
-
-                  <div class="slider-slide">
-                    <div class="product-card">
-                      <div class="product-card__top">
-                        <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" />
-                        </a>
-
-                        <div class="product-actions">
-                          <button class="product-actions__button fav-button">
-                            <svg
-                              width="23"
-                              height="21"
-                              viewBox="0 0 23 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
-                                fill="#A5ABB7" />
-                            </svg>
-                          </button>
-                          <button
-                            class="product-actions__button comprasion-button">
-                            <svg
-                              width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <g >
-                                <rect
-                                  y="4.03986"
-                                  width="5.45455"
-                                  height="16.3636"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="7.27271"
-                                  y="9.49438"
-                                  width="5.45455"
-                                  height="10.9091"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="14.5454"
-                                  y="0.403503"
-                                  width="5.45455"
-                                  height="20"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                              </g>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="product-card__body">
-                        <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
-                        >
-                        <p class="product-card__label paragraph">Наушники</p>
-                      </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
-
-                        <div class="product-rate">
-                          <img
-                            src="./img/icons/star-rate.svg"
-                            alt=""
-                            class="product-rate__icon" />
-                          <span class="product-rate__rating">4.8</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="slider-slide">
-                    <div class="product-card">
-                      <div class="product-card__top">
-                        <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" />
-                        </a>
-
-                        <div class="product-actions">
-                          <button class="product-actions__button fav-button">
-                            <svg
-                              width="23"
-                              height="21"
-                              viewBox="0 0 23 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
-                                fill="#A5ABB7" />
-                            </svg>
-                          </button>
-                          <button
-                            class="product-actions__button comprasion-button">
-                            <svg
-                              width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <g >
-                                <rect
-                                  y="4.03986"
-                                  width="5.45455"
-                                  height="16.3636"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="7.27271"
-                                  y="9.49438"
-                                  width="5.45455"
-                                  height="10.9091"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="14.5454"
-                                  y="0.403503"
-                                  width="5.45455"
-                                  height="20"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                              </g>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="product-card__body">
-                        <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
-                        >
-                        <p class="product-card__label paragraph">Наушники</p>
-                      </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
-
-                        <div class="product-rate">
-                          <img
-                            src="./img/icons/star-rate.svg"
-                            alt=""
-                            class="product-rate__icon" />
-                          <span class="product-rate__rating">4.8</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="slider-slide">
-                    <div class="product-card">
-                      <div class="product-card__top">
-                        <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" />
-                        </a>
-
-                        <div class="product-actions">
-                          <button class="product-actions__button fav-button">
-                            <svg
-                              width="23"
-                              height="21"
-                              viewBox="0 0 23 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
-                                fill="#A5ABB7" />
-                            </svg>
-                          </button>
-                          <button
-                            class="product-actions__button comprasion-button">
-                            <svg
-                              width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <g >
-                                <rect
-                                  y="4.03986"
-                                  width="5.45455"
-                                  height="16.3636"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="7.27271"
-                                  y="9.49438"
-                                  width="5.45455"
-                                  height="10.9091"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="14.5454"
-                                  y="0.403503"
-                                  width="5.45455"
-                                  height="20"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                              </g>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="product-card__body">
-                        <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
-                        >
-                        <p class="product-card__label paragraph">Наушники</p>
-                      </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
-
-                        <div class="product-rate">
-                          <img
-                            src="./img/icons/star-rate.svg"
-                            alt=""
-                            class="product-rate__icon" />
-                          <span class="product-rate__rating">4.8</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="slider-slide">
-                    <div class="product-card">
-                      <div class="product-card__top">
-                        <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" />
-                        </a>
-
-                        <div class="product-actions">
-                          <button class="product-actions__button fav-button">
-                            <svg
-                              width="23"
-                              height="21"
-                              viewBox="0 0 23 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
-                                fill="#A5ABB7" />
-                            </svg>
-                          </button>
-                          <button
-                            class="product-actions__button comprasion-button">
-                            <svg
-                              width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <g >
-                                <rect
-                                  y="4.03986"
-                                  width="5.45455"
-                                  height="16.3636"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="7.27271"
-                                  y="9.49438"
-                                  width="5.45455"
-                                  height="10.9091"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="14.5454"
-                                  y="0.403503"
-                                  width="5.45455"
-                                  height="20"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                              </g>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="product-card__body">
-                        <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
-                        >
-                        <p class="product-card__label paragraph">Наушники</p>
-                      </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
-
-                        <div class="product-rate">
-                          <img
-                            src="./img/icons/star-rate.svg"
-                            alt=""
-                            class="product-rate__icon" />
-                          <span class="product-rate__rating">4.8</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="slider-slide">
-                    <div class="product-card">
-                      <div class="product-card__top">
-                        <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" />
-                        </a>
-
-                        <div class="product-actions">
-                          <button class="product-actions__button fav-button">
-                            <svg
-                              width="23"
-                              height="21"
-                              viewBox="0 0 23 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
-                                fill="#A5ABB7" />
-                            </svg>
-                          </button>
-                          <button
-                            class="product-actions__button comprasion-button">
-                            <svg
-                              width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <g >
-                                <rect
-                                  y="4.03986"
-                                  width="5.45455"
-                                  height="16.3636"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="7.27271"
-                                  y="9.49438"
-                                  width="5.45455"
-                                  height="10.9091"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="14.5454"
-                                  y="0.403503"
-                                  width="5.45455"
-                                  height="20"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                              </g>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="product-card__body">
-                        <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
-                        >
-                        <p class="product-card__label paragraph">Наушники</p>
-                      </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
-
-                        <div class="product-rate">
-                          <img
-                            src="./img/icons/star-rate.svg"
-                            alt=""
-                            class="product-rate__icon" />
-                          <span class="product-rate__rating">4.8</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="slider-slide">
-                    <div class="product-card">
-                      <div class="product-card__top">
-                        <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" />
-                        </a>
-
-                        <div class="product-actions">
-                          <button class="product-actions__button fav-button">
-                            <svg
-                              width="23"
-                              height="21"
-                              viewBox="0 0 23 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
-                                fill="#A5ABB7" />
-                            </svg>
-                          </button>
-                          <button
-                            class="product-actions__button comprasion-button">
-                            <svg
-                              width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <g >
-                                <rect
-                                  y="4.03986"
-                                  width="5.45455"
-                                  height="16.3636"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="7.27271"
-                                  y="9.49438"
-                                  width="5.45455"
-                                  height="10.9091"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="14.5454"
-                                  y="0.403503"
-                                  width="5.45455"
-                                  height="20"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                              </g>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="product-card__body">
-                        <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
-                        >
-                        <p class="product-card__label paragraph">Наушники</p>
-                      </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
-
-                        <div class="product-rate">
-                          <img
-                            src="./img/icons/star-rate.svg"
-                            alt=""
-                            class="product-rate__icon" />
-                          <span class="product-rate__rating">4.8</span>
-                        </div>
-                      </div>
-                    </div>
+                    <div class="pagination__page">2</div>
+                    <div class="pagination__page">3</div>
+                    <div class="pagination__page">4</div>
+                    <div class="pagination__page">5</div>
+                    <div class="pagination__dots">...</div>
+                    <div class="pagination__page">10</div>
                   </div>
                 </div>
               </div>
-
-              <div class="slider-btn slider-btn__prev disable">
-                <svg
-                  width="21"
-                  height="10"
-                  viewBox="0 0 21 10"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M20.3265 5.32997C20.5649 5.09158 20.5649 4.70506 20.3265 4.46666L16.4416 0.581731C16.2032 0.343333 15.8167 0.343333 15.5783 0.581731C15.3399 0.82013 15.3399 1.20665 15.5783 1.44505L19.0315 4.89832L15.5783 8.35158C15.3399 8.58998 15.3399 8.9765 15.5783 9.2149C15.8167 9.4533 16.2032 9.4533 16.4416 9.2149L20.3265 5.32997ZM0.939514 5.50877H19.8949V4.28786H0.939514V5.50877Z"
-                    fill="#F9F9F9" />
-                </svg>
-              </div>
-              <div class="slider-btn slider-btn__next">
-                <svg
-                  width="21"
-                  height="10"
-                  viewBox="0 0 21 10"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M20.3265 5.32997C20.5649 5.09158 20.5649 4.70506 20.3265 4.46666L16.4416 0.581731C16.2032 0.343333 15.8167 0.343333 15.5783 0.581731C15.3399 0.82013 15.3399 1.20665 15.5783 1.44505L19.0315 4.89832L15.5783 8.35158C15.3399 8.58998 15.3399 8.9765 15.5783 9.2149C15.8167 9.4533 16.2032 9.4533 16.4416 9.2149L20.3265 5.32997ZM0.939514 5.50877H19.8949V4.28786H0.939514V5.50877Z"
-                    fill="#F9F9F9" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="main__blog blog">
-          <div class="blog__wrapper">
-            <div class="blog__container">
-              <h2 class="blog__title title title_second main__title">Блог</h2>
-            </div>
-            <div class="blog__main">
-              <div class="blog-list slider">
-                <div class="slider-wrapper">
-                  <div class="slider-slide blog-card">
-                    <a href="#" class="blog-card__preview">
-                      <img src="./img/imgs/blog-preview.png" alt="blog" />
-                    </a>
-                    <a href="#" class="blog-card__title"
-                      >Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
-                      впечатления</a
-                    >
-                    <p class="blog-card__paragraph paragraph">
-                      ASUS бодро начала год и представила на CES 2021 кучу новых
-                      устройств, в том...
-                    </p>
-                  </div>
-                  <div class="slider-slide blog-card">
-                    <a href="#" class="blog-card__preview">
-                      <img src="./img/imgs/blog-preview.png" alt="blog" />
-                    </a>
-                    <a href="#" class="blog-card__title"
-                      >Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
-                      впечатления</a
-                    >
-                    <p class="blog-card__paragraph paragraph">
-                      ASUS бодро начала год и представила на CES 2021 кучу новых
-                      устройств, в том...
-                    </p>
-                  </div>
-                  <div class="slider-slide blog-card">
-                    <a href="#" class="blog-card__preview">
-                      <img src="./img/imgs/blog-preview.png" alt="blog" />
-                    </a>
-                    <a href="#" class="blog-card__title"
-                      >Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
-                      впечатления</a
-                    >
-                    <p class="blog-card__paragraph paragraph">
-                      ASUS бодро начала год и представила на CES 2021 кучу новых
-                      устройств, в том...
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <button class="blog__button">Все статьи</button>
             </div>
           </div>
         </section>
@@ -1741,7 +1234,9 @@
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__wrapper">
-            <a href="index.html" class="logo"><img src="./img/logo.svg" alt="logo" /></a>
+            <a href="index.html" class="logo"
+              ><img src="./img/logo.svg" alt="logo"
+            /></a>
 
             <div class="footer-nav">
               <ul class="footer-nav__list">
@@ -5607,8 +5102,8 @@
     <script src="./js/catalog.js"></script>
     <script src="./js/popup.js"></script>
     <script src="./js/search.js"></script>
+    <script src="./js/actions.js"></script>
     <script src="./js/slider-core.js"></script>
     <script src="./js/scroll-control.js"></script>
-    <script src="./js/actions.js"></script>
   </body>
 </html>

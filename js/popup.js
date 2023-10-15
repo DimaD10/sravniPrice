@@ -24,6 +24,18 @@ document.addEventListener("click", (e) => {
   ) {
     closeLocModal();
   }
+
+  if (e.target.closest(".subcategory-aside__close-btn")) {
+    e.target.closest(".subcategory-aside").classList.remove("active");
+    document.querySelector("body").style.overflow = "visible";
+  }
+  if (
+    e.target.closest(".open-filter") &&
+    document.querySelector(".subcategory-aside")
+  ) {
+    document.querySelector(".subcategory-aside").classList.add("active");
+    document.querySelector("body").style.overflow = "hidden";
+  }
 });
 
 window.addEventListener("load", () => {

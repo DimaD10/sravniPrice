@@ -42,13 +42,27 @@ document.addEventListener("touchstart", (e) => {
 
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("slider-bullet")) {
-    let slider = e.target.closest(".hero").querySelector(".slider-init");
+    let slider;
+    if (e.target.closest(".hero")) {
+      slider = e.target.closest(".hero").querySelector(".slider-init");
+    } else if (e.target.closest(".product-banner")) {
+      slider = e.target
+        .closest(".product-banner")
+        .querySelector(".slider-init");
+    }
     let slideWidth = slider.querySelectorAll(".slider-slide")[0].offsetWidth;
 
     if (slider) {
-      let bullets = e.target
-        .closest(".hero__bullets")
-        .querySelectorAll(".slider-bullet");
+      let bullets;
+      if (e.target.closest(".hero")) {
+        bullets = e.target
+          .closest(".hero__bullets")
+          .querySelectorAll(".slider-bullet");
+      } else if (e.target.closest(".product-banner")) {
+        bullets = e.target
+          .closest(".product-banner")
+          .querySelectorAll(".slider-bullet");
+      }
       let clickedBulletIndex = Array.from(bullets).indexOf(e.target);
       slider.setAttribute("data-current-slide", clickedBulletIndex);
 
@@ -56,12 +70,21 @@ document.addEventListener("click", (e) => {
         .querySelector(".slider-wrapper")
         .scrollTo(parseInt(slideWidth) * parseInt(clickedBulletIndex), 0);
 
-      e.target
-        .closest(".hero__bullets")
-        .querySelectorAll(".slider-bullet")
-        .forEach((el) => {
-          el.classList.remove("slider-bullet_active");
-        });
+      if (e.target.closest(".hero")) {
+        e.target
+          .closest(".hero__bullets")
+          .querySelectorAll(".slider-bullet")
+          .forEach((el) => {
+            el.classList.remove("slider-bullet_active");
+          });
+      } else if (e.target.closest(".product-banner")) {
+        e.target
+          .closest(".product-banner__bullets")
+          .querySelectorAll(".slider-bullet")
+          .forEach((el) => {
+            el.classList.remove("slider-bullet_active");
+          });
+      }
       e.target.classList.add("slider-bullet_active");
 
       isAutoplay = false;
@@ -155,6 +178,26 @@ window.addEventListener("load", () => {
 
     autoPlay(heroSlider);
   }
+  if (document.querySelectorAll(".product-banner__slider").length > 0) {
+    document.querySelectorAll(".product-banner__slider").forEach((slider) => {
+      let bullets = slider
+        .closest(".product-banner")
+        .querySelector(".product-banner__bullets");
+
+      for (
+        let i = 0;
+        i < slider.querySelectorAll(".slider-slide").length;
+        i++
+      ) {
+        let bullet = document.createElement("div");
+        bullet.className = "slider-bullet";
+        bullets.appendChild(bullet);
+      }
+      bullets
+        .querySelectorAll(".slider-bullet")[0]
+        .classList.add("slider-bullet_active");
+    });
+  }
 
   document.querySelectorAll(".slider-parent").forEach((slider) => {
     let slideWidth = slider.querySelectorAll(".slider-slide")[0].offsetWidth;
@@ -208,6 +251,20 @@ function attributeChangeCallback(mutationsList, observer) {
         el.classList.remove("slider-bullet_active");
       });
       bullets[parseInt(currentSlide)].classList.add("slider-bullet_active");
+    } else if (
+      mutation.type === "attributes" &&
+      mutation.attributeName === "data-current-slide" &&
+      mutation.target.classList.contains("product-banner__slider")
+    ) {
+      let currentSlide = mutation.target.getAttribute("data-current-slide");
+      let bullets = mutation.target
+        .closest(".product-banner")
+        .querySelector(".product-banner__bullets")
+        .querySelectorAll(".slider-bullet");
+      bullets.forEach((el) => {
+        el.classList.remove("slider-bullet_active");
+      });
+      bullets[parseInt(currentSlide)].classList.add("slider-bullet_active");
     }
   }
 }
@@ -219,13 +276,17 @@ function checkCurrentSlide(slider) {
       slider.querySelectorAll(".slider-slide").length - 1
     ].getBoundingClientRect().left;
 
+  let sliderLeft = slider.getBoundingClientRect().left;
+
   let slideWidth = slider.querySelectorAll(".slider-slide")[0].offsetWidth;
   let currentSlide =
     slider.querySelectorAll(".slider-slide").length -
     1 -
-    Math.floor(pos / slideWidth);
+    Math.floor((pos - sliderLeft) / slideWidth);
 
-  if (slider.classList.contains("hero-slider")) {
+  if (
+    slider.classList.contains("hero-slider")
+  ) {
     if (window.innerWidth < 767.98) {
       slider.setAttribute("data-current-slide", currentSlide);
     } else {
@@ -236,6 +297,8 @@ function checkCurrentSlide(slider) {
           : slider.querySelectorAll(".slider-slide").length - 1
       );
     }
+  } else if (slider.classList.contains("product-banner__slider")) {
+    slider.setAttribute("data-current-slide", currentSlide);
   } else {
     slider.setAttribute("data-current-slide", currentSlide);
   }
