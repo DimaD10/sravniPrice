@@ -78,7 +78,6 @@ window.addEventListener("load", () => {
   }
 
   if (spoilers.length > 0) {
-    console.log(true);
     spoilers.forEach((el) => {
       let body = el.querySelector(".spoiler__body");
       el.setAttribute("data-height", parseInt(body.offsetHeight));

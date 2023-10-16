@@ -59,7 +59,8 @@ body {
 
 a,
 button,
-.catalog-category,
+label,
+input .catalog-category,
 .open-popup-location,
 .slider-bullet,
 .slider-btn,
@@ -901,4 +902,235 @@ button,
     transition: height ease $animSpeed, opacity ease $animSpeed;
     opacity: 0;
   }
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__input {
+    display: none;
+  }
+
+  &__custom-input {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    background-color: $lightGrey;
+    transition: background-color ease $animSpeed;
+
+    display: block;
+
+    position: relative;
+
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 8px;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+
+      background: url("../img/icons/bird.svg") no-repeat 100%;
+      background-position: center;
+      background-size: contain;
+      opacity: 0;
+
+      transition: opacity ease $animSpeed;
+    }
+  }
+
+  &__label {
+    color: $dark;
+    font-family: Gilroy;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+
+    cursor: pointer;
+  }
+
+  .checkbox__input:checked + .checkbox__custom-input {
+    background-color: $dark;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__input {
+    display: none;
+  }
+
+  &__custom-input {
+    width: 15px;
+    height: 15px;
+    min-height: 15px;
+    border-radius: 50%;
+    background-color: $lightGrey;
+    transition: background-color ease $animSpeed;
+
+    cursor: pointer;
+
+    display: block;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 4px solid $dark;
+      opacity: 0;
+
+      transition: opacity ease $animSpeed;
+    }
+  }
+
+  &__label {
+    color: $dark;
+    font-family: Gilroy;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+
+    cursor: pointer;
+  }
+
+  .radio__input:checked + .radio__custom-input {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+.radio-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.range-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  max-width: 190px;
+
+  .slider {
+    height: 2px;
+    width: 100%;
+    position: relative;
+    background: #f6f7f8;
+    border-radius: 5px;
+    display: flex;
+    transform: translateY(12px);
+
+    .progress {
+      height: 100%;
+      left: 25%;
+      right: 25%;
+      position: absolute;
+      border-radius: 5px;
+      background: $dark;
+    }
+  }
+
+  .range-input {
+    position: relative;
+    width: 100%;
+
+    input {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: -5px;
+      background: none;
+      pointer-events: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background: $dark;
+      pointer-events: auto;
+      -webkit-appearance: none;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+      cursor: grab;
+    }
+    input[type="range"]::-moz-range-thumb {
+      height: 10px;
+      width: 10px;
+      border: none;
+      border-radius: 50%;
+      background: $dark;
+      pointer-events: auto;
+      -moz-appearance: none;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+      cursor: grab;
+    }
+  }
+
+  .price-input {
+    display: flex;
+    gap: 10px;
+
+    .field {
+      height: 35px;
+      padding: 6px 12px;
+      background-color: $lightGrey;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      span {
+        color: #a5abb7;
+
+        font-family: Gilroy;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 150%;
+        text-transform: lowercase;
+      }
+
+      input {
+        min-width: 40px;
+        background-color: transparent;
+
+        color: #363436;
+        font-family: Gilroy;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 150%;
+      }
+    }
+  }
+}
+
+.price-range {
+  width: auto;
 }
