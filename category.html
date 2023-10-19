@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" itemscope itemtype="http://schema.org/WebSite">
   <head>
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
@@ -24,12 +24,12 @@
                 <span class="button__text">Каталог</span>
               </button>
 
-              <div class="location">
+              <div class="location" itemscope itemtype="http://schema.org/PostalAddress">
                 <div class="location__icon">
                   <img src="./img/icons/location-icon.svg" alt="location" >
                 </div>
                 <span class="location__text">Ваш город: </span>
-                <span class="location__lacate open-popup-location">Минск</span>
+                <span class="location__lacate open-popup-location" itemprop="addressLocality">Минск</span>
 
                 <div class="location-question popup">
                   <div class="location-question__wrapper">
@@ -113,65 +113,81 @@
         </div>
       </header>
       <main class="main">
-        <div class="main__breadcrumbs breadcrumbs">
+        <div class="main__breadcrumbs breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
           <div class="breadcrumbs__container">
             <div class="breadcrumbs__wrapper">
-              <span class="breadcrumbs__crumb">
-                <a href="index.html">Главная</a>
+              <span class="breadcrumbs__crumb" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="index.html" itemprop="item" itemscope itemtype="https://schema.org/WebPage">
+                  <span itemprop="name">Главная</span>
+                </a>
+                <meta itemprop="position" content="1" >
               </span>
-              <span class="breadcrumbs__crumb breadcrumbs__crumb_current">Категория</span>
+              <span class="breadcrumbs__crumb" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="category.html" itemprop="item" itemscope itemtype="https://schema.org/WebPage">
+                  <span itemprop="name">Категория</span>
+                </a>
+                <meta itemprop="position" content="2" >
+              </span>
+              <span class="breadcrumbs__crumb breadcrumbs__crumb_current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">Подкатегория с товарами</span>
+                <meta itemprop="position" content="3" >
+              </span>
             </div>
           </div>
         </div>
 
         <section class="main__page-title page-title">
           <div class="page-title__container">
-            <h1 class="page-title__title title title_first">Бытовая техника</h1>
+            <h1 class="page-title__title title title_first" itemprop="headline">Бытовая техника</h1>
           </div>
         </section>
 
-        <div class="main__category-list category-list">
+        <div class="main__category-list category-list" itemscope itemtype="http://schema.org/BreadcrumbList">
             <div class="category-list__container">
                 <div class="category-list__wrapper">
-                    <a href="#" class="category-card">
-                        <div class="category-card__title">Бытовая техника</div>
-                        <div class="category-card__icon">
-                            <img
-                            src="./img/category-icons/Appliances3d.png"
-                            alt="Бытовая техника" >
-                        </div>
+                    <a href="#" class="category-card" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                      <div class="category-card__title" itemprop="name">Бытовая техника</div>
+                      <div class="category-card__icon">
+                        <img
+                          src="./img/category-icons/Appliances3d.png"
+                          alt="Бытовая техника" >
+                      </div>
+                      <meta itemprop="position" content="1">
                     </a>
-                    <a href="#" class="category-card">
-                        <div class="category-card__title">Красота и здоровье</div>
-                        <div class="category-card__icon">
-                            <img
-                            src="./img/category-icons/beautyNhealth3d.png"
-                            alt="Красота и здоровье" >
-                        </div>
+                    <a href="#" class="category-card" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                      <div class="category-card__title" itemprop="name">Красота и здоровье</div>
+                      <div class="category-card__icon">
+                        <img
+                          src="./img/category-icons/beautyNhealth3d.png"
+                          alt="Красота и здоровье" >
+                      </div>
+                      <meta itemprop="position" content="2">
                     </a>
-                    <a href="#" class="category-card">
-                        <div class="category-card__title">
-                            Смартфоны и фототехника
-                        </div>
-                        <div class="category-card__icon">
-                            <img
-                            src="./img/category-icons/smartphones3d.png"
-                            alt="Смартфоны и фототехника" >
-                        </div>
+                    <a href="#" class="category-card" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                      <div class="category-card__title" itemprop="name">
+                        Смартфоны и фототехника
+                      </div>
+                      <div class="category-card__icon">
+                        <img
+                          src="./img/category-icons/smartphones3d.png"
+                          alt="Смартфоны и фототехника" >
+                      </div>
+                      <meta itemprop="position" content="3">
                     </a>
-                    <a href="#" class="category-card">
-                        <div class="category-card__title">
-                            ТВ, консоли и аудио
-                        </div>
-                        <div class="category-card__icon">
-                            <img
-                            src="./img/category-icons/tv3d.png"
-                            alt="ТВ, консоли и аудио" >
-                        </div>
+                    <a href="#" class="category-card" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                      <div class="category-card__title" itemprop="name">
+                        ТВ, консоли и аудио
+                      </div>
+                      <div class="category-card__icon">
+                        <img
+                          src="./img/category-icons/tv3d.png"
+                          alt="ТВ, консоли и аудио" >
+                      </div>
+                      <meta itemprop="position" content="4">
                     </a>
 
-                    <a href="#" class="category-card">
-                      <div class="category-card__title">
+                    <a href="#" class="category-card" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                      <div class="category-card__title" itemprop="name">
                         ПК, ноутбуки, перифер
                       </div>
                       <div class="category-card__icon">
@@ -179,27 +195,30 @@
                           src="./img/category-icons/pc3d.png"
                           alt="ПК, ноутбуки, перифер" >
                       </div>
+                      <meta itemprop="position" content="5">
                     </a>
-                    <a href="#" class="category-card">
-                        <div class="category-card__title">
-                            Комплектующие для ПК
-                        </div>
-                        <div class="category-card__icon">
-                            <img
-                            src="./img/category-icons/pc-components3d.png"
-                            alt="Комплектующие для ПК" >
-                        </div>
+                    <a href="#" class="category-card" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                      <div class="category-card__title" itemprop="name">
+                        Комплектующие для ПК
+                      </div>
+                      <div class="category-card__icon">
+                        <img
+                          src="./img/category-icons/pc-components3d.png"
+                          alt="Комплектующие для ПК" >
+                      </div>
+                      <meta itemprop="position" content="6">
                     </a>
-                    <a href="#" class="category-card">
-                      <div class="category-card__title">Офис и мебель</div>
+                    <a href="#" class="category-card" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                      <div class="category-card__title" itemprop="name">Офис и мебель</div>
                       <div class="category-card__icon">
                         <img
                           src="./img/category-icons/office3d.png"
                           alt="Офис и мебель" >
                       </div>
+                      <meta itemprop="position" content="7">
                     </a>
-                    <a href="#" class="category-card">
-                      <div class="category-card__title">
+                    <a href="#" class="category-card" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                      <div class="category-card__title" itemprop="name">
                         Сетевое оборудование
                       </div>
                       <div class="category-card__icon">
@@ -207,9 +226,10 @@
                           src="./img/category-icons/network3d.png"
                           alt="Сетевое оборудование" >
                       </div>
+                      <meta itemprop="position" content="8">
                     </a>
-                    <a href="#" class="category-card">
-                      <div class="category-card__title">
+                    <a href="#" class="category-card" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                      <div class="category-card__title" itemprop="name">
                         Отдых и развлечения
                       </div>
                       <div class="category-card__icon">
@@ -217,17 +237,19 @@
                           src="./img/category-icons/entertainment3d.png"
                           alt="Отдых и развлечения" >
                       </div>
+                      <meta itemprop="position" content="9">
                     </a>
-                    <a href="#" class="category-card">
-                      <div class="category-card__title">Автотовары</div>
+                    <a href="#" class="category-card" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                      <div class="category-card__title" itemprop="name">Автотовары</div>
                       <div class="category-card__icon">
                         <img
                           src="./img/category-icons/car3d.png"
                           alt="Автотовары" >
                       </div>
+                      <meta itemprop="position" content="10">
                     </a>
-                    <a href="#" class="category-card">
-                      <div class="category-card__title">
+                    <a href="#" class="category-card" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                      <div class="category-card__title" itemprop="name">
                         Аксессуары и услуги
                       </div>
                       <div class="category-card__icon">
@@ -235,6 +257,7 @@
                           src="./img/category-icons/accessories3d.png"
                           alt="Аксессуары и услуги" >
                       </div>
+                      <meta itemprop="position" content="11">
                     </a>
                 </div>
             </div>
@@ -243,49 +266,52 @@
         <section class="main__blog blog">
           <div class="blog__wrapper">
             <div class="blog__container">
-              <h2 class="blog__title title title_second main__title">Статьи о бытовой технике</h2>
+              <h2 class="blog__title title title_second main__title" itemprop="headline">Блог</h2>
             </div>
             <div class="blog__main">
               <div class="blog-list slider">
                 <div class="slider-wrapper">
-                  <div class="slider-slide blog-card">
+                  <div class="slider-slide blog-card" itemscope itemtype="http://schema.org/BlogPosting">
                     <a href="#" class="blog-card__preview">
-                      <img src="./img/imgs/blog-preview.png" alt="blog" >
+                      <img src="./img/imgs/blog-preview.png" alt="blog" itemprop="image" >
                     </a>
                     <a href="#" class="blog-card__title"
-                      >Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
-                      впечатления</a
+                      ><span itemprop="headline">Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                      впечатления</span></a
                     >
-                    <p class="blog-card__paragraph paragraph">
+                    <p class="blog-card__paragraph paragraph" itemprop="description">
                       ASUS бодро начала год и представила на CES 2021 кучу новых
                       устройств, в том...
                     </p>
+                    <meta itemprop="url" content="#">
                   </div>
-                  <div class="slider-slide blog-card">
+                  <div class="slider-slide blog-card" itemscope itemtype="http://schema.org/BlogPosting">
                     <a href="#" class="blog-card__preview">
-                      <img src="./img/imgs/blog-preview.png" alt="blog" >
+                      <img src="./img/imgs/blog-preview.png" alt="blog" itemprop="image" >
                     </a>
                     <a href="#" class="blog-card__title"
-                      >Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
-                      впечатления</a
+                      ><span itemprop="headline">Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                      впечатления</span></a
                     >
-                    <p class="blog-card__paragraph paragraph">
+                    <p class="blog-card__paragraph paragraph" itemprop="description">
                       ASUS бодро начала год и представила на CES 2021 кучу новых
                       устройств, в том...
                     </p>
+                    <meta itemprop="url" content="#">
                   </div>
-                  <div class="slider-slide blog-card">
+                  <div class="slider-slide blog-card" itemscope itemtype="http://schema.org/BlogPosting">
                     <a href="#" class="blog-card__preview">
-                      <img src="./img/imgs/blog-preview.png" alt="blog" >
+                      <img src="./img/imgs/blog-preview.png" alt="blog" itemprop="image" >
                     </a>
                     <a href="#" class="blog-card__title"
-                      >Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
-                      впечатления</a
+                      ><span itemprop="headline">Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                      впечатления</span></a
                     >
-                    <p class="blog-card__paragraph paragraph">
+                    <p class="blog-card__paragraph paragraph" itemprop="description">
                       ASUS бодро начала год и представила на CES 2021 кучу новых
                       устройств, в том...
                     </p>
+                    <meta itemprop="url" content="#">
                   </div>
                 </div>
               </div>
@@ -302,9 +328,9 @@
                   <img src="./img/imgs/article-preview.png" alt="SEO-текст" >
                 </div>
                 <div class="article__body">
-                  <h2 class="article__title title title_third">SEO-текст</h2>
+                  <h2 class="article__title title title_third" itemprop="headline">SEO-текст</h2>
 
-                  <p class="article__paragraph paragraph">
+                  <p class="article__paragraph paragraph" itemprop="description">
                     It has survived not only five centuries, but also the leap
                     into electronic typesetting, remaining essentially
                     unchanged. It was popularised in the 1960s with the release
@@ -312,14 +338,14 @@
                     recently with desktop publishing software like Aldus
                     PageMaker including versions of Lorem Ipsum.
                   </p>
-                  <p class="article__paragraph paragraph">
+                  <p class="article__paragraph paragraph" itemprop="description">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an unknown
                     printer took a galley of type and scrambled it to make a
                     type specimen book.
                   </p>
-                  <p class="article__paragraph paragraph">
+                  <p class="article__paragraph paragraph" itemprop="description">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an unknown
@@ -335,24 +361,22 @@
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__wrapper">
-            <a href="index.html" class="logo"
-              ><img src="./img/logo.svg" alt="logo"
-            ></a>
+            <a href="index.html" class="logo"><img src="./img/logo.svg" alt="logo" ></a>
 
-            <div class="footer-nav">
+            <div class="footer-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
               <ul class="footer-nav__list">
                 <li class="footer-nav__el">
-                  <a href="about.html" class="footer-nav__link">О компании </a>
+                  <a href="about.html" class="footer-nav__link"><span itemprop="name">О компании</span></a>
                 </li>
                 <li class="footer-nav__el">
-                  <a href="about.html" class="footer-nav__link">Контакты</a>
+                  <a href="about.html" class="footer-nav__link"><span itemprop="name">Контакты</span></a>
                 </li>
                 <li class="footer-nav__el">
-                  <a href="about.html" class="footer-nav__link">Блог</a>
+                  <a href="about.html" class="footer-nav__link"><span itemprop="name">Блог</span></a>
                 </li>
                 <li class="footer-nav__el">
                   <a href="about.html" class="footer-nav__link"
-                    >Правовая информация</a
+                    ><span itemprop="name">Правовая информация</span></a
                   >
                 </li>
               </ul>

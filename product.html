@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" itemscope itemtype="http://schema.org/WebSite">
   <head>
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
@@ -24,12 +24,12 @@
                 <span class="button__text">Каталог</span>
               </button>
 
-              <div class="location">
+              <div class="location" itemscope itemtype="http://schema.org/PostalAddress">
                 <div class="location__icon">
                   <img src="./img/icons/location-icon.svg" alt="location" >
                 </div>
                 <span class="location__text">Ваш город: </span>
-                <span class="location__lacate open-popup-location">Минск</span>
+                <span class="location__lacate open-popup-location" itemprop="addressLocality">Минск</span>
 
                 <div class="location-question popup">
                   <div class="location-question__wrapper">
@@ -113,18 +113,25 @@
         </div>
       </header>
       <main class="main">
-        <div class="main__breadcrumbs breadcrumbs">
+        <div class="main__breadcrumbs breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
           <div class="breadcrumbs__container">
             <div class="breadcrumbs__wrapper">
-              <span class="breadcrumbs__crumb">
-                <a href="index.html">Главная</a>
+              <span class="breadcrumbs__crumb" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="index.html" itemprop="item" itemscope itemtype="https://schema.org/WebPage">
+                  <span itemprop="name">Главная</span>
+                </a>
+                <meta itemprop="position" content="1" >
               </span>
-              <span class="breadcrumbs__crumb">
-                <a href="category.html">Категория</a>
+              <span class="breadcrumbs__crumb" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="category.html" itemprop="item" itemscope itemtype="https://schema.org/WebPage">
+                  <span itemprop="name">Категория</span>
+                </a>
+                <meta itemprop="position" content="2" >
               </span>
-              <span class="breadcrumbs__crumb breadcrumbs__crumb_current"
-                >Подкатегория с товарами</span
-              >
+              <span class="breadcrumbs__crumb breadcrumbs__crumb_current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">Подкатегория с товарами</span>
+                <meta itemprop="position" content="3" >
+              </span>
             </div>
           </div>
         </div>
@@ -132,24 +139,26 @@
         <div class="main__product-section product-section">
           <div class="product-section__container">
             <div class="product-section__wrapper">
-              <div class="product-section__about">
+              <div class="product-section__about" itemscope itemtype="https://schema.org/Product">
                 <div class="product-section__marker" id="AboutProduct"></div>
                 <div class="product-section__header">
-                  <h1 class="product-section__title">
+                  <h1 class="product-section__title" itemprop="name">
                     Наушники Honor Earbuds X3 белый
                   </h1>
                   <div class="product-section__header-bottom">
-                    <span class="product-section__price"
-                      >от 1 500 Р до 65 000 Р</span
-                    >
+                    <span class="product-section__price" itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+                      от <span itemprop="price" content="1500">1 500</span> <span itemprop="priceCurrency" content="RUB">Р</span>
+                      до <span itemprop="highPrice" content="65000">65 000</span> <span itemprop="priceCurrency" content="RUB">Р</span>
+                    </span>
 
                     <div class="product-section__rating">
-                      <div class="product-rate">
+                      <div class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                         <img
                           src="./img/icons/star-rate.svg"
                           alt=""
                           class="product-rate__icon" >
-                        <span class="product-rate__rating">4.8</span>
+                        <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                        <span class="product-rate__rating-max" itemprop="bestRating">5</span>
                       </div>
                       <button
                         class="product-section__leave-review leave-review-btn">
@@ -253,16 +262,16 @@
                       data-current-slide="0">
                       <div class="slider-wrapper">
                         <div class="slider-slide product-banner__preview-img">
-                          <img src="./img/imgs/prod-preview.png" alt="" >
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                         </div>
                         <div class="slider-slide product-banner__preview-img">
-                          <img src="./img/imgs/prod-preview.png" alt="" >
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                         </div>
                         <div class="slider-slide product-banner__preview-img">
-                          <img src="./img/imgs/prod-preview.png" alt="" >
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                         </div>
                         <div class="slider-slide product-banner__preview-img">
-                          <img src="./img/imgs/prod-preview.png" alt="" >
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                         </div>
                       </div>
                     </div>
@@ -272,12 +281,13 @@
 
                   <div class="prod-main__options">
                     <div class="prod-main__header">
-                      <h1 class="product-section__title">
+                      <h1 class="product-section__title" itemprop="name">
                         Наушники Honor Earbuds X3 белый
                       </h1>
-                      <span class="product-section__price"
-                        >от 1 500 Р до 65 000 Р</span
-                      >
+                      <span class="product-section__price" itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+                        от <span itemprop="price" content="1500">1 500</span> <span itemprop="priceCurrency" content="RUB">Р</span>
+                        до <span itemprop="highPrice" content="65000">65 000</span> <span itemprop="priceCurrency" content="RUB">Р</span>
+                      </span>
                     </div>
 
                     <div class="product-colors">
@@ -376,8 +386,8 @@
                   </div>
 
                   <div class="prod-main__info-actions">
-                    <div class="prod-order">
-                      <span class="prod-main__price">30 000 ₽</span>
+                    <div class="prod-order" itemscope itemtype="https://schema.org/Offer">
+                      <span class="prod-main__price"><span itemprop="price">30 000</span> <span itemprop="priceCurrency">₽</span></span>
                       <button class="prod-main__button button">
                         В магазин
                       </button>
@@ -405,12 +415,13 @@
                           </div>
                           <span class="product-banner__point-text">
                             <span>Каприоника</span>
-                            <span class="product-rate">
+                            <span class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                               <img
                                 src="./img/icons/star-rate.svg"
                                 alt=""
                                 class="product-rate__icon" >
-                              <span class="product-rate__rating">4.8</span>
+                              <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                              <span class="product-rate__rating-max" itemprop="bestRating">5</span>
                             </span>
                             <span class="prod-order__rate-count"
                               >1500 оценок</span
@@ -461,7 +472,7 @@
               <div class="product-section__prices">
                 <div class="product-section__marker" id="PricesProduct"></div>
                 <div class="product-section__section-header">
-                  <h2 class="title title_third">
+                  <h2 class="title title_third" itemprop="headline">
                     Цены на Наушники Honor Earbuds X3 белый
                   </h2>
                 </div>
@@ -542,7 +553,7 @@
                   </div>
 
                   <div class="product-prices__stores">
-                    <div class="product-banner product-banner_store">
+                    <div class="product-banner product-banner_store" itemscope itemtype="https://schema.org/Product">
                       <div class="product-banner__preview">
                         <div
                           class="product-banner__slider slider slider-init"
@@ -551,22 +562,22 @@
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                           </div>
                         </div>
@@ -623,7 +634,7 @@
 
                       <div class="product-banner__main">
                         <h3 class="product-banner__headline">
-                          <span class="product-banner__title"
+                          <span class="product-banner__title" itemprop="name"
                             >Наушники Honor Earbuds X3 белый</span
                           >
                         </h3>
@@ -666,7 +677,7 @@
 
                       <div class="product-banner__store-info store-info">
                         <a href="#" class="store-info__logo">
-                          <img src="./img/imgs/store-logo.png" alt="" >
+                          <img src="./img/imgs/store-logo.png" alt="" itemprop="logo">
                         </a>
                         <div class="store-info__rating">
                           <div class="product-rate">
@@ -687,8 +698,8 @@
                           <span class="product-banner__price-old"
                             >35 000 ₽</span
                           >
-                          <span class="product-banner__price-new"
-                            >30 000 ₽</span
+                          <span class="product-banner__price-new" itemscope itemtype="https://schema.org/Offer"
+                            ><span itemprop="price">30 000</span> <span itemprop="priceCurrency">₽</span></span
                           >
                         </span>
 
@@ -746,7 +757,7 @@
                       </div>
                     </div>
 
-                    <div class="product-banner product-banner_store">
+                    <div class="product-banner product-banner_store" itemscope itemtype="https://schema.org/Product">
                       <div class="product-banner__preview">
                         <div
                           class="product-banner__slider slider slider-init"
@@ -755,22 +766,22 @@
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                           </div>
                         </div>
@@ -827,7 +838,7 @@
 
                       <div class="product-banner__main">
                         <h3 class="product-banner__headline">
-                          <span class="product-banner__title"
+                          <span class="product-banner__title" itemprop="name"
                             >Наушники Honor Earbuds X3 белый</span
                           >
                         </h3>
@@ -870,7 +881,7 @@
 
                       <div class="product-banner__store-info store-info">
                         <a href="#" class="store-info__logo">
-                          <img src="./img/imgs/store-logo.png" alt="" >
+                          <img src="./img/imgs/store-logo.png" alt="" itemprop="logo">
                         </a>
                         <div class="store-info__rating">
                           <div class="product-rate">
@@ -891,8 +902,8 @@
                           <span class="product-banner__price-old"
                             >35 000 ₽</span
                           >
-                          <span class="product-banner__price-new"
-                            >30 000 ₽</span
+                          <span class="product-banner__price-new" itemscope itemtype="https://schema.org/Offer"
+                            ><span itemprop="price">30 000</span> <span itemprop="priceCurrency">₽</span></span
                           >
                         </span>
 
@@ -950,7 +961,7 @@
                       </div>
                     </div>
 
-                    <div class="product-banner product-banner_store">
+                    <div class="product-banner product-banner_store" itemscope itemtype="https://schema.org/Product">
                       <div class="product-banner__preview">
                         <div
                           class="product-banner__slider slider slider-init"
@@ -959,22 +970,22 @@
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                           </div>
                         </div>
@@ -1031,7 +1042,7 @@
 
                       <div class="product-banner__main">
                         <h3 class="product-banner__headline">
-                          <span class="product-banner__title"
+                          <span class="product-banner__title" itemprop="name"
                             >Наушники Honor Earbuds X3 белый</span
                           >
                         </h3>
@@ -1074,7 +1085,7 @@
 
                       <div class="product-banner__store-info store-info">
                         <a href="#" class="store-info__logo">
-                          <img src="./img/imgs/store-logo.png" alt="" >
+                          <img src="./img/imgs/store-logo.png" alt="" itemprop="logo">
                         </a>
                         <div class="store-info__rating">
                           <div class="product-rate">
@@ -1095,8 +1106,8 @@
                           <span class="product-banner__price-old"
                             >35 000 ₽</span
                           >
-                          <span class="product-banner__price-new"
-                            >30 000 ₽</span
+                          <span class="product-banner__price-new" itemscope itemtype="https://schema.org/Offer"
+                            ><span itemprop="price">30 000</span> <span itemprop="priceCurrency">₽</span></span
                           >
                         </span>
 
@@ -1154,7 +1165,7 @@
                       </div>
                     </div>
 
-                    <div class="product-banner product-banner_store">
+                    <div class="product-banner product-banner_store" itemscope itemtype="https://schema.org/Product">
                       <div class="product-banner__preview">
                         <div
                           class="product-banner__slider slider slider-init"
@@ -1163,22 +1174,22 @@
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                           </div>
                         </div>
@@ -1235,7 +1246,7 @@
 
                       <div class="product-banner__main">
                         <h3 class="product-banner__headline">
-                          <span class="product-banner__title"
+                          <span class="product-banner__title" itemprop="name"
                             >Наушники Honor Earbuds X3 белый</span
                           >
                         </h3>
@@ -1278,7 +1289,7 @@
 
                       <div class="product-banner__store-info store-info">
                         <a href="#" class="store-info__logo">
-                          <img src="./img/imgs/store-logo.png" alt="" >
+                          <img src="./img/imgs/store-logo.png" alt="" itemprop="logo">
                         </a>
                         <div class="store-info__rating">
                           <div class="product-rate">
@@ -1299,8 +1310,8 @@
                           <span class="product-banner__price-old"
                             >35 000 ₽</span
                           >
-                          <span class="product-banner__price-new"
-                            >30 000 ₽</span
+                          <span class="product-banner__price-new" itemscope itemtype="https://schema.org/Offer"
+                            ><span itemprop="price">30 000</span> <span itemprop="priceCurrency">₽</span></span
                           >
                         </span>
 
@@ -1365,7 +1376,7 @@
                   class="product-section__marker"
                   id="CharacteristicsProduct"></div>
                 <div class="product-section__section-header">
-                  <h2 class="title title_third">
+                  <h2 class="title title_third" itemprop="headline">
                     Характеристики Наушников Honor Earbuds X3 белый
                   </h2>
                 </div>
@@ -1426,21 +1437,19 @@
                 <div class="product-reviews">
                   <div class="product-reviews__main">
                     <div class="review-list">
-                      <div class="review">
+                      <div class="review" itemscope itemtype="https://schema.org/Review">
                         <div class="review__header">
                           <div class="review__user-avatar">
-                            <img src="./img/icons/user-avatar.svg" alt="" >
+                            <img src="./img/icons/user-avatar.svg" alt="">
                           </div>
-                          <div class="review__user-info">
-                            <div class="review__user-about">
-                              <span class="review__username"
-                                >Мария Шиманович</span
-                              >
-                              <span class="review__date">25.09.2032</span>
+                          <div class="review__user-info" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <div class="review__user-about" itemscope itemtype="https://schema.org/CreativeWork">
+                              <span class="review__username" itemprop="author">Мария Шиманович</span>
+                              <span class="review__date" itemprop="datePublished">25.09.2032</span>
                             </div>
                             <div
                               class="review__rating visual-rating"
-                              data-rating="4">
+                              data-rating="4" itemscope itemtype="https://schema.org/Rating">
                               <div class="visual-rating__star">
                                 <svg
                                   width="18"
@@ -1501,14 +1510,14 @@
                                     fill="#F5E023" />
                                 </svg>
                               </div>
+
+                              <meta itemprop="ratingValue" content="4.0">
                             </div>
                           </div>
                         </div>
                         <div class="review__main">
                           <p class="review__total">
-                            <span class="review__total-title"
-                              >Достоинства:</span
-                            >
+                            <span class="review__total-title">Достоинства:</span>
                             only five centuries, but also the leap into
                             electronic typesetting
                           </p>
@@ -1517,8 +1526,7 @@
                             only five centuries, but also the leap into
                             electronic typesetting
                           </p>
-
-                          <p class="review__message">
+                          <p class="review__message" itemprop="reviewBody">
                             Lorem Ipsum is simply dummy text of the printing and
                             typesetting industry. Lorem Ipsum has been the
                             industry's standard dummy text ever since the 1500s,
@@ -1527,21 +1535,20 @@
                           </p>
                         </div>
                       </div>
-                      <div class="review">
+
+                      <div class="review" itemscope itemtype="https://schema.org/Review">
                         <div class="review__header">
                           <div class="review__user-avatar">
-                            <img src="./img/icons/user-avatar.svg" alt="" >
+                            <img src="./img/icons/user-avatar.svg" alt="">
                           </div>
-                          <div class="review__user-info">
-                            <div class="review__user-about">
-                              <span class="review__username"
-                                >Мария Шиманович</span
-                              >
-                              <span class="review__date">25.09.2032</span>
+                          <div class="review__user-info" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <div class="review__user-about" itemscope itemtype="https://schema.org/CreativeWork">
+                              <span class="review__username" itemprop="author">Мария Шиманович</span>
+                              <span class="review__date" itemprop="datePublished">25.09.2032</span>
                             </div>
                             <div
                               class="review__rating visual-rating"
-                              data-rating="4">
+                              data-rating="4" itemscope itemtype="https://schema.org/Rating">
                               <div class="visual-rating__star">
                                 <svg
                                   width="18"
@@ -1602,14 +1609,14 @@
                                     fill="#F5E023" />
                                 </svg>
                               </div>
+
+                              <meta itemprop="ratingValue" content="4.0">
                             </div>
                           </div>
                         </div>
                         <div class="review__main">
                           <p class="review__total">
-                            <span class="review__total-title"
-                              >Достоинства:</span
-                            >
+                            <span class="review__total-title">Достоинства:</span>
                             only five centuries, but also the leap into
                             electronic typesetting
                           </p>
@@ -1618,8 +1625,7 @@
                             only five centuries, but also the leap into
                             electronic typesetting
                           </p>
-
-                          <p class="review__message">
+                          <p class="review__message" itemprop="reviewBody">
                             Lorem Ipsum is simply dummy text of the printing and
                             typesetting industry. Lorem Ipsum has been the
                             industry's standard dummy text ever since the 1500s,
@@ -1665,7 +1671,7 @@
           <div class="videos__wrapper">
             <div class="videos__container">
               <div class="videos__header">
-                <h2 class="videos__title title title_second">Видеообзоры</h2>
+                <h2 class="videos__title title title_second" itemprop="headline">Видеообзоры</h2>
               </div>
             </div>
 
@@ -1804,7 +1810,7 @@
           <div class="recent__wrapper">
             <div class="recent__container">
               <div class="popular-products__header">
-                <h2 class="popular-products__title title title_second">
+                <h2 class="popular-products__title title title_second" itemprop="headline">
                   Похожие товары
                 </h2>
               </div>
@@ -1813,13 +1819,98 @@
             <div class="recent__main slider-parent">
               <div
                 class="popular-slider slider slider-init"
-                data-current-slide="0">
+                data-current-slide="0" itemprop="offers">
                 <div class="slider-wrapper">
                   <div class="slider-slide">
-                    <div class="product-card">
+                    <div class="product-card" itemscope itemtype="https://schema.org/Product">
                       <div class="product-card__top">
                         <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" >
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                        </a>
+
+                        <div class="product-status">
+                          <div
+                            class="product-status__label product-status__label_green">
+                            new
+                          </div>
+                          <div
+                            class="product-status__label product-status__label_orange">
+                            хит
+                          </div>
+                        </div>
+                        <div class="product-actions">
+                          <button class="product-actions__button fav-button active">
+                            <svg
+                              width="23"
+                              height="21"
+                              viewBox="0 0 23 21"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
+                                fill="#A5ABB7" />
+                            </svg>
+                          </button>
+                          <button
+                            class="product-actions__button comprasion-button">
+                            <svg
+                              width="20"
+                              height="21"
+                              viewBox="0 0 20 21"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g >
+                                <rect
+                                  y="4.03986"
+                                  width="5.45455"
+                                  height="16.3636"
+                                  rx="2.72727"
+                                  fill="#A5ABB7" />
+                                <rect
+                                  x="7.27271"
+                                  y="9.49438"
+                                  width="5.45455"
+                                  height="10.9091"
+                                  rx="2.72727"
+                                  fill="#A5ABB7" />
+                                <rect
+                                  x="14.5454"
+                                  y="0.403503"
+                                  width="5.45455"
+                                  height="20"
+                                  rx="2.72727"
+                                  fill="#A5ABB7" />
+                              </g>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="product-card__body">
+                        <a href="#" class="product-card__title"
+                          ><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a
+                        >
+                        <p class="product-card__label paragraph" itemprop="category">Наушники</p>
+                      </div>
+                      <div class="product-card__bottom" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span class="product-card__price">от <span itemprop="price">1 500</span><span itemprop="priceCurrency">Р</span></span>
+
+                        <div class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                          <img
+                            src="./img/icons/star-rate.svg"
+                            alt=""
+                            class="product-rate__icon" >
+                          <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                          <span class="product-rate__rating-max" itemprop="bestRating">5</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="slider-slide">
+                    <div class="product-card" itemscope itemtype="https://schema.org/Product">
+                      <div class="product-card__top">
+                        <a href="#" class="product-card__preview">
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                         </a>
 
                         <div class="product-status">
@@ -1853,7 +1944,7 @@
                               viewBox="0 0 20 21"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg">
-                              <g>
+                              <g >
                                 <rect
                                   y="4.03986"
                                   width="5.45455"
@@ -1881,31 +1972,42 @@
                       </div>
                       <div class="product-card__body">
                         <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
+                          ><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a
                         >
-                        <p class="product-card__label paragraph">Наушники</p>
+                        <p class="product-card__label paragraph" itemprop="category">Наушники</p>
                       </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
+                      <div class="product-card__bottom" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span class="product-card__price">от <span itemprop="price">1 500</span><span itemprop="priceCurrency">Р</span></span>
 
-                        <div class="product-rate">
+                        <div class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                           <img
                             src="./img/icons/star-rate.svg"
                             alt=""
                             class="product-rate__icon" >
-                          <span class="product-rate__rating">4.8</span>
+                          <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                          <span class="product-rate__rating-max" itemprop="bestRating">5</span>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div class="slider-slide">
-                    <div class="product-card">
+                    <div class="product-card" itemscope itemtype="https://schema.org/Product">
                       <div class="product-card__top">
                         <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" >
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                         </a>
 
+                        <div class="product-status">
+                          <div
+                            class="product-status__label product-status__label_green">
+                            new
+                          </div>
+                          <div
+                            class="product-status__label product-status__label_orange">
+                            хит
+                          </div>
+                        </div>
                         <div class="product-actions">
                           <button class="product-actions__button fav-button">
                             <svg
@@ -1927,7 +2029,7 @@
                               viewBox="0 0 20 21"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg">
-                              <g>
+                              <g >
                                 <rect
                                   y="4.03986"
                                   width="5.45455"
@@ -1955,31 +2057,42 @@
                       </div>
                       <div class="product-card__body">
                         <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
+                          ><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a
                         >
-                        <p class="product-card__label paragraph">Наушники</p>
+                        <p class="product-card__label paragraph" itemprop="category">Наушники</p>
                       </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
+                      <div class="product-card__bottom" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span class="product-card__price">от <span itemprop="price">1 500</span><span itemprop="priceCurrency">Р</span></span>
 
-                        <div class="product-rate">
+                        <div class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                           <img
                             src="./img/icons/star-rate.svg"
                             alt=""
                             class="product-rate__icon" >
-                          <span class="product-rate__rating">4.8</span>
+                          <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                          <span class="product-rate__rating-max" itemprop="bestRating">5</span>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div class="slider-slide">
-                    <div class="product-card">
+                    <div class="product-card" itemscope itemtype="https://schema.org/Product">
                       <div class="product-card__top">
                         <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" >
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                         </a>
 
+                        <div class="product-status">
+                          <div
+                            class="product-status__label product-status__label_green">
+                            new
+                          </div>
+                          <div
+                            class="product-status__label product-status__label_orange">
+                            хит
+                          </div>
+                        </div>
                         <div class="product-actions">
                           <button class="product-actions__button fav-button">
                             <svg
@@ -2001,7 +2114,7 @@
                               viewBox="0 0 20 21"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg">
-                              <g>
+                              <g >
                                 <rect
                                   y="4.03986"
                                   width="5.45455"
@@ -2029,31 +2142,42 @@
                       </div>
                       <div class="product-card__body">
                         <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
+                          ><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a
                         >
-                        <p class="product-card__label paragraph">Наушники</p>
+                        <p class="product-card__label paragraph" itemprop="category">Наушники</p>
                       </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
+                      <div class="product-card__bottom" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span class="product-card__price">от <span itemprop="price">1 500</span><span itemprop="priceCurrency">Р</span></span>
 
-                        <div class="product-rate">
+                        <div class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                           <img
                             src="./img/icons/star-rate.svg"
                             alt=""
                             class="product-rate__icon" >
-                          <span class="product-rate__rating">4.8</span>
+                          <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                          <span class="product-rate__rating-max" itemprop="bestRating">5</span>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div class="slider-slide">
-                    <div class="product-card">
+                    <div class="product-card" itemscope itemtype="https://schema.org/Product">
                       <div class="product-card__top">
                         <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" >
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                         </a>
 
+                        <div class="product-status">
+                          <div
+                            class="product-status__label product-status__label_green">
+                            new
+                          </div>
+                          <div
+                            class="product-status__label product-status__label_orange">
+                            хит
+                          </div>
+                        </div>
                         <div class="product-actions">
                           <button class="product-actions__button fav-button">
                             <svg
@@ -2075,7 +2199,7 @@
                               viewBox="0 0 20 21"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg">
-                              <g>
+                              <g >
                                 <rect
                                   y="4.03986"
                                   width="5.45455"
@@ -2103,31 +2227,42 @@
                       </div>
                       <div class="product-card__body">
                         <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
+                          ><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a
                         >
-                        <p class="product-card__label paragraph">Наушники</p>
+                        <p class="product-card__label paragraph" itemprop="category">Наушники</p>
                       </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
+                      <div class="product-card__bottom" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span class="product-card__price">от <span itemprop="price">1 500</span><span itemprop="priceCurrency">Р</span></span>
 
-                        <div class="product-rate">
+                        <div class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                           <img
                             src="./img/icons/star-rate.svg"
                             alt=""
                             class="product-rate__icon" >
-                          <span class="product-rate__rating">4.8</span>
+                          <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                          <span class="product-rate__rating-max" itemprop="bestRating">5</span>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div class="slider-slide">
-                    <div class="product-card">
+                    <div class="product-card" itemscope itemtype="https://schema.org/Product">
                       <div class="product-card__top">
                         <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" >
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                         </a>
 
+                        <div class="product-status">
+                          <div
+                            class="product-status__label product-status__label_green">
+                            new
+                          </div>
+                          <div
+                            class="product-status__label product-status__label_orange">
+                            хит
+                          </div>
+                        </div>
                         <div class="product-actions">
                           <button class="product-actions__button fav-button">
                             <svg
@@ -2149,7 +2284,7 @@
                               viewBox="0 0 20 21"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg">
-                              <g>
+                              <g >
                                 <rect
                                   y="4.03986"
                                   width="5.45455"
@@ -2177,31 +2312,42 @@
                       </div>
                       <div class="product-card__body">
                         <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
+                          ><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a
                         >
-                        <p class="product-card__label paragraph">Наушники</p>
+                        <p class="product-card__label paragraph" itemprop="category">Наушники</p>
                       </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
+                      <div class="product-card__bottom" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span class="product-card__price">от <span itemprop="price">1 500</span><span itemprop="priceCurrency">Р</span></span>
 
-                        <div class="product-rate">
+                        <div class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                           <img
                             src="./img/icons/star-rate.svg"
                             alt=""
                             class="product-rate__icon" >
-                          <span class="product-rate__rating">4.8</span>
+                          <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                          <span class="product-rate__rating-max" itemprop="bestRating">5</span>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div class="slider-slide">
-                    <div class="product-card">
+                    <div class="product-card" itemscope itemtype="https://schema.org/Product">
                       <div class="product-card__top">
                         <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" >
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                         </a>
 
+                        <div class="product-status">
+                          <div
+                            class="product-status__label product-status__label_green">
+                            new
+                          </div>
+                          <div
+                            class="product-status__label product-status__label_orange">
+                            хит
+                          </div>
+                        </div>
                         <div class="product-actions">
                           <button class="product-actions__button fav-button">
                             <svg
@@ -2223,7 +2369,7 @@
                               viewBox="0 0 20 21"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg">
-                              <g>
+                              <g >
                                 <rect
                                   y="4.03986"
                                   width="5.45455"
@@ -2251,31 +2397,42 @@
                       </div>
                       <div class="product-card__body">
                         <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
+                          ><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a
                         >
-                        <p class="product-card__label paragraph">Наушники</p>
+                        <p class="product-card__label paragraph" itemprop="category">Наушники</p>
                       </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
+                      <div class="product-card__bottom" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span class="product-card__price">от <span itemprop="price">1 500</span><span itemprop="priceCurrency">Р</span></span>
 
-                        <div class="product-rate">
+                        <div class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                           <img
                             src="./img/icons/star-rate.svg"
                             alt=""
                             class="product-rate__icon" >
-                          <span class="product-rate__rating">4.8</span>
+                          <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                          <span class="product-rate__rating-max" itemprop="bestRating">5</span>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div class="slider-slide">
-                    <div class="product-card">
+                    <div class="product-card" itemscope itemtype="https://schema.org/Product">
                       <div class="product-card__top">
                         <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" >
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                         </a>
 
+                        <div class="product-status">
+                          <div
+                            class="product-status__label product-status__label_green">
+                            new
+                          </div>
+                          <div
+                            class="product-status__label product-status__label_orange">
+                            хит
+                          </div>
+                        </div>
                         <div class="product-actions">
                           <button class="product-actions__button fav-button">
                             <svg
@@ -2297,7 +2454,7 @@
                               viewBox="0 0 20 21"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg">
-                              <g>
+                              <g >
                                 <rect
                                   y="4.03986"
                                   width="5.45455"
@@ -2325,93 +2482,20 @@
                       </div>
                       <div class="product-card__body">
                         <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
+                          ><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a
                         >
-                        <p class="product-card__label paragraph">Наушники</p>
+                        <p class="product-card__label paragraph" itemprop="category">Наушники</p>
                       </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
+                      <div class="product-card__bottom" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span class="product-card__price">от <span itemprop="price">1 500</span><span itemprop="priceCurrency">Р</span></span>
 
-                        <div class="product-rate">
+                        <div class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                           <img
                             src="./img/icons/star-rate.svg"
                             alt=""
                             class="product-rate__icon" >
-                          <span class="product-rate__rating">4.8</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="slider-slide">
-                    <div class="product-card">
-                      <div class="product-card__top">
-                        <a href="#" class="product-card__preview">
-                          <img src="./img/imgs/prod-preview.png" alt="" >
-                        </a>
-
-                        <div class="product-actions">
-                          <button class="product-actions__button fav-button">
-                            <svg
-                              width="23"
-                              height="21"
-                              viewBox="0 0 23 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
-                                fill="#A5ABB7" />
-                            </svg>
-                          </button>
-                          <button
-                            class="product-actions__button comprasion-button">
-                            <svg
-                              width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <g>
-                                <rect
-                                  y="4.03986"
-                                  width="5.45455"
-                                  height="16.3636"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="7.27271"
-                                  y="9.49438"
-                                  width="5.45455"
-                                  height="10.9091"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="14.5454"
-                                  y="0.403503"
-                                  width="5.45455"
-                                  height="20"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                              </g>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="product-card__body">
-                        <a href="#" class="product-card__title"
-                          >Наушники Honor Earbuds X3 белый</a
-                        >
-                        <p class="product-card__label paragraph">Наушники</p>
-                      </div>
-                      <div class="product-card__bottom">
-                        <span class="product-card__price">от 1 500 Р</span>
-
-                        <div class="product-rate">
-                          <img
-                            src="./img/icons/star-rate.svg"
-                            alt=""
-                            class="product-rate__icon" >
-                          <span class="product-rate__rating">4.8</span>
+                          <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                          <span class="product-rate__rating-max" itemprop="bestRating">5</span>
                         </div>
                       </div>
                     </div>
@@ -2450,24 +2534,22 @@
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__wrapper">
-            <a href="index.html" class="logo"
-              ><img src="./img/logo.svg" alt="logo"
-            ></a>
+            <a href="index.html" class="logo"><img src="./img/logo.svg" alt="logo" ></a>
 
-            <div class="footer-nav">
+            <div class="footer-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
               <ul class="footer-nav__list">
                 <li class="footer-nav__el">
-                  <a href="about.html" class="footer-nav__link">О компании </a>
+                  <a href="about.html" class="footer-nav__link"><span itemprop="name">О компании</span></a>
                 </li>
                 <li class="footer-nav__el">
-                  <a href="about.html" class="footer-nav__link">Контакты</a>
+                  <a href="about.html" class="footer-nav__link"><span itemprop="name">Контакты</span></a>
                 </li>
                 <li class="footer-nav__el">
-                  <a href="about.html" class="footer-nav__link">Блог</a>
+                  <a href="about.html" class="footer-nav__link"><span itemprop="name">Блог</span></a>
                 </li>
                 <li class="footer-nav__el">
                   <a href="about.html" class="footer-nav__link"
-                    >Правовая информация</a
+                    ><span itemprop="name">Правовая информация</span></a
                   >
                 </li>
               </ul>

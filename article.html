@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" itemscope itemtype="http://schema.org/WebSite">
   <head>
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
@@ -24,12 +24,12 @@
                 <span class="button__text">Каталог</span>
               </button>
 
-              <div class="location">
+              <div class="location" itemscope itemtype="http://schema.org/PostalAddress">
                 <div class="location__icon">
                   <img src="./img/icons/location-icon.svg" alt="location" >
                 </div>
                 <span class="location__text">Ваш город: </span>
-                <span class="location__lacate open-popup-location">Минск</span>
+                <span class="location__lacate open-popup-location" itemprop="addressLocality">Минск</span>
 
                 <div class="location-question popup">
                   <div class="location-question__wrapper">
@@ -113,18 +113,25 @@
         </div>
       </header>
       <main class="main">
-        <div class="main__breadcrumbs breadcrumbs">
+        <div class="main__breadcrumbs breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
           <div class="breadcrumbs__container">
             <div class="breadcrumbs__wrapper">
-              <span class="breadcrumbs__crumb">
-                <a href="index.html">Главная</a>
+              <span class="breadcrumbs__crumb" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="index.html" itemprop="item" itemscope itemtype="https://schema.org/WebPage">
+                  <span itemprop="name">Главная</span>
+                </a>
+                <meta itemprop="position" content="1" >
               </span>
-              <span class="breadcrumbs__crumb">
-                <a href="category.html">Категория</a>
+              <span class="breadcrumbs__crumb" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="category.html" itemprop="item" itemscope itemtype="https://schema.org/WebPage">
+                  <span itemprop="name">Категория</span>
+                </a>
+                <meta itemprop="position" content="2" >
               </span>
-              <span class="breadcrumbs__crumb breadcrumbs__crumb_current"
-                >Подкатегория с товарами</span
-              >
+              <span class="breadcrumbs__crumb breadcrumbs__crumb_current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">Подкатегория с товарами</span>
+                <meta itemprop="position" content="3" >
+              </span>
             </div>
           </div>
         </div>
@@ -148,21 +155,21 @@
                   <h2 class="article-blog-aside__title title title_second">Популярные товары</h2>
 
                   <div class="article-blog-aside__product-list">
-                    <div class="product-banner product-banner_small">
+                    <div class="product-banner product-banner_small" itemscope itemtype="https://schema.org/Product">
                       <div class="product-banner__preview">
                         <div class="product-banner__slider slider slider-init" data-current-slide="0">
                           <div class="slider-wrapper">
                             <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                           </div>
                         </div>
@@ -218,19 +225,20 @@
                       </div>
                       <div class="product-banner__main">
                         <h3 class="product-banner__headline">
-                          <a href="#" class="product-banner__title">Наушники Honor Earbuds X3 белый</a>
-                          <span class="product-rate">
+                          <a href="#" class="product-banner__title"><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a>
+                          <span class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                             <img
                               src="./img/icons/star-rate.svg"
                               alt=""
                               class="product-rate__icon" >
-                            <span class="product-rate__rating">4.8</span>
+                            <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                            <span class="product-rate__rating-max" itemprop="bestRating">5</span>
                           </span>
                         </h3>
 
                         <div class="product-banner__info">
-                          <span class="product-banner__price">
-                            от 30 000 ₽
+                          <span class="product-banner__price" itemscope itemtype="https://schema.org/Offer">
+                            от <span itemprop="price">30 000</span> <span itemprop="priceCurrency">₽</span>
                           </span>
 
                           <div class="product-actions">
@@ -283,21 +291,21 @@
                       </div>
                     </div>
 
-                    <div class="product-banner product-banner_small">
+                    <div class="product-banner product-banner_small" itemscope itemtype="https://schema.org/Product">
                       <div class="product-banner__preview">
                         <div class="product-banner__slider slider slider-init" data-current-slide="0">
                           <div class="slider-wrapper">
                             <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                           </div>
                         </div>
@@ -349,24 +357,24 @@
                               </g>
                             </svg>
                           </button>
-                        </div>
+                        </div>                      
                       </div>
-
                       <div class="product-banner__main">
                         <h3 class="product-banner__headline">
-                          <a href="#" class="product-banner__title">Наушники Honor Earbuds X3 белый</a>
-                          <span class="product-rate">
+                          <a href="#" class="product-banner__title"><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a>
+                          <span class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                             <img
                               src="./img/icons/star-rate.svg"
                               alt=""
                               class="product-rate__icon" >
-                            <span class="product-rate__rating">4.8</span>
+                            <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                            <span class="product-rate__rating-max" itemprop="bestRating">5</span>
                           </span>
                         </h3>
 
                         <div class="product-banner__info">
-                          <span class="product-banner__price">
-                            от 30 000 ₽
+                          <span class="product-banner__price" itemscope itemtype="https://schema.org/Offer">
+                            от <span itemprop="price">30 000</span> <span itemprop="priceCurrency">₽</span>
                           </span>
 
                           <div class="product-actions">
@@ -419,21 +427,21 @@
                       </div>
                     </div>
 
-                    <div class="product-banner product-banner_small">
+                    <div class="product-banner product-banner_small" itemscope itemtype="https://schema.org/Product">
                       <div class="product-banner__preview">
                         <div class="product-banner__slider slider slider-init" data-current-slide="0">
                           <div class="slider-wrapper">
                             <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                           </div>
                         </div>
@@ -485,24 +493,24 @@
                               </g>
                             </svg>
                           </button>
-                        </div>
+                        </div>                      
                       </div>
-
                       <div class="product-banner__main">
                         <h3 class="product-banner__headline">
-                          <a href="#" class="product-banner__title">Наушники Honor Earbuds X3 белый</a>
-                          <span class="product-rate">
+                          <a href="#" class="product-banner__title"><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a>
+                          <span class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                             <img
                               src="./img/icons/star-rate.svg"
                               alt=""
                               class="product-rate__icon" >
-                            <span class="product-rate__rating">4.8</span>
+                            <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                            <span class="product-rate__rating-max" itemprop="bestRating">5</span>
                           </span>
                         </h3>
 
                         <div class="product-banner__info">
-                          <span class="product-banner__price">
-                            от 30 000 ₽
+                          <span class="product-banner__price" itemscope itemtype="https://schema.org/Offer">
+                            от <span itemprop="price">30 000</span> <span itemprop="priceCurrency">₽</span>
                           </span>
 
                           <div class="product-actions">
@@ -555,21 +563,21 @@
                       </div>
                     </div>
 
-                    <div class="product-banner product-banner_small">
+                    <div class="product-banner product-banner_small" itemscope itemtype="https://schema.org/Product">
                       <div class="product-banner__preview">
                         <div class="product-banner__slider slider slider-init" data-current-slide="0">
                           <div class="slider-wrapper">
                             <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                           </div>
                         </div>
@@ -621,24 +629,24 @@
                               </g>
                             </svg>
                           </button>
-                        </div>
+                        </div>                      
                       </div>
-
                       <div class="product-banner__main">
                         <h3 class="product-banner__headline">
-                          <a href="#" class="product-banner__title">Наушники Honor Earbuds X3 белый</a>
-                          <span class="product-rate">
+                          <a href="#" class="product-banner__title"><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a>
+                          <span class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                             <img
                               src="./img/icons/star-rate.svg"
                               alt=""
                               class="product-rate__icon" >
-                            <span class="product-rate__rating">4.8</span>
+                            <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                            <span class="product-rate__rating-max" itemprop="bestRating">5</span>
                           </span>
                         </h3>
 
                         <div class="product-banner__info">
-                          <span class="product-banner__price">
-                            от 30 000 ₽
+                          <span class="product-banner__price" itemscope itemtype="https://schema.org/Offer">
+                            от <span itemprop="price">30 000</span> <span itemprop="priceCurrency">₽</span>
                           </span>
 
                           <div class="product-actions">
@@ -700,26 +708,26 @@
                   <div class="article-blog__preview">
                     <img src="./img/imgs/blog-preview.png" alt="">
                   </div>
-                  <h1 class="article-blog__title title title_first">
+                  <h1 class="article-blog__title title title_first" itemprop="headline">
                     Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
                     впечатления
                   </h1>
                 </div>
 
-                <div class="article-blog__article">
+                <div class="article-blog__article" itemscope itemtype="https://schema.org/Article">
                   <div class="article-blog__article-marker"></div>
 
-                  <h2 class="article-blog__title title title_second">Игровой ультрабук-трансформер</h2>
-                  <p class="article-blog__paragraph paragraph">
+                  <h2 class="article-blog__title title title_second" itemprop="headline">Игровой ультрабук-трансформер</h2>
+                  <p class="article-blog__paragraph paragraph" itemprop="text">
                     Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например,
                   </p>
                 </div>
 
-                <div class="article-blog__article">
+                <div class="article-blog__article" itemscope itemtype="https://schema.org/Article">
                   <div class="article-blog__article-marker"></div>
 
-                  <h2 class="article-blog__title title title_second">Игровой ультрабук-трансформер</h2>
-                  <p class="article-blog__paragraph paragraph">
+                  <h2 class="article-blog__title title title_second" itemprop="headline">Игровой ультрабук-трансформер</h2>
+                  <p class="article-blog__paragraph paragraph" itemprop="text">
                     Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например,
                   </p>
                   <div class="article-blog__preview">
@@ -727,30 +735,30 @@
                   </div>
                 </div>
 
-                <div class="article-blog__article">
+                <div class="article-blog__article" itemscope itemtype="https://schema.org/Article">
                   <div class="article-blog__article-marker"></div>
 
-                  <h2 class="article-blog__title title title_third">Игровой ультрабук-трансформер</h2>
-                  <p class="article-blog__paragraph paragraph">
+                  <h2 class="article-blog__title title title_third" itemprop="headline">Игровой ультрабук-трансформер</h2>
+                  <p class="article-blog__paragraph paragraph" itemprop="text">
                     Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например,
                   </p>
                 </div>
 
-                <div class="product-banner">
+                <div class="product-banner" itemscope itemtype="https://schema.org/Product">
                   <div class="product-banner__preview">
                     <div class="product-banner__slider slider slider-init" data-current-slide="0">
                       <div class="slider-wrapper">
                         <a href="#" class="slider-slide product-banner__preview-img">
-                          <img src="./img/imgs/prod-preview.png" alt="">
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                         </a>
                         <a href="#" class="slider-slide product-banner__preview-img">
-                          <img src="./img/imgs/prod-preview.png" alt="">
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                         </a>
                         <a href="#" class="slider-slide product-banner__preview-img">
-                          <img src="./img/imgs/prod-preview.png" alt="">
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                         </a>
                         <a href="#" class="slider-slide product-banner__preview-img">
-                          <img src="./img/imgs/prod-preview.png" alt="">
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                         </a>
                       </div>
                     </div>
@@ -807,13 +815,14 @@
 
                   <div class="product-banner__main">
                     <h3 class="product-banner__headline">
-                      <a href="#" class="product-banner__title">Наушники Honor Earbuds X3 белый</a>
-                      <span class="product-rate">
+                      <a href="#" class="product-banner__title"><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a>
+                      <span class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                         <img
                           src="./img/icons/star-rate.svg"
                           alt=""
                           class="product-rate__icon" >
-                        <span class="product-rate__rating">4.8</span>
+                        <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                        <span class="product-rate__rating-max" itemprop="bestRating">5</span>
                       </span>
                     </h3>
 
@@ -831,8 +840,8 @@
                   </div>
 
                   <div class="product-banner__info">
-                    <span class="product-banner__price">
-                      от 30 000 ₽
+                    <span class="product-banner__price" itemscope itemtype="https://schema.org/Offer">
+                      от <span itemprop="price">30 000</span> <span itemprop="priceCurrency">₽</span>
                     </span>
 
                     <div class="product-banner__info-actions">
@@ -887,11 +896,11 @@
                   </div>
                 </div>
 
-                <div class="article-blog__article">
+                <div class="article-blog__article" itemscope itemtype="https://schema.org/Article">
                   <div class="article-blog__article-marker"></div>
 
-                  <h2 class="article-blog__title title title_second">Заголовок 2</h2>
-                  <p class="article-blog__paragraph paragraph">
+                  <h2 class="article-blog__title title title_second" itemprop="headline">Заголовок 2</h2>
+                  <p class="article-blog__paragraph paragraph" itemprop="text">
                     Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например,
                   </p>
                 </div>
@@ -903,49 +912,52 @@
         <section class="main__blog blog">
           <div class="blog__wrapper">
             <div class="blog__container">
-              <h2 class="blog__title title title_second main__title">Блог</h2>
+              <h2 class="blog__title title title_second main__title" itemprop="headline">Блог</h2>
             </div>
             <div class="blog__main">
               <div class="blog-list slider">
                 <div class="slider-wrapper">
-                  <div class="slider-slide blog-card">
+                  <div class="slider-slide blog-card" itemscope itemtype="http://schema.org/BlogPosting">
                     <a href="#" class="blog-card__preview">
-                      <img src="./img/imgs/blog-preview.png" alt="blog" >
+                      <img src="./img/imgs/blog-preview.png" alt="blog" itemprop="image" >
                     </a>
                     <a href="#" class="blog-card__title"
-                      >Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
-                      впечатления</a
+                      ><span itemprop="headline">Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                      впечатления</span></a
                     >
-                    <p class="blog-card__paragraph paragraph">
+                    <p class="blog-card__paragraph paragraph" itemprop="description">
                       ASUS бодро начала год и представила на CES 2021 кучу новых
                       устройств, в том...
                     </p>
+                    <meta itemprop="url" content="#">
                   </div>
-                  <div class="slider-slide blog-card">
+                  <div class="slider-slide blog-card" itemscope itemtype="http://schema.org/BlogPosting">
                     <a href="#" class="blog-card__preview">
-                      <img src="./img/imgs/blog-preview.png" alt="blog" >
+                      <img src="./img/imgs/blog-preview.png" alt="blog" itemprop="image" >
                     </a>
                     <a href="#" class="blog-card__title"
-                      >Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
-                      впечатления</a
+                      ><span itemprop="headline">Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                      впечатления</span></a
                     >
-                    <p class="blog-card__paragraph paragraph">
+                    <p class="blog-card__paragraph paragraph" itemprop="description">
                       ASUS бодро начала год и представила на CES 2021 кучу новых
                       устройств, в том...
                     </p>
+                    <meta itemprop="url" content="#">
                   </div>
-                  <div class="slider-slide blog-card">
+                  <div class="slider-slide blog-card" itemscope itemtype="http://schema.org/BlogPosting">
                     <a href="#" class="blog-card__preview">
-                      <img src="./img/imgs/blog-preview.png" alt="blog" >
+                      <img src="./img/imgs/blog-preview.png" alt="blog" itemprop="image" >
                     </a>
                     <a href="#" class="blog-card__title"
-                      >Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
-                      впечатления</a
+                      ><span itemprop="headline">Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                      впечатления</span></a
                     >
-                    <p class="blog-card__paragraph paragraph">
+                    <p class="blog-card__paragraph paragraph" itemprop="description">
                       ASUS бодро начала год и представила на CES 2021 кучу новых
                       устройств, в том...
                     </p>
+                    <meta itemprop="url" content="#">
                   </div>
                 </div>
               </div>
@@ -957,24 +969,22 @@
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__wrapper">
-            <a href="index.html" class="logo"
-              ><img src="./img/logo.svg" alt="logo"
-            ></a>
+            <a href="index.html" class="logo"><img src="./img/logo.svg" alt="logo" ></a>
 
-            <div class="footer-nav">
+            <div class="footer-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
               <ul class="footer-nav__list">
                 <li class="footer-nav__el">
-                  <a href="about.html" class="footer-nav__link">О компании </a>
+                  <a href="about.html" class="footer-nav__link"><span itemprop="name">О компании</span></a>
                 </li>
                 <li class="footer-nav__el">
-                  <a href="about.html" class="footer-nav__link">Контакты</a>
+                  <a href="about.html" class="footer-nav__link"><span itemprop="name">Контакты</span></a>
                 </li>
                 <li class="footer-nav__el">
-                  <a href="about.html" class="footer-nav__link">Блог</a>
+                  <a href="about.html" class="footer-nav__link"><span itemprop="name">Блог</span></a>
                 </li>
                 <li class="footer-nav__el">
                   <a href="about.html" class="footer-nav__link"
-                    >Правовая информация</a
+                    ><span itemprop="name">Правовая информация</span></a
                   >
                 </li>
               </ul>

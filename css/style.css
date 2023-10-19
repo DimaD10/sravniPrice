@@ -3680,6 +3680,9 @@ input[type=number]::-webkit-inner-spin-button {
     font-size: calc(12px + 2 * (100vw - 320px) / 880);
   }
 }
+.product-rate__rating-max {
+  display: none;
+}
 
 .product-actions {
   display: -webkit-box;

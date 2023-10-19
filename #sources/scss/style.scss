@@ -1716,6 +1716,10 @@
     }
     font-weight: 500;
     line-height: 150%;
+
+    &-max {
+      display: none;
+    }
   }
 }
 .product-actions {

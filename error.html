@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" itemscope itemtype="http://schema.org/WebSite">
   <head>
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
@@ -24,12 +24,12 @@
                 <span class="button__text">Каталог</span>
               </button>
 
-              <div class="location">
+              <div class="location" itemscope itemtype="http://schema.org/PostalAddress">
                 <div class="location__icon">
                   <img src="./img/icons/location-icon.svg" alt="location" >
                 </div>
                 <span class="location__text">Ваш город: </span>
-                <span class="location__lacate open-popup-location">Минск</span>
+                <span class="location__lacate open-popup-location" itemprop="addressLocality">Минск</span>
 
                 <div class="location-question popup">
                   <div class="location-question__wrapper">
@@ -138,20 +138,20 @@
           <div class="footer__wrapper">
             <a href="index.html" class="logo"><img src="./img/logo.svg" alt="logo" ></a>
 
-            <div class="footer-nav">
+            <div class="footer-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
               <ul class="footer-nav__list">
                 <li class="footer-nav__el">
-                  <a href="about.html" class="footer-nav__link">О компании </a>
+                  <a href="about.html" class="footer-nav__link"><span itemprop="name">О компании</span></a>
                 </li>
                 <li class="footer-nav__el">
-                  <a href="about.html" class="footer-nav__link">Контакты</a>
+                  <a href="about.html" class="footer-nav__link"><span itemprop="name">Контакты</span></a>
                 </li>
                 <li class="footer-nav__el">
-                  <a href="about.html" class="footer-nav__link">Блог</a>
+                  <a href="about.html" class="footer-nav__link"><span itemprop="name">Блог</span></a>
                 </li>
                 <li class="footer-nav__el">
                   <a href="about.html" class="footer-nav__link"
-                    >Правовая информация</a
+                    ><span itemprop="name">Правовая информация</span></a
                   >
                 </li>
               </ul>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" itemscope itemtype="http://schema.org/WebSite">
   <head>
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
@@ -24,12 +24,12 @@
                 <span class="button__text">Каталог</span>
               </button>
 
-              <div class="location">
+              <div class="location" itemscope itemtype="http://schema.org/PostalAddress">
                 <div class="location__icon">
                   <img src="./img/icons/location-icon.svg" alt="location" >
                 </div>
                 <span class="location__text">Ваш город: </span>
-                <span class="location__lacate open-popup-location">Минск</span>
+                <span class="location__lacate open-popup-location" itemprop="addressLocality">Минск</span>
 
                 <div class="location-question popup">
                   <div class="location-question__wrapper">
@@ -113,219 +113,233 @@
         </div>
       </header>
       <main class="main">
-        <div class="main__breadcrumbs breadcrumbs">
+        <div class="main__breadcrumbs breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
           <div class="breadcrumbs__container">
             <div class="breadcrumbs__wrapper">
-              <span class="breadcrumbs__crumb">
-                <a href="index.html">Главная</a>
+              <span class="breadcrumbs__crumb" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="index.html" itemprop="item" itemscope itemtype="https://schema.org/WebPage">
+                  <span itemprop="name">Главная</span>
+                </a>
+                <meta itemprop="position" content="1" >
               </span>
-              <span class="breadcrumbs__crumb">
-                <a href="category.html">Категория</a>
+              <span class="breadcrumbs__crumb" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="category.html" itemprop="item" itemscope itemtype="https://schema.org/WebPage">
+                  <span itemprop="name">Категория</span>
+                </a>
+                <meta itemprop="position" content="2" >
               </span>
-              <span class="breadcrumbs__crumb breadcrumbs__crumb_current"
-                >Подкатегория с товарами</span
-              >
+              <span class="breadcrumbs__crumb breadcrumbs__crumb_current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">Подкатегория с товарами</span>
+                <meta itemprop="position" content="3" >
+              </span>
             </div>
           </div>
         </div>
         <section class="main__blog-main blog-main">
-            <div class="blog-main__wrapper">
-                <div class="blog-main__container">
-                    <h1 class="blog-main__title title title_first">Блог</h1>
-                </div>
+          <div class="blog-main__wrapper">
+            <div class="blog-main__container">
+                <h1 class="blog-main__title title title_first" itemprop="headline">Блог</h1>
+            </div>
 
-                <div class="blog-categories">
-                    <div class="blog-categories__slider slider slider-init">
-                        <div class="slider-wrapper">
-                            <div class="slider-slide">
-                                <a href="#" class="blog-category">Гейминг</a>
-                            </div>
-                            <div class="slider-slide">
-                                <a href="#" class="blog-category">Комплектующие</a>
-                            </div>
-                            <div class="slider-slide">
-                                <a href="#" class="blog-category">Гейминг</a>
-                            </div>
-                            <div class="slider-slide">
-                                <a href="#" class="blog-category">Комплектующие</a>
-                            </div>
-                            <div class="slider-slide">
-                                <a href="#" class="blog-category">Гейминг</a>
-                            </div>
-                            <div class="slider-slide">
-                                <a href="#" class="blog-category">Комплектующие</a>
-                            </div>
-                            <div class="slider-slide">
-                                <a href="#" class="blog-category">Гейминг</a>
-                            </div>
+            <div class="blog-categories">
+                <div class="blog-categories__slider slider slider-init">
+                    <div class="slider-wrapper">
+                        <div class="slider-slide">
+                            <a href="#" class="blog-category">Гейминг</a>
+                        </div>
+                        <div class="slider-slide">
+                            <a href="#" class="blog-category">Комплектующие</a>
+                        </div>
+                        <div class="slider-slide">
+                            <a href="#" class="blog-category">Гейминг</a>
+                        </div>
+                        <div class="slider-slide">
+                            <a href="#" class="blog-category">Комплектующие</a>
+                        </div>
+                        <div class="slider-slide">
+                            <a href="#" class="blog-category">Гейминг</a>
+                        </div>
+                        <div class="slider-slide">
+                            <a href="#" class="blog-category">Комплектующие</a>
+                        </div>
+                        <div class="slider-slide">
+                            <a href="#" class="blog-category">Гейминг</a>
                         </div>
                     </div>
-                    <button class="blog-categories__button">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+                </div>
+                <button class="blog-categories__button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="blog-main__container">
+              <div class="blog-main__list">
+                <div class="blog-card" itemscope itemtype="http://schema.org/BlogPosting">
+                  <a href="#" class="blog-card__preview">
+                    <img src="./img/imgs/blog-preview.png" alt="blog" itemprop="image" >
+                  </a>
+                  <a href="#" class="blog-card__title"
+                    ><span itemprop="headline">Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                    впечатления</span></a
+                  >
+                  <p class="blog-card__paragraph paragraph" itemprop="description">
+                    ASUS бодро начала год и представила на CES 2021 кучу новых
+                    устройств, в том...
+                  </p>
+                  <meta itemprop="url" content="#">
+                </div>
+                <div class="blog-card" itemscope itemtype="http://schema.org/BlogPosting">
+                  <a href="#" class="blog-card__preview">
+                    <img src="./img/imgs/blog-preview.png" alt="blog" itemprop="image" >
+                  </a>
+                  <a href="#" class="blog-card__title"
+                    ><span itemprop="headline">Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                    впечатления</span></a
+                  >
+                  <p class="blog-card__paragraph paragraph" itemprop="description">
+                    ASUS бодро начала год и представила на CES 2021 кучу новых
+                    устройств, в том...
+                  </p>
+                  <meta itemprop="url" content="#">
+                </div>
+                <div class="blog-card" itemscope itemtype="http://schema.org/BlogPosting">
+                  <a href="#" class="blog-card__preview">
+                    <img src="./img/imgs/blog-preview.png" alt="blog" itemprop="image" >
+                  </a>
+                  <a href="#" class="blog-card__title"
+                    ><span itemprop="headline">Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                    впечатления</span></a
+                  >
+                  <p class="blog-card__paragraph paragraph" itemprop="description">
+                    ASUS бодро начала год и представила на CES 2021 кучу новых
+                    устройств, в том...
+                  </p>
+                  <meta itemprop="url" content="#">
                 </div>
 
-                <div class="blog-main__container">
-                    <div class="blog-main__list">
-                    <div class="blog-card">
-                        <a href="#" class="blog-card__preview">
-                        <img src="./img/imgs/blog-preview.png" alt="blog" >
-                        </a>
-                        <a href="#" class="blog-card__title"
-                        >Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
-                        впечатления</a
-                        >
-                        <p class="blog-card__paragraph paragraph">
-                        ASUS бодро начала год и представила на CES 2021 кучу новых
-                        устройств, в том...
-                        </p>
-                    </div>
-                    <div class="blog-card">
-                        <a href="#" class="blog-card__preview">
-                        <img src="./img/imgs/blog-preview.png" alt="blog" >
-                        </a>
-                        <a href="#" class="blog-card__title"
-                        >Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
-                        впечатления</a
-                        >
-                        <p class="blog-card__paragraph paragraph">
-                        ASUS бодро начала год и представила на CES 2021 кучу новых
-                        устройств, в том...
-                        </p>
-                    </div>
-                    <div class="blog-card">
-                        <a href="#" class="blog-card__preview">
-                        <img src="./img/imgs/blog-preview.png" alt="blog" >
-                        </a>
-                        <a href="#" class="blog-card__title"
-                        >Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
-                        впечатления</a
-                        >
-                        <p class="blog-card__paragraph paragraph">
-                        ASUS бодро начала год и представила на CES 2021 кучу новых
-                        устройств, в том...
-                        </p>
-                    </div>
-
-                    <div class="blog-card">
-                        <a href="#" class="blog-card__preview">
-                        <img src="./img/imgs/blog-preview.png" alt="blog" >
-                        </a>
-                        <a href="#" class="blog-card__title"
-                        >Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
-                        впечатления</a
-                        >
-                        <p class="blog-card__paragraph paragraph">
-                        ASUS бодро начала год и представила на CES 2021 кучу новых
-                        устройств, в том...
-                        </p>
-                    </div>
-                    <div class="blog-card">
-                        <a href="#" class="blog-card__preview">
-                        <img src="./img/imgs/blog-preview.png" alt="blog" >
-                        </a>
-                        <a href="#" class="blog-card__title"
-                        >Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
-                        впечатления</a
-                        >
-                        <p class="blog-card__paragraph paragraph">
-                        ASUS бодро начала год и представила на CES 2021 кучу новых
-                        устройств, в том...
-                        </p>
-                    </div>
-                    <div class="blog-card">
-                        <a href="#" class="blog-card__preview">
-                        <img src="./img/imgs/blog-preview.png" alt="blog" >
-                        </a>
-                        <a href="#" class="blog-card__title"
-                        >Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
-                        впечатления</a
-                        >
-                        <p class="blog-card__paragraph paragraph">
-                        ASUS бодро начала год и представила на CES 2021 кучу новых
-                        устройств, в том...
-                        </p>
-                    </div>
-
-                    <div class="blog-card">
-                        <a href="#" class="blog-card__preview">
-                        <img src="./img/imgs/blog-preview.png" alt="blog" >
-                        </a>
-                        <a href="#" class="blog-card__title"
-                        >Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
-                        впечатления</a
-                        >
-                        <p class="blog-card__paragraph paragraph">
-                        ASUS бодро начала год и представила на CES 2021 кучу новых
-                        устройств, в том...
-                        </p>
-                    </div>
-                    <div class="blog-card">
-                        <a href="#" class="blog-card__preview">
-                        <img src="./img/imgs/blog-preview.png" alt="blog" >
-                        </a>
-                        <a href="#" class="blog-card__title"
-                        >Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
-                        впечатления</a
-                        >
-                        <p class="blog-card__paragraph paragraph">
-                        ASUS бодро начала год и представила на CES 2021 кучу новых
-                        устройств, в том...
-                        </p>
-                    </div>
-                    <div class="blog-card">
-                        <a href="#" class="blog-card__preview">
-                        <img src="./img/imgs/blog-preview.png" alt="blog" >
-                        </a>
-                        <a href="#" class="blog-card__title"
-                        >Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
-                        впечатления</a
-                        >
-                        <p class="blog-card__paragraph paragraph">
-                        ASUS бодро начала год и представила на CES 2021 кучу новых
-                        устройств, в том...
-                        </p>
-                    </div>
-                    </div>
+                <div class="blog-card" itemscope itemtype="http://schema.org/BlogPosting">
+                  <a href="#" class="blog-card__preview">
+                    <img src="./img/imgs/blog-preview.png" alt="blog" itemprop="image" >
+                  </a>
+                  <a href="#" class="blog-card__title"
+                    ><span itemprop="headline">Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                    впечатления</span></a
+                  >
+                  <p class="blog-card__paragraph paragraph" itemprop="description">
+                    ASUS бодро начала год и представила на CES 2021 кучу новых
+                    устройств, в том...
+                  </p>
+                  <meta itemprop="url" content="#">
+                </div>
+                <div class="blog-card" itemscope itemtype="http://schema.org/BlogPosting">
+                  <a href="#" class="blog-card__preview">
+                    <img src="./img/imgs/blog-preview.png" alt="blog" itemprop="image" >
+                  </a>
+                  <a href="#" class="blog-card__title"
+                    ><span itemprop="headline">Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                    впечатления</span></a
+                  >
+                  <p class="blog-card__paragraph paragraph" itemprop="description">
+                    ASUS бодро начала год и представила на CES 2021 кучу новых
+                    устройств, в том...
+                  </p>
+                  <meta itemprop="url" content="#">
+                </div>
+                <div class="blog-card" itemscope itemtype="http://schema.org/BlogPosting">
+                  <a href="#" class="blog-card__preview">
+                    <img src="./img/imgs/blog-preview.png" alt="blog" itemprop="image" >
+                  </a>
+                  <a href="#" class="blog-card__title"
+                    ><span itemprop="headline">Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                    впечатления</span></a
+                  >
+                  <p class="blog-card__paragraph paragraph" itemprop="description">
+                    ASUS бодро начала год и представила на CES 2021 кучу новых
+                    устройств, в том...
+                  </p>
+                  <meta itemprop="url" content="#">
                 </div>
 
-                <div class="blog-main__container">
-                    <div class="blog-main__pagination pagination">
-                    <div class="pagination__page pagination__page_current">1</div>
-                    <div class="pagination__page">2</div>
-                    <div class="pagination__page">3</div>
-                    <div class="pagination__page">4</div>
-                    <div class="pagination__page">5</div>
-                    <div class="pagination__dots">...</div>
-                    <div class="pagination__page">10</div>
-                    </div>
+                <div class="blog-card" itemscope itemtype="http://schema.org/BlogPosting">
+                  <a href="#" class="blog-card__preview">
+                    <img src="./img/imgs/blog-preview.png" alt="blog" itemprop="image" >
+                  </a>
+                  <a href="#" class="blog-card__title"
+                    ><span itemprop="headline">Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                    впечатления</span></a
+                  >
+                  <p class="blog-card__paragraph paragraph" itemprop="description">
+                    ASUS бодро начала год и представила на CES 2021 кучу новых
+                    устройств, в том...
+                  </p>
+                  <meta itemprop="url" content="#">
+                </div>
+                <div class="blog-card" itemscope itemtype="http://schema.org/BlogPosting">
+                  <a href="#" class="blog-card__preview">
+                    <img src="./img/imgs/blog-preview.png" alt="blog" itemprop="image" >
+                  </a>
+                  <a href="#" class="blog-card__title"
+                    ><span itemprop="headline">Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                    впечатления</span></a
+                  >
+                  <p class="blog-card__paragraph paragraph" itemprop="description">
+                    ASUS бодро начала год и представила на CES 2021 кучу новых
+                    устройств, в том...
+                  </p>
+                  <meta itemprop="url" content="#">
+                </div>
+                <div class="blog-card" itemscope itemtype="http://schema.org/BlogPosting">
+                  <a href="#" class="blog-card__preview">
+                    <img src="./img/imgs/blog-preview.png" alt="blog" itemprop="image" >
+                  </a>
+                  <a href="#" class="blog-card__title"
+                    ><span itemprop="headline">Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                    впечатления</span></a
+                  >
+                  <p class="blog-card__paragraph paragraph" itemprop="description">
+                    ASUS бодро начала год и представила на CES 2021 кучу новых
+                    устройств, в том...
+                  </p>
+                  <meta itemprop="url" content="#">
+                </div>
+              </div>
+            </div>
+
+            <div class="blog-main__container">
+                <div class="blog-main__pagination pagination">
+                <div class="pagination__page pagination__page_current">1</div>
+                <div class="pagination__page">2</div>
+                <div class="pagination__page">3</div>
+                <div class="pagination__page">4</div>
+                <div class="pagination__page">5</div>
+                <div class="pagination__dots">...</div>
+                <div class="pagination__page">10</div>
                 </div>
             </div>
+          </div>
         </section>
       </main>
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__wrapper">
-            <a href="index.html" class="logo"
-              ><img src="./img/logo.svg" alt="logo"
-            ></a>
+            <a href="index.html" class="logo"><img src="./img/logo.svg" alt="logo" ></a>
 
-            <div class="footer-nav">
+            <div class="footer-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
               <ul class="footer-nav__list">
                 <li class="footer-nav__el">
-                  <a href="about.html" class="footer-nav__link">О компании </a>
+                  <a href="about.html" class="footer-nav__link"><span itemprop="name">О компании</span></a>
                 </li>
                 <li class="footer-nav__el">
-                  <a href="about.html" class="footer-nav__link">Контакты</a>
+                  <a href="about.html" class="footer-nav__link"><span itemprop="name">Контакты</span></a>
                 </li>
                 <li class="footer-nav__el">
-                  <a href="about.html" class="footer-nav__link">Блог</a>
+                  <a href="about.html" class="footer-nav__link"><span itemprop="name">Блог</span></a>
                 </li>
                 <li class="footer-nav__el">
                   <a href="about.html" class="footer-nav__link"
-                    >Правовая информация</a
+                    ><span itemprop="name">Правовая информация</span></a
                   >
                 </li>
               </ul>

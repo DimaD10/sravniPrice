@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" itemscope itemtype="http://schema.org/WebSite">
   <head>
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
@@ -24,12 +24,12 @@
                 <span class="button__text">Каталог</span>
               </button>
 
-              <div class="location">
+              <div class="location" itemscope itemtype="http://schema.org/PostalAddress">
                 <div class="location__icon">
                   <img src="./img/icons/location-icon.svg" alt="location" >
                 </div>
                 <span class="location__text">Ваш город: </span>
-                <span class="location__lacate open-popup-location">Минск</span>
+                <span class="location__lacate open-popup-location" itemprop="addressLocality">Минск</span>
 
                 <div class="location-question popup">
                   <div class="location-question__wrapper">
@@ -113,18 +113,25 @@
         </div>
       </header>
       <main class="main">
-        <div class="main__breadcrumbs breadcrumbs">
+        <div class="main__breadcrumbs breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
           <div class="breadcrumbs__container">
             <div class="breadcrumbs__wrapper">
-              <span class="breadcrumbs__crumb">
-                <a href="index.html">Главная</a>
+              <span class="breadcrumbs__crumb" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="index.html" itemprop="item" itemscope itemtype="https://schema.org/WebPage">
+                  <span itemprop="name">Главная</span>
+                </a>
+                <meta itemprop="position" content="1" >
               </span>
-              <span class="breadcrumbs__crumb">
-                <a href="category.html">Категория</a>
+              <span class="breadcrumbs__crumb" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="category.html" itemprop="item" itemscope itemtype="https://schema.org/WebPage">
+                  <span itemprop="name">Категория</span>
+                </a>
+                <meta itemprop="position" content="2" >
               </span>
-              <span class="breadcrumbs__crumb breadcrumbs__crumb_current"
-                >Подкатегория с товарами</span
-              >
+              <span class="breadcrumbs__crumb breadcrumbs__crumb_current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">Подкатегория с товарами</span>
+                <meta itemprop="position" content="3" >
+              </span>
             </div>
           </div>
         </div>
@@ -132,7 +139,7 @@
         <section class="main__subcategory subcategory">
           <div class="subcategory__container">
             <div class="subcategory__wrapper">
-              <h1 class="subcategory__title title title_first">Подкатегория</h1>
+              <h1 class="subcategory__title title title_first" itemprop="headline">Подкатегория</h1>
 
               <div class="subcategory__main">
                 <div class="subcategory-aside">
@@ -447,7 +454,7 @@
                     </div>
                   </div>
                   <div class="subcategory-main__list">
-                    <div class="product product-banner">
+                    <div class="product product-banner" itemscope itemtype="https://schema.org/Product">
                       <div class="product-banner__preview">
                         <div class="product-status">
                           <div
@@ -467,22 +474,22 @@
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                           </div>
                         </div>
@@ -540,14 +547,15 @@
                       <div class="product-banner__main">
                         <h3 class="product-banner__headline">
                           <a href="#" class="product-banner__title"
-                            >Наушники Honor Earbuds X3 белый</a
+                            ><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a
                           >
-                          <span class="product-rate">
+                          <span class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                             <img
                               src="./img/icons/star-rate.svg"
                               alt=""
                               class="product-rate__icon" >
-                            <span class="product-rate__rating">4.8</span>
+                            <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                            <span class="product-rate__rating-max" itemprop="bestRating">5</span>
                           </span>
                         </h3>
 
@@ -587,220 +595,54 @@
                         </div>
                       </div>
 
-                      <div class="product-banner__info">
-                        <span class="product-banner__price">
-                          от 1 500 Р до 65 000 Р
+                      <div class="product-banner__info" itemscope itemtype="https://schema.org/Product">
+                        <span class="product-banner__price" itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+                          от <span itemprop="lowPrice">1,500</span><span itemprop="priceCurrency">Р</span> до <span itemprop="highPrice">65,000</span> Р
                         </span>
 
                         <div class="sites-list">
-                          <div class="sites-list__row">
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                             <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
+                              <a href="#" itemprop="seller">sity.ru</a>
                             </div>
-                            <div
-                              class="sites-list__price sites-list__price_green">
-                              1 500 Р
+                            <div class="sites-list__price sites-list__price_green">
+                              <span itemprop="price">1,500</span><span itemprop="priceCurrency">Р</span>
                             </div>
                           </div>
-                          <div class="sites-list__row">
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                             <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
+                              <a href="#" itemprop="seller">sity.ru</a>
                             </div>
-                            <div class="sites-list__price">65 500 Р</div>
+                            <div class="sites-list__price">
+                              <span itemprop="price">65,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
                           </div>
-                          <div class="sites-list__row">
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                             <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
+                              <a href="#" itemprop="seller">sity.ru</a>
                             </div>
-                            <div class="sites-list__price">45 500 Р</div>
+                            <div class="sites-list__price">
+                              <span itemprop="price">45,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
                           </div>
-                          <div class="sites-list__row">
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                             <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
+                              <a href="#" itemprop="seller">sity.ru</a>
                             </div>
-                            <div class="sites-list__price">25 500 Р</div>
+                            <div class="sites-list__price">
+                              <span itemprop="price">25,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
                           </div>
                         </div>
 
                         <div class="product-banner__info-actions">
                           <button class="product-banner__button">
-                            Сравнить цены
+                            <span>Сравнить цены</span>
                           </button>
                         </div>
                       </div>
                     </div>
-                    <div class="product product-banner">
-                      <div class="product-banner__preview">
-                        <div
-                          class="product-banner__slider slider slider-init"
-                          data-current-slide="0">
-                          <div class="slider-wrapper">
-                            <a
-                              href="#"
-                              class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
-                            </a>
-                            <a
-                              href="#"
-                              class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
-                            </a>
-                            <a
-                              href="#"
-                              class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
-                            </a>
-                            <a
-                              href="#"
-                              class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
-                            </a>
-                          </div>
-                        </div>
-
-                        <div class="product-banner__bullets"></div>
-
-                        <div class="product-actions">
-                          <button class="product-actions__button fav-button">
-                            <svg
-                              width="23"
-                              height="21"
-                              viewBox="0 0 23 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
-                                fill="#A5ABB7" />
-                            </svg>
-                          </button>
-                          <button
-                            class="product-actions__button comprasion-button">
-                            <svg
-                              width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <g>
-                                <rect
-                                  y="4.03986"
-                                  width="5.45455"
-                                  height="16.3636"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="7.27271"
-                                  y="9.49438"
-                                  width="5.45455"
-                                  height="10.9091"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="14.5454"
-                                  y="0.403503"
-                                  width="5.45455"
-                                  height="20"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                              </g>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-
-                      <div class="product-banner__main">
-                        <h3 class="product-banner__headline">
-                          <a href="#" class="product-banner__title"
-                            >Наушники Honor Earbuds X3 белый</a
-                          >
-                          <span class="product-rate">
-                            <img
-                              src="./img/icons/star-rate.svg"
-                              alt=""
-                              class="product-rate__icon" >
-                            <span class="product-rate__rating">4.8</span>
-                          </span>
-                        </h3>
-
-                        <div class="product-banner__descr">
-                          <div class="product-banner__descr-row">
-                            <span class="product-banner__descr-title"
-                              >Характеристики:</span
-                            >
-                            <span class="product-banner__descr-value"
-                              >1234</span
-                            >
-                          </div>
-                          <div class="product-banner__descr-row">
-                            <span class="product-banner__descr-title"
-                              >Детали:</span
-                            >
-                            <span class="product-banner__descr-value"
-                              >1234</span
-                            >
-                          </div>
-                          <div class="product-banner__descr-row">
-                            <span class="product-banner__descr-title"
-                              >Характеристики:</span
-                            >
-                            <span class="product-banner__descr-value"
-                              >1234</span
-                            >
-                          </div>
-                          <div class="product-banner__descr-row">
-                            <span class="product-banner__descr-title"
-                              >Детали:</span
-                            >
-                            <span class="product-banner__descr-value"
-                              >1234</span
-                            >
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="product-banner__info">
-                        <span class="product-banner__price">
-                          от 1 500 Р до 65 000 Р
-                        </span>
-
-                        <div class="sites-list">
-                          <div class="sites-list__row">
-                            <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
-                            </div>
-                            <div
-                              class="sites-list__price sites-list__price_green">
-                              1 500 Р
-                            </div>
-                          </div>
-                          <div class="sites-list__row">
-                            <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
-                            </div>
-                            <div class="sites-list__price">65 500 Р</div>
-                          </div>
-                          <div class="sites-list__row">
-                            <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
-                            </div>
-                            <div class="sites-list__price">45 500 Р</div>
-                          </div>
-                          <div class="sites-list__row">
-                            <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
-                            </div>
-                            <div class="sites-list__price">25 500 Р</div>
-                          </div>
-                        </div>
-
-                        <div class="product-banner__info-actions">
-                          <button class="product-banner__button">
-                            Сравнить цены
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="product product-banner">
+                    <div class="product product-banner" itemscope itemtype="https://schema.org/Product">
                       <div class="product-banner__preview">
                         <div class="product-status">
                           <div
@@ -820,22 +662,22 @@
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                           </div>
                         </div>
@@ -893,14 +735,15 @@
                       <div class="product-banner__main">
                         <h3 class="product-banner__headline">
                           <a href="#" class="product-banner__title"
-                            >Наушники Honor Earbuds X3 белый</a
+                            ><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a
                           >
-                          <span class="product-rate">
+                          <span class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                             <img
                               src="./img/icons/star-rate.svg"
                               alt=""
                               class="product-rate__icon" >
-                            <span class="product-rate__rating">4.8</span>
+                            <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                            <span class="product-rate__rating-max" itemprop="bestRating">5</span>
                           </span>
                         </h3>
 
@@ -940,220 +783,54 @@
                         </div>
                       </div>
 
-                      <div class="product-banner__info">
-                        <span class="product-banner__price">
-                          от 1 500 Р до 65 000 Р
+                      <div class="product-banner__info" itemscope itemtype="https://schema.org/Product">
+                        <span class="product-banner__price" itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+                          от <span itemprop="lowPrice">1,500</span><span itemprop="priceCurrency">Р</span> до <span itemprop="highPrice">65,000</span> Р
                         </span>
 
                         <div class="sites-list">
-                          <div class="sites-list__row">
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                             <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
+                              <a href="#" itemprop="seller">sity.ru</a>
                             </div>
-                            <div
-                              class="sites-list__price sites-list__price_green">
-                              1 500 Р
+                            <div class="sites-list__price sites-list__price_green">
+                              <span itemprop="price">1,500</span><span itemprop="priceCurrency">Р</span>
                             </div>
                           </div>
-                          <div class="sites-list__row">
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                             <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
+                              <a href="#" itemprop="seller">sity.ru</a>
                             </div>
-                            <div class="sites-list__price">65 500 Р</div>
+                            <div class="sites-list__price">
+                              <span itemprop="price">65,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
                           </div>
-                          <div class="sites-list__row">
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                             <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
+                              <a href="#" itemprop="seller">sity.ru</a>
                             </div>
-                            <div class="sites-list__price">45 500 Р</div>
+                            <div class="sites-list__price">
+                              <span itemprop="price">45,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
                           </div>
-                          <div class="sites-list__row">
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                             <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
+                              <a href="#" itemprop="seller">sity.ru</a>
                             </div>
-                            <div class="sites-list__price">25 500 Р</div>
+                            <div class="sites-list__price">
+                              <span itemprop="price">25,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
                           </div>
                         </div>
 
                         <div class="product-banner__info-actions">
                           <button class="product-banner__button">
-                            Сравнить цены
+                            <span>Сравнить цены</span>
                           </button>
                         </div>
                       </div>
                     </div>
-                    <div class="product product-banner">
-                      <div class="product-banner__preview">
-                        <div
-                          class="product-banner__slider slider slider-init"
-                          data-current-slide="0">
-                          <div class="slider-wrapper">
-                            <a
-                              href="#"
-                              class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
-                            </a>
-                            <a
-                              href="#"
-                              class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
-                            </a>
-                            <a
-                              href="#"
-                              class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
-                            </a>
-                            <a
-                              href="#"
-                              class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
-                            </a>
-                          </div>
-                        </div>
-
-                        <div class="product-banner__bullets"></div>
-
-                        <div class="product-actions">
-                          <button class="product-actions__button fav-button">
-                            <svg
-                              width="23"
-                              height="21"
-                              viewBox="0 0 23 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
-                                fill="#A5ABB7" />
-                            </svg>
-                          </button>
-                          <button
-                            class="product-actions__button comprasion-button">
-                            <svg
-                              width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <g>
-                                <rect
-                                  y="4.03986"
-                                  width="5.45455"
-                                  height="16.3636"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="7.27271"
-                                  y="9.49438"
-                                  width="5.45455"
-                                  height="10.9091"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                                <rect
-                                  x="14.5454"
-                                  y="0.403503"
-                                  width="5.45455"
-                                  height="20"
-                                  rx="2.72727"
-                                  fill="#A5ABB7" />
-                              </g>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-
-                      <div class="product-banner__main">
-                        <h3 class="product-banner__headline">
-                          <a href="#" class="product-banner__title"
-                            >Наушники Honor Earbuds X3 белый</a
-                          >
-                          <span class="product-rate">
-                            <img
-                              src="./img/icons/star-rate.svg"
-                              alt=""
-                              class="product-rate__icon" >
-                            <span class="product-rate__rating">4.8</span>
-                          </span>
-                        </h3>
-
-                        <div class="product-banner__descr">
-                          <div class="product-banner__descr-row">
-                            <span class="product-banner__descr-title"
-                              >Характеристики:</span
-                            >
-                            <span class="product-banner__descr-value"
-                              >1234</span
-                            >
-                          </div>
-                          <div class="product-banner__descr-row">
-                            <span class="product-banner__descr-title"
-                              >Детали:</span
-                            >
-                            <span class="product-banner__descr-value"
-                              >1234</span
-                            >
-                          </div>
-                          <div class="product-banner__descr-row">
-                            <span class="product-banner__descr-title"
-                              >Характеристики:</span
-                            >
-                            <span class="product-banner__descr-value"
-                              >1234</span
-                            >
-                          </div>
-                          <div class="product-banner__descr-row">
-                            <span class="product-banner__descr-title"
-                              >Детали:</span
-                            >
-                            <span class="product-banner__descr-value"
-                              >1234</span
-                            >
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="product-banner__info">
-                        <span class="product-banner__price">
-                          от 1 500 Р до 65 000 Р
-                        </span>
-
-                        <div class="sites-list">
-                          <div class="sites-list__row">
-                            <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
-                            </div>
-                            <div
-                              class="sites-list__price sites-list__price_green">
-                              1 500 Р
-                            </div>
-                          </div>
-                          <div class="sites-list__row">
-                            <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
-                            </div>
-                            <div class="sites-list__price">65 500 Р</div>
-                          </div>
-                          <div class="sites-list__row">
-                            <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
-                            </div>
-                            <div class="sites-list__price">45 500 Р</div>
-                          </div>
-                          <div class="sites-list__row">
-                            <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
-                            </div>
-                            <div class="sites-list__price">25 500 Р</div>
-                          </div>
-                        </div>
-
-                        <div class="product-banner__info-actions">
-                          <button class="product-banner__button">
-                            Сравнить цены
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="product product-banner">
+                    <div class="product product-banner" itemscope itemtype="https://schema.org/Product">
                       <div class="product-banner__preview">
                         <div class="product-status">
                           <div
@@ -1173,22 +850,22 @@
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                           </div>
                         </div>
@@ -1246,14 +923,15 @@
                       <div class="product-banner__main">
                         <h3 class="product-banner__headline">
                           <a href="#" class="product-banner__title"
-                            >Наушники Honor Earbuds X3 белый</a
+                            ><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a
                           >
-                          <span class="product-rate">
+                          <span class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                             <img
                               src="./img/icons/star-rate.svg"
                               alt=""
                               class="product-rate__icon" >
-                            <span class="product-rate__rating">4.8</span>
+                            <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                            <span class="product-rate__rating-max" itemprop="bestRating">5</span>
                           </span>
                         </h3>
 
@@ -1293,49 +971,54 @@
                         </div>
                       </div>
 
-                      <div class="product-banner__info">
-                        <span class="product-banner__price">
-                          от 1 500 Р до 65 000 Р
+                      <div class="product-banner__info" itemscope itemtype="https://schema.org/Product">
+                        <span class="product-banner__price" itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+                          от <span itemprop="lowPrice">1,500</span><span itemprop="priceCurrency">Р</span> до <span itemprop="highPrice">65,000</span> Р
                         </span>
 
                         <div class="sites-list">
-                          <div class="sites-list__row">
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                             <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
+                              <a href="#" itemprop="seller">sity.ru</a>
                             </div>
-                            <div
-                              class="sites-list__price sites-list__price_green">
-                              1 500 Р
+                            <div class="sites-list__price sites-list__price_green">
+                              <span itemprop="price">1,500</span><span itemprop="priceCurrency">Р</span>
                             </div>
                           </div>
-                          <div class="sites-list__row">
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                             <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
+                              <a href="#" itemprop="seller">sity.ru</a>
                             </div>
-                            <div class="sites-list__price">65 500 Р</div>
+                            <div class="sites-list__price">
+                              <span itemprop="price">65,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
                           </div>
-                          <div class="sites-list__row">
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                             <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
+                              <a href="#" itemprop="seller">sity.ru</a>
                             </div>
-                            <div class="sites-list__price">45 500 Р</div>
+                            <div class="sites-list__price">
+                              <span itemprop="price">45,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
                           </div>
-                          <div class="sites-list__row">
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                             <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
+                              <a href="#" itemprop="seller">sity.ru</a>
                             </div>
-                            <div class="sites-list__price">25 500 Р</div>
+                            <div class="sites-list__price">
+                              <span itemprop="price">25,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
                           </div>
                         </div>
 
                         <div class="product-banner__info-actions">
                           <button class="product-banner__button">
-                            Сравнить цены
+                            <span>Сравнить цены</span>
                           </button>
                         </div>
                       </div>
                     </div>
-                    <div class="product product-banner">
+                    <div class="product product-banner" itemscope itemtype="https://schema.org/Product">
                       <div class="product-banner__preview">
                         <div class="product-status">
                           <div
@@ -1355,22 +1038,22 @@
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                             <a
                               href="#"
                               class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" >
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
                             </a>
                           </div>
                         </div>
@@ -1428,14 +1111,15 @@
                       <div class="product-banner__main">
                         <h3 class="product-banner__headline">
                           <a href="#" class="product-banner__title"
-                            >Наушники Honor Earbuds X3 белый</a
+                            ><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a
                           >
-                          <span class="product-rate">
+                          <span class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                             <img
                               src="./img/icons/star-rate.svg"
                               alt=""
                               class="product-rate__icon" >
-                            <span class="product-rate__rating">4.8</span>
+                            <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                            <span class="product-rate__rating-max" itemprop="bestRating">5</span>
                           </span>
                         </h3>
 
@@ -1475,44 +1159,425 @@
                         </div>
                       </div>
 
-                      <div class="product-banner__info">
-                        <span class="product-banner__price">
-                          от 1 500 Р до 65 000 Р
+                      <div class="product-banner__info" itemscope itemtype="https://schema.org/Product">
+                        <span class="product-banner__price" itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+                          от <span itemprop="lowPrice">1,500</span><span itemprop="priceCurrency">Р</span> до <span itemprop="highPrice">65,000</span> Р
                         </span>
 
                         <div class="sites-list">
-                          <div class="sites-list__row">
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                             <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
+                              <a href="#" itemprop="seller">sity.ru</a>
                             </div>
-                            <div
-                              class="sites-list__price sites-list__price_green">
-                              1 500 Р
+                            <div class="sites-list__price sites-list__price_green">
+                              <span itemprop="price">1,500</span><span itemprop="priceCurrency">Р</span>
                             </div>
                           </div>
-                          <div class="sites-list__row">
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                             <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
+                              <a href="#" itemprop="seller">sity.ru</a>
                             </div>
-                            <div class="sites-list__price">65 500 Р</div>
+                            <div class="sites-list__price">
+                              <span itemprop="price">65,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
                           </div>
-                          <div class="sites-list__row">
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                             <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
+                              <a href="#" itemprop="seller">sity.ru</a>
                             </div>
-                            <div class="sites-list__price">45 500 Р</div>
+                            <div class="sites-list__price">
+                              <span itemprop="price">45,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
                           </div>
-                          <div class="sites-list__row">
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                             <div class="sites-list__title">
-                              <a href="#">sity.ru</a>
+                              <a href="#" itemprop="seller">sity.ru</a>
                             </div>
-                            <div class="sites-list__price">25 500 Р</div>
+                            <div class="sites-list__price">
+                              <span itemprop="price">25,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
                           </div>
                         </div>
 
                         <div class="product-banner__info-actions">
                           <button class="product-banner__button">
-                            Сравнить цены
+                            <span>Сравнить цены</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product product-banner" itemscope itemtype="https://schema.org/Product">
+                      <div class="product-banner__preview">
+                        <div class="product-status">
+                          <div
+                            class="product-status__label product-status__label_green">
+                            new
+                          </div>
+                          <div
+                            class="product-status__label product-status__label_orange">
+                            хит
+                          </div>
+                        </div>
+
+                        <div
+                          class="product-banner__slider slider slider-init"
+                          data-current-slide="0">
+                          <div class="slider-wrapper">
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="product-banner__bullets"></div>
+
+                        <div class="product-actions">
+                          <button class="product-actions__button fav-button">
+                            <svg
+                              width="23"
+                              height="21"
+                              viewBox="0 0 23 21"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
+                                fill="#A5ABB7" />
+                            </svg>
+                          </button>
+                          <button
+                            class="product-actions__button comprasion-button">
+                            <svg
+                              width="20"
+                              height="21"
+                              viewBox="0 0 20 21"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g>
+                                <rect
+                                  y="4.03986"
+                                  width="5.45455"
+                                  height="16.3636"
+                                  rx="2.72727"
+                                  fill="#A5ABB7" />
+                                <rect
+                                  x="7.27271"
+                                  y="9.49438"
+                                  width="5.45455"
+                                  height="10.9091"
+                                  rx="2.72727"
+                                  fill="#A5ABB7" />
+                                <rect
+                                  x="14.5454"
+                                  y="0.403503"
+                                  width="5.45455"
+                                  height="20"
+                                  rx="2.72727"
+                                  fill="#A5ABB7" />
+                              </g>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="product-banner__main">
+                        <h3 class="product-banner__headline">
+                          <a href="#" class="product-banner__title"
+                            ><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a
+                          >
+                          <span class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                            <img
+                              src="./img/icons/star-rate.svg"
+                              alt=""
+                              class="product-rate__icon" >
+                            <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                            <span class="product-rate__rating-max" itemprop="bestRating">5</span>
+                          </span>
+                        </h3>
+
+                        <div class="product-banner__descr">
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title"
+                              >Характеристики:</span
+                            >
+                            <span class="product-banner__descr-value"
+                              >1234</span
+                            >
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title"
+                              >Детали:</span
+                            >
+                            <span class="product-banner__descr-value"
+                              >1234</span
+                            >
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title"
+                              >Характеристики:</span
+                            >
+                            <span class="product-banner__descr-value"
+                              >1234</span
+                            >
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title"
+                              >Детали:</span
+                            >
+                            <span class="product-banner__descr-value"
+                              >1234</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="product-banner__info" itemscope itemtype="https://schema.org/Product">
+                        <span class="product-banner__price" itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+                          от <span itemprop="lowPrice">1,500</span><span itemprop="priceCurrency">Р</span> до <span itemprop="highPrice">65,000</span> Р
+                        </span>
+
+                        <div class="sites-list">
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <div class="sites-list__title">
+                              <a href="#" itemprop="seller">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price sites-list__price_green">
+                              <span itemprop="price">1,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
+                          </div>
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <div class="sites-list__title">
+                              <a href="#" itemprop="seller">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">
+                              <span itemprop="price">65,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
+                          </div>
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <div class="sites-list__title">
+                              <a href="#" itemprop="seller">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">
+                              <span itemprop="price">45,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
+                          </div>
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <div class="sites-list__title">
+                              <a href="#" itemprop="seller">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">
+                              <span itemprop="price">25,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-banner__info-actions">
+                          <button class="product-banner__button">
+                            <span>Сравнить цены</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product product-banner" itemscope itemtype="https://schema.org/Product">
+                      <div class="product-banner__preview">
+                        <div class="product-status">
+                          <div
+                            class="product-status__label product-status__label_green">
+                            new
+                          </div>
+                          <div
+                            class="product-status__label product-status__label_orange">
+                            хит
+                          </div>
+                        </div>
+
+                        <div
+                          class="product-banner__slider slider slider-init"
+                          data-current-slide="0">
+                          <div class="slider-wrapper">
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="product-banner__bullets"></div>
+
+                        <div class="product-actions">
+                          <button class="product-actions__button fav-button">
+                            <svg
+                              width="23"
+                              height="21"
+                              viewBox="0 0 23 21"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M16.4834 0.403503C15.4231 0.420108 14.3859 0.718115 13.4765 1.26743C12.5672 1.81674 11.8179 2.59792 11.3043 3.53205C10.7908 2.59792 10.0415 1.81674 9.13219 1.26743C8.22284 0.718115 7.18562 0.420108 6.12528 0.403503C4.43496 0.477442 2.84241 1.22191 1.69556 2.47426C0.548699 3.7266 -0.0592386 5.38503 0.00455862 7.08723C0.00455862 11.398 4.51129 16.106 8.29107 19.2981C9.13499 20.0121 10.202 20.4035 11.3043 20.4035C12.4067 20.4035 13.4737 20.0121 14.3176 19.2981C18.0974 16.106 22.6041 11.398 22.6041 7.08723C22.6679 5.38503 22.06 3.7266 20.9131 2.47426C19.7663 1.22191 18.1737 0.477442 16.4834 0.403503Z"
+                                fill="#A5ABB7" />
+                            </svg>
+                          </button>
+                          <button
+                            class="product-actions__button comprasion-button">
+                            <svg
+                              width="20"
+                              height="21"
+                              viewBox="0 0 20 21"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g>
+                                <rect
+                                  y="4.03986"
+                                  width="5.45455"
+                                  height="16.3636"
+                                  rx="2.72727"
+                                  fill="#A5ABB7" />
+                                <rect
+                                  x="7.27271"
+                                  y="9.49438"
+                                  width="5.45455"
+                                  height="10.9091"
+                                  rx="2.72727"
+                                  fill="#A5ABB7" />
+                                <rect
+                                  x="14.5454"
+                                  y="0.403503"
+                                  width="5.45455"
+                                  height="20"
+                                  rx="2.72727"
+                                  fill="#A5ABB7" />
+                              </g>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="product-banner__main">
+                        <h3 class="product-banner__headline">
+                          <a href="#" class="product-banner__title"
+                            ><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a
+                          >
+                          <span class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                            <img
+                              src="./img/icons/star-rate.svg"
+                              alt=""
+                              class="product-rate__icon" >
+                            <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
+                            <span class="product-rate__rating-max" itemprop="bestRating">5</span>
+                          </span>
+                        </h3>
+
+                        <div class="product-banner__descr">
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title"
+                              >Характеристики:</span
+                            >
+                            <span class="product-banner__descr-value"
+                              >1234</span
+                            >
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title"
+                              >Детали:</span
+                            >
+                            <span class="product-banner__descr-value"
+                              >1234</span
+                            >
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title"
+                              >Характеристики:</span
+                            >
+                            <span class="product-banner__descr-value"
+                              >1234</span
+                            >
+                          </div>
+                          <div class="product-banner__descr-row">
+                            <span class="product-banner__descr-title"
+                              >Детали:</span
+                            >
+                            <span class="product-banner__descr-value"
+                              >1234</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="product-banner__info" itemscope itemtype="https://schema.org/Product">
+                        <span class="product-banner__price" itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+                          от <span itemprop="lowPrice">1,500</span><span itemprop="priceCurrency">Р</span> до <span itemprop="highPrice">65,000</span> Р
+                        </span>
+
+                        <div class="sites-list">
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <div class="sites-list__title">
+                              <a href="#" itemprop="seller">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price sites-list__price_green">
+                              <span itemprop="price">1,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
+                          </div>
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <div class="sites-list__title">
+                              <a href="#" itemprop="seller">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">
+                              <span itemprop="price">65,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
+                          </div>
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <div class="sites-list__title">
+                              <a href="#" itemprop="seller">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">
+                              <span itemprop="price">45,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
+                          </div>
+                          <div class="sites-list__row" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <div class="sites-list__title">
+                              <a href="#" itemprop="seller">sity.ru</a>
+                            </div>
+                            <div class="sites-list__price">
+                              <span itemprop="price">25,500</span><span itemprop="priceCurrency">Р</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-banner__info-actions">
+                          <button class="product-banner__button">
+                            <span>Сравнить цены</span>
                           </button>
                         </div>
                       </div>
@@ -1544,9 +1609,9 @@
                   <img src="./img/imgs/article-preview.png" alt="SEO-текст" >
                 </div>
                 <div class="article__body">
-                  <h2 class="article__title title title_third">SEO-текст</h2>
+                  <h2 class="article__title title title_third" itemprop="headline">SEO-текст</h2>
 
-                  <p class="article__paragraph paragraph">
+                  <p class="article__paragraph paragraph" itemprop="description">
                     It has survived not only five centuries, but also the leap
                     into electronic typesetting, remaining essentially
                     unchanged. It was popularised in the 1960s with the release
@@ -1554,14 +1619,14 @@
                     recently with desktop publishing software like Aldus
                     PageMaker including versions of Lorem Ipsum.
                   </p>
-                  <p class="article__paragraph paragraph">
+                  <p class="article__paragraph paragraph" itemprop="description">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an unknown
                     printer took a galley of type and scrambled it to make a
                     type specimen book.
                   </p>
-                  <p class="article__paragraph paragraph">
+                  <p class="article__paragraph paragraph" itemprop="description">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an unknown
@@ -1577,24 +1642,22 @@
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__wrapper">
-            <a href="index.html" class="logo"
-              ><img src="./img/logo.svg" alt="logo"
-            ></a>
+            <a href="index.html" class="logo"><img src="./img/logo.svg" alt="logo" ></a>
 
-            <div class="footer-nav">
+            <div class="footer-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
               <ul class="footer-nav__list">
                 <li class="footer-nav__el">
-                  <a href="about.html" class="footer-nav__link">О компании </a>
+                  <a href="about.html" class="footer-nav__link"><span itemprop="name">О компании</span></a>
                 </li>
                 <li class="footer-nav__el">
-                  <a href="about.html" class="footer-nav__link">Контакты</a>
+                  <a href="about.html" class="footer-nav__link"><span itemprop="name">Контакты</span></a>
                 </li>
                 <li class="footer-nav__el">
-                  <a href="about.html" class="footer-nav__link">Блог</a>
+                  <a href="about.html" class="footer-nav__link"><span itemprop="name">Блог</span></a>
                 </li>
                 <li class="footer-nav__el">
                   <a href="about.html" class="footer-nav__link"
-                    >Правовая информация</a
+                    ><span itemprop="name">Правовая информация</span></a
                   >
                 </li>
               </ul>
