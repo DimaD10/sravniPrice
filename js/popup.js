@@ -36,6 +36,28 @@ document.addEventListener("click", (e) => {
     document.querySelector(".subcategory-aside").classList.add("active");
     document.querySelector("body").style.overflow = "hidden";
   }
+
+  if (
+    e.target.closest(".leave-review-btn") &&
+    document.querySelector(".leave-review")
+  ) {
+    document.querySelector(".leave-review").classList.add("popup_opened");
+    document.querySelector("body").style.overflow = "hidden";
+  }
+  if (
+    e.target.closest(".popup__close-btn") &&
+    document.querySelector(".leave-review")
+  ) {
+    document.querySelector("body").style.overflow = "visible";
+  }
+
+  if (
+    e.target.closest(".leave-review") &&
+    !e.target.closest(".leave-review__card")
+  ) {
+    document.querySelector(".leave-review").classList.remove("popup_opened");
+    document.querySelector("body").style.overflow = "visible";
+  }
 });
 
 window.addEventListener("load", () => {
@@ -51,6 +73,15 @@ document.addEventListener("keydown", function (event) {
   ) {
     if (event.key == "Escape") {
       closeLocModal();
+    }
+  }
+  if (
+    document.querySelector(".leave-review") &&
+    document.querySelector(".leave-review").classList.contains("popup_opened")
+  ) {
+    if (event.key == "Escape") {
+      document.querySelector(".leave-review").classList.remove("popup_opened");
+      document.querySelector("body").style.overflow = "visible";
     }
   }
 });

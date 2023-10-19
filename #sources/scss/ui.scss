@@ -31,7 +31,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  overflow: hidden;
+  //overflow: hidden;
 }
 .main {
   flex: 1 1 auto;
@@ -60,12 +60,14 @@ body {
 a,
 button,
 label,
-input .catalog-category,
+input,
+.fav-button,
+.catalog-category,
 .open-popup-location,
 .slider-bullet,
 .slider-btn,
 .dropdown__header,
-.spoiler__header {
+.spoiler__header, .product-nav__point, .product-colors__color, .product-options__option {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -325,11 +327,6 @@ input .catalog-category,
     display: none;
   }
 
-  // .breadcrumbs__container
-
-  &__container {
-  }
-
   // .breadcrumbs__wrapper
 
   &__wrapper {
@@ -466,6 +463,72 @@ input .catalog-category,
       font-size: 18px;
     }
   }
+  &_store {
+    border-radius: 0;
+    box-shadow: none;
+    padding-left: 0;
+
+    border-bottom: 1px solid #a5abb71a;
+
+    @media (max-width: 1200px) {
+      padding-right: calc(
+        0px + (35 - 0) * ((100vw - 991.98px) / (1200 - 991.98))
+      );
+      gap: calc(40px + (60 - 40) * ((100vw - 991.98px) / (1200 - 991.98)));
+    }
+    @media (max-width: 991.98px) {
+      display: grid;
+      grid-template-columns: auto auto auto;
+
+      padding-right: calc(
+        0px + (65 - 0) * ((100vw - 567.98px) / (991.98 - 567.98))
+      );
+      padding-left: calc(
+        0px + (65 - 0) * ((100vw - 567.98px) / (991.98 - 567.98))
+      );
+
+      column-gap: calc(
+        40px + (60 - 40) * ((100vw - 767.98px) / (991.98 - 767.98))
+      );
+      row-gap: 12px;
+
+      .product-banner__preview {
+        grid-row: span 2;
+      }
+    }
+    @media (max-width: 667.98px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    @media (max-width: 567.98px) {
+      grid-template-columns: auto auto;
+      align-items: flex-start;
+      row-gap: 10px;
+      column-gap: calc(16px + (60 - 16) * ((100vw - 320px) / (567.98 - 320)));
+
+      .product-banner__preview {
+        grid-row: span 4;
+      }
+      .product-banner__info {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 32px;
+        row-gap: 6px;
+        flex-wrap: wrap;
+      }
+    }
+
+    .product-banner__price-old {
+      color: #b1453e;
+      font-family: Gilroy;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 150%;
+      text-decoration-line: line-through;
+      margin-right: 10px;
+    }
+  }
 
   .product-actions {
     position: static;
@@ -552,6 +615,38 @@ input .catalog-category,
   }
   .product-rate {
     display: inline-flex;
+  }
+
+  &__points {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+
+    @media (max-width: 991.98px) {
+      margin-left: 0;
+    }
+    @media (max-width: 567.98px) {
+      margin-bottom: 0;
+    }
+  }
+  &__point {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    span {
+      color: #a5abb7;
+      font-family: Gilroy;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 200%;
+
+      display: inline-flex;
+      align-items: center;
+    }
   }
 
   &__price {
@@ -668,12 +763,60 @@ input .catalog-category,
     }
   }
 }
+.store-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+  margin-right: auto;
+  @media (max-width: 567.98px) {
+    gap: 10px;
+  }
+
+  &__logo {
+    max-width: 100px;
+    max-height: 100px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .product-rate {
+      display: flex;
+      align-items: center;
+      img {
+        margin: 0;
+      }
+
+      span {
+        line-height: 100%;
+      }
+    }
+  }
+  &__rate-count {
+    color: #363436;
+    font-family: Gilroy;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+}
 
 .dropdown {
   position: relative;
-  z-index: 99;
 
   &.active {
+    z-index: 99;
+
     .dropdown__body {
       opacity: 1;
       pointer-events: all;
@@ -740,6 +883,7 @@ input .catalog-category,
     display: flex;
     flex-direction: column;
     gap: 8px;
+    z-index: 9999;
 
     transition: opacity ease $animSpeed, transform ease $animSpeed;
   }
@@ -1133,4 +1277,77 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .price-range {
   width: auto;
+}
+
+.visual-rating {
+  display: flex;
+  gap: 4px;
+
+  &__star {
+    width: 12px;
+    height: 12px;
+    path {
+      fill: #f4f5f6;
+
+      transition: fill ease $animSpeed;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    &.active {
+      path {
+        fill: #f5e023;
+      }
+    }
+  }
+}
+
+.rating {
+  border: none;
+  float: left;
+  margin-right: auto;
+
+  label {
+    cursor: pointer;
+  }
+}
+
+.rating > input {
+  display: none;
+}
+.rating > label:before {
+  font-size: 30px;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "★";
+}
+
+.rating > .half:before {
+  content: "★";
+  position: absolute;
+  width: 12.5px;
+  overflow: hidden;
+}
+
+.rating > label {
+  color: #f4f5f6;
+  float: right;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #f5e023;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+  color: #f6eaa5;
 }

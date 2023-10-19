@@ -5,6 +5,10 @@ const dropdowns = document.querySelectorAll(".dropdown");
 
 const spoilers = document.querySelectorAll(".spoiler");
 
+const visualStarRationg = document.querySelectorAll(".visual-rating");
+
+const prodColors = document.querySelectorAll(".product-colors__color");
+
 document.addEventListener("click", (e) => {
   if (e.target.closest(".fav-button")) {
     if (e.target.closest(".product-banner")) {
@@ -37,6 +41,10 @@ document.addEventListener("click", (e) => {
     dropdown.classList.toggle("active");
 
     updDropdown(dropdown);
+
+    if (dropdown.querySelector(".dropdown__hidden-text")) {
+      dropdown.querySelector(".dropdown__hidden-text").style.display = "none";
+    }
   }
   if (e.target.closest(".spoiler__header")) {
     e.target.closest(".spoiler").classList.toggle("active");
@@ -49,6 +57,31 @@ document.addEventListener("click", (e) => {
     } else {
       body.style.height = `0px`;
     }
+  }
+
+  if (e.target.classList.contains(".product-nav__point")) {
+    document.querySelectorAll(".product-nav__point").forEach((el) => {
+      el.classList.remove("product-nav__point_current");
+    });
+    e.target.classList.add("product-nav__point_current");
+  }
+
+  if (e.target.classList.contains("product-colors__color")) {
+    document.querySelectorAll(".product-colors__color").forEach((el) => {
+      el.classList.remove("product-colors__color_current");
+    });
+    e.target.classList.add("product-colors__color_current");
+    updProdColor();
+  }
+
+  if (e.target.classList.contains("product-options__option")) {
+    let optionsParent = e.target.closest(".product-options__options");
+    let options = optionsParent.querySelectorAll(".product-options__option");
+
+    options.forEach((option) => {
+      option.classList.remove("product-options__option_current");
+    });
+    e.target.classList.add("product-options__option_current");
   }
 });
 
@@ -89,6 +122,26 @@ window.addEventListener("load", () => {
       }
     });
   }
+
+  if (visualStarRationg.length > 0) {
+    visualStarRationg.forEach((rating) => {
+      rate = parseInt(rating.getAttribute("data-rating"));
+      stars = rating.querySelectorAll(".visual-rating__star");
+
+      for (let i = 0; i < rate; i++) {
+        const el = stars[i];
+        el.classList.add("active");
+      }
+    });
+  }
+
+  if (prodColors.length > 0) {
+    prodColors.forEach((color) => {
+      let hex = color.getAttribute("data-color-hex");
+      color.style.backgroundColor = hex;
+    });
+    updProdColor();
+  }
 });
 
 function updDropdown(dropdown) {
@@ -101,4 +154,11 @@ function updDropdown(dropdown) {
       el.style.display = "inline";
     }
   });
+}
+
+function updProdColor() {
+  let label = document
+    .querySelector(".product-colors__color_current")
+    .getAttribute("data-color-label");
+  document.querySelector(".product-colors__color-label").textContent = label;
 }
