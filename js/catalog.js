@@ -7,6 +7,10 @@ document.addEventListener("click", (e) => {
   if (e.target.closest(".open-catalog")) {
     catalog.classList.toggle("active");
     header.classList.remove("hidden");
+    document.querySelectorAll(".open-catalog").forEach((el) => {
+      el.classList.toggle("active");
+    });
+    document.querySelector(".user-actions_main").classList.toggle("active");
 
     document
       .getElementById("MobileCatalogBtn")
@@ -81,7 +85,7 @@ window.addEventListener("resize", () => {
     catalogTabs[0].classList.add("catalog-category_current");
     catalogSections[0].classList.add("catalog-section_current");
 
-    document.querySelector(".catalog__container").appendChild(catalogMenu);
+    document.querySelector(".catalog__body").appendChild(catalogMenu);
   }
 });
 

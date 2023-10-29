@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+*::selection {
+  background-color: #a5abb7;
+}
+
 [class*="__container"] {
   max-width: 1220px;
   padding: 0 10px;
@@ -67,7 +71,10 @@ input,
 .slider-bullet,
 .slider-btn,
 .dropdown__header,
-.spoiler__header, .product-nav__point, .product-colors__color, .product-options__option {
+.spoiler__header,
+.product-nav__point,
+.product-colors__color,
+.product-options__option {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -236,6 +243,28 @@ input,
     scroll-snap-align: start;
     padding-left: 10px;
   }
+
+  &.slider_fade {
+    overflow: hidden;
+    transition: height ease 0.4s;
+
+    .slider-wrapper {
+      align-items: flex-start;
+      gap: 0;
+      overflow-x: visible;
+    }
+
+    .slider-slide {
+      opacity: 0;
+      transition: opacity ease 1s;
+      pointer-events: none;
+
+      &_active {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
 }
 .slider-bullet {
   height: 2px;
@@ -282,7 +311,10 @@ input,
   position: absolute;
   top: 50%;
   right: 10px;
-  transform: translateY(-50%);
+  transform: translate(50%, -50%);
+  @media (max-width: 1260px) {
+    transform: translate(0%, -50%);
+  }
 
   @media (max-width: 991.98px) {
     display: none;
@@ -316,7 +348,10 @@ input,
   &__prev {
     right: auto;
     left: 10px;
-    transform: translateY(-50%) rotate(180deg);
+    transform: translate(-50%, -50%) rotate(180deg);
+    @media (max-width: 1260px) {
+      transform: translate(0%, -50%) rotate(180deg);
+    }
   }
 }
 
@@ -361,6 +396,7 @@ input,
         display: block;
         width: 10px;
         height: 6px;
+        margin-top: 2px;
         background: url("../img/icons/arrow-right-grey.svg") no-repeat 100%;
       }
     }

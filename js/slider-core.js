@@ -1,7 +1,7 @@
 let isAutoplay = true;
 
 document.addEventListener("touchend", (e) => {
-  if (e.target.closest(".slider-init")) {
+  if (e.target.closest(".slider-init") && !e.target.closest(".slider_fade")) {
     let slider = e.target.closest(".slider-init");
 
     checkCurrentSlide(slider);
@@ -26,7 +26,7 @@ document.addEventListener("touchend", (e) => {
   }
 });
 document.addEventListener("touchmove", (e) => {
-  if (e.target.closest(".slider-init")) {
+  if (e.target.closest(".slider-init") && !e.target.closest(".slider_fade")) {
     let slider = e.target.closest(".slider-init");
     checkCurrentSlide(slider);
   }
@@ -152,6 +152,11 @@ document.addEventListener("click", (e) => {
 
 window.addEventListener("resize", () => {
   checkBlogSliders();
+
+  if (document.querySelector(".hero-slider")) {
+    let heroSlider = document.querySelector(".hero-slider");
+    heroSlider.style.height = `auto`;
+  }
 });
 window.addEventListener("load", () => {
   checkBlogSliders();
@@ -160,6 +165,12 @@ window.addEventListener("load", () => {
     document.querySelector(".hero-slider").classList.add("slider-init");
 
     let heroSlider = document.querySelector(".hero-slider");
+    heroSlider
+      .querySelectorAll(".slider-slide")[0]
+      .classList.add("slider-slide_active");
+    heroSlider.style.height = `${
+      heroSlider.querySelectorAll(".slider-slide")[0].offsetHeight
+    }px`;
 
     let bullets = document.querySelector(".hero__bullets");
 
@@ -171,6 +182,10 @@ window.addEventListener("load", () => {
       let bullet = document.createElement("div");
       bullet.className = "slider-bullet";
       bullets.appendChild(bullet);
+
+      heroSlider.querySelectorAll(".slider-slide")[
+        i
+      ].style.transform = `translateX(-${i * 100}%)`;
     }
     bullets
       .querySelectorAll(".slider-bullet")[0]
@@ -243,20 +258,32 @@ function attributeChangeCallback(mutationsList, observer) {
       mutation.attributeName === "data-current-slide" &&
       mutation.target.classList.contains("hero-slider")
     ) {
-      let currentSlide = mutation.target.getAttribute("data-current-slide");
+      let slider = document.querySelector(".hero-slider");
+      let currentSlideNum = mutation.target.getAttribute("data-current-slide");
       let bullets = document
         .querySelector(".hero__bullets")
         .querySelectorAll(".slider-bullet");
       bullets.forEach((el) => {
         el.classList.remove("slider-bullet_active");
       });
-      bullets[parseInt(currentSlide)].classList.add("slider-bullet_active");
+      bullets[parseInt(currentSlideNum)].classList.add("slider-bullet_active");
+
+      slider.querySelectorAll(".slider-slide").forEach((el) => {
+        el.classList.remove("slider-slide_active");
+      });
+      slider
+        .querySelectorAll(".slider-slide")
+        [parseInt(currentSlideNum)].classList.add("slider-slide_active");
+      slider.style.height = `${
+        slider.querySelectorAll(".slider-slide")[parseInt(currentSlideNum)]
+          .offsetHeight
+      }px`;
     } else if (
       mutation.type === "attributes" &&
       mutation.attributeName === "data-current-slide" &&
       mutation.target.classList.contains("product-banner__slider")
     ) {
-      let currentSlide = mutation.target.getAttribute("data-current-slide");
+      let currentSlideNum = mutation.target.getAttribute("data-current-slide");
       let bullets = mutation.target
         .closest(".product-banner")
         .querySelector(".product-banner__bullets")
@@ -264,7 +291,7 @@ function attributeChangeCallback(mutationsList, observer) {
       bullets.forEach((el) => {
         el.classList.remove("slider-bullet_active");
       });
-      bullets[parseInt(currentSlide)].classList.add("slider-bullet_active");
+      bullets[parseInt(currentSlideNum)].classList.add("slider-bullet_active");
     }
   }
 }
@@ -284,9 +311,7 @@ function checkCurrentSlide(slider) {
     1 -
     Math.floor((pos - sliderLeft) / slideWidth);
 
-  if (
-    slider.classList.contains("hero-slider")
-  ) {
+  if (slider.classList.contains("hero-slider")) {
     if (window.innerWidth < 767.98) {
       slider.setAttribute("data-current-slide", currentSlide);
     } else {
@@ -312,6 +337,14 @@ const autoPlay = (slider) => {
   let bullets = slider.closest(".hero").querySelectorAll(".slider-bullet");
   let currentSlide = 0;
 
+  let observerOptions = {
+    attributes: true,
+    attributeFilter: ["data-current-slide"],
+  };
+  let observer = new MutationObserver(attributeChangeCallback);
+
+  observer.observe(slider, observerOptions);
+
   const heroAutoplay = setInterval(() => {
     if (isAutoplay) {
       if (
@@ -329,6 +362,8 @@ const autoPlay = (slider) => {
       slider
         .querySelector(".slider-wrapper")
         .scrollTo(slideWidth * currentSlide, 0);
+
+      observer.observe(slider, observerOptions);
     }
   }, autoplaySpeed);
 };
