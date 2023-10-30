@@ -9,6 +9,8 @@ const visualStarRationg = document.querySelectorAll(".visual-rating");
 
 const prodColors = document.querySelectorAll(".product-colors__color");
 
+const blogSlider = document.querySelector(".blog-categories__slider");
+
 document.addEventListener("click", (e) => {
   if (e.target.closest(".fav-button")) {
     if (e.target.closest(".product-banner")) {
@@ -30,6 +32,9 @@ document.addEventListener("click", (e) => {
   }
 
   if (e.target.closest(".dropdown__header")) {
+    document.querySelectorAll(".dropdown").forEach((el) => {
+      el.classList.remove("active");
+    });
     let dropdown = e.target.closest(".dropdown");
     dropdown.classList.toggle("active");
   }
@@ -82,6 +87,17 @@ document.addEventListener("click", (e) => {
       option.classList.remove("product-options__option_current");
     });
     e.target.classList.add("product-options__option_current");
+  }
+
+  if (e.target.closest(".blog-categories__button")) {
+    e.target.closest(".blog-categories__button").style.display = "none";
+    e.target.closest(".blog-categories").classList.add("active");
+  }
+
+  if (!e.target.closest(".dropdown")) {
+    document.querySelectorAll(".dropdown").forEach((el) => {
+      el.classList.remove("active");
+    });
   }
 });
 
@@ -142,6 +158,12 @@ window.addEventListener("load", () => {
     });
     updProdColor();
   }
+
+  checkBlogSlider();
+});
+
+window.addEventListener("resize", () => {
+  checkBlogSlider();
 });
 
 function updDropdown(dropdown) {
@@ -161,4 +183,25 @@ function updProdColor() {
     .querySelector(".product-colors__color_current")
     .getAttribute("data-color-label");
   document.querySelector(".product-colors__color-label").textContent = label;
+}
+
+function checkBlogSlider() {
+  if (blogSlider) {
+    console.log(true);
+    let sliderWidth = blogSlider.offsetWidth;
+    let sliderContentWidth = 0;
+
+    blogSlider.querySelectorAll(".slider-slide").forEach((el) => {
+      let margin = parseInt(window.getComputedStyle(el).paddingLeft);
+
+      sliderContentWidth += margin + parseInt(el.offsetWidth);
+    });
+
+    if (parseInt(sliderWidth) + 10 < sliderContentWidth) {
+      blogSlider.closest(".blog-categories").classList.add("slider");
+    } else {
+      blogSlider.closest(".blog-categories").classList.remove("slider");
+    }
+    console.log(sliderContentWidth, parseInt(sliderWidth));
+  }
 }

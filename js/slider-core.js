@@ -240,6 +240,41 @@ window.addEventListener("load", () => {
   });
 });
 
+document.addEventListener("mouseover", (e) => {
+  if (
+    e.target.closest(".product-banner") &&
+    e.target.closest(".product-banner__bullets") &&
+    e.target.closest(".slider-bullet") &&
+    e.target.closest(".product-slides")
+  ) {
+    let mouseBullet = e.target.closest(".slider-bullet");
+    let slider = e.target.closest(".slider-init");
+    let bullets = slider.querySelectorAll(".slider-bullet");
+    let sliderWidth = parseInt(
+      slider.querySelectorAll(".slider-slide")[0].offsetWidth
+    );
+
+    let elPos = [...bullets].indexOf(mouseBullet);
+
+    slider.setAttribute("data-current-slide", elPos);
+
+    let observerOptions = {
+      attributes: true,
+      attributeFilter: ["data-current-slide"],
+    };
+
+    let observer = new MutationObserver(attributeChangeCallback);
+    observer.observe(slider, observerOptions);
+
+    slider.querySelector(".slider-wrapper").scrollTo(sliderWidth * elPos, 0);
+
+    bullets.forEach((bullet) => {
+      bullet.classList.remove("slider-bullet_active");
+    });
+    mouseBullet.classList.add("slider-bullet_active");
+  }
+});
+
 function checkBlogSliders() {
   const homeBlogSlider = document.querySelector(".blog-list");
   if (!homeBlogSlider) return;

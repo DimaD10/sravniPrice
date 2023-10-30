@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" itemscope itemtype="http://schema.org/WebSite">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
@@ -24,12 +24,12 @@
                 <span class="button__text">Каталог</span>
               </button>
 
-              <div class="location" itemscope itemtype="http://schema.org/PostalAddress">
+              <div class="location">
                 <div class="location__icon">
                   <img src="./img/icons/location-icon.svg" alt="location" >
                 </div>
                 <span class="location__text">Ваш город: </span>
-                <span class="location__lacate open-popup-location" itemprop="addressLocality">Минск</span>
+                <span class="location__lacate open-popup-location">Минск</span>
 
                 <div class="location-question popup">
                   <div class="location-question__wrapper">
@@ -136,6 +136,18 @@
           <div class="article-blog__container">
             <div class="article-blog__wrapper">
               <div class="article-blog-aside">
+                <div class="article-blog__header">
+                  <div class="article-blog__article-marker"></div>
+                  <h1 class="article-blog__title title title_first">
+                    Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                    впечатления
+                  </h1>
+                  <div class="article-blog__preview">
+                    <img src="./img/imgs/blog-preview.png" alt="">
+                  </div>
+
+                </div>
+
                 <div class="article-blog-aside__navigate">
                   <div class="article-blog-aside__navigate-header">
                     <h2 class="article-blog-aside__title title title_second">Содержание</h2>
@@ -151,26 +163,47 @@
                   <h2 class="article-blog-aside__title title title_second">Популярные товары</h2>
 
                   <div class="article-blog-aside__product-list">
-                    <div class="product-banner product-banner_small" itemscope itemtype="https://schema.org/Product">
+                    <div class="product-banner product-slides product-banner_small">
                       <div class="product-banner__preview">
-                        <div class="product-banner__slider slider slider-init" data-current-slide="0">
-                          <div class="slider-wrapper">
-                            <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                            </a>
-                            <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                            </a>
-                            <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                            </a>
-                            <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                            </a>
+                        <div class="product-status">
+                          <div
+                            class="product-status__label product-status__label_green">
+                            new
+                          </div>
+                          <div
+                            class="product-status__label product-status__label_orange">
+                            хит
                           </div>
                         </div>
 
-                        <div class="product-banner__bullets"></div>
+                        <div
+                          class="product-banner__slider slider slider-init"
+                          data-current-slide="0">
+                          <div class="slider-wrapper">
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                          </div>
+
+                          <div class="product-banner__bullets"></div>
+                        </div>
 
                         <div class="product-actions">
                           <button class="product-actions__button fav-button">
@@ -193,7 +226,7 @@
                               viewBox="0 0 20 21"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg">
-                              <g >
+                              <g>
                                 <rect
                                   y="4.03986"
                                   width="5.45455"
@@ -217,24 +250,23 @@
                               </g>
                             </svg>
                           </button>
-                        </div>                      
+                        </div>
                       </div>
                       <div class="product-banner__main">
                         <h3 class="product-banner__headline">
-                          <a href="#" class="product-banner__title"><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a>
-                          <span class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                          <a href="#" class="product-banner__title"><span>Наушники Honor Earbuds X3 белый</span></a>
+                          <span class="product-rate">
                             <img
                               src="./img/icons/star-rate.svg"
                               alt=""
                               class="product-rate__icon" >
-                            <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
-                            <span class="product-rate__rating-max" itemprop="bestRating">5</span>
+                            <span class="product-rate__rating">4.8</span>
                           </span>
                         </h3>
 
                         <div class="product-banner__info">
-                          <span class="product-banner__price" itemscope itemtype="https://schema.org/Offer">
-                            от <span itemprop="price">30 000</span> <span itemprop="priceCurrency">₽</span>
+                          <span class="product-banner__price">
+                            от <span>30 000</span> <span>₽</span>
                           </span>
 
                           <div class="product-actions">
@@ -287,26 +319,47 @@
                       </div>
                     </div>
 
-                    <div class="product-banner product-banner_small" itemscope itemtype="https://schema.org/Product">
+                    <div class="product-banner product-slides product-banner_small">
                       <div class="product-banner__preview">
-                        <div class="product-banner__slider slider slider-init" data-current-slide="0">
-                          <div class="slider-wrapper">
-                            <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                            </a>
-                            <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                            </a>
-                            <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                            </a>
-                            <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                            </a>
+                        <div class="product-status">
+                          <div
+                            class="product-status__label product-status__label_green">
+                            new
+                          </div>
+                          <div
+                            class="product-status__label product-status__label_orange">
+                            хит
                           </div>
                         </div>
 
-                        <div class="product-banner__bullets"></div>
+                        <div
+                          class="product-banner__slider slider slider-init"
+                          data-current-slide="0">
+                          <div class="slider-wrapper">
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                          </div>
+
+                          <div class="product-banner__bullets"></div>
+                        </div>
 
                         <div class="product-actions">
                           <button class="product-actions__button fav-button">
@@ -329,7 +382,7 @@
                               viewBox="0 0 20 21"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg">
-                              <g >
+                              <g>
                                 <rect
                                   y="4.03986"
                                   width="5.45455"
@@ -353,24 +406,23 @@
                               </g>
                             </svg>
                           </button>
-                        </div>                      
+                        </div>
                       </div>
                       <div class="product-banner__main">
                         <h3 class="product-banner__headline">
-                          <a href="#" class="product-banner__title"><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a>
-                          <span class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                          <a href="#" class="product-banner__title"><span>Наушники Honor Earbuds X3 белый</span></a>
+                          <span class="product-rate">
                             <img
                               src="./img/icons/star-rate.svg"
                               alt=""
                               class="product-rate__icon" >
-                            <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
-                            <span class="product-rate__rating-max" itemprop="bestRating">5</span>
+                            <span class="product-rate__rating">4.8</span>
                           </span>
                         </h3>
 
                         <div class="product-banner__info">
-                          <span class="product-banner__price" itemscope itemtype="https://schema.org/Offer">
-                            от <span itemprop="price">30 000</span> <span itemprop="priceCurrency">₽</span>
+                          <span class="product-banner__price">
+                            от <span>30 000</span> <span>₽</span>
                           </span>
 
                           <div class="product-actions">
@@ -423,26 +475,47 @@
                       </div>
                     </div>
 
-                    <div class="product-banner product-banner_small" itemscope itemtype="https://schema.org/Product">
+                    <div class="product-banner product-slides product-banner_small">
                       <div class="product-banner__preview">
-                        <div class="product-banner__slider slider slider-init" data-current-slide="0">
-                          <div class="slider-wrapper">
-                            <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                            </a>
-                            <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                            </a>
-                            <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                            </a>
-                            <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                            </a>
+                        <div class="product-status">
+                          <div
+                            class="product-status__label product-status__label_green">
+                            new
+                          </div>
+                          <div
+                            class="product-status__label product-status__label_orange">
+                            хит
                           </div>
                         </div>
 
-                        <div class="product-banner__bullets"></div>
+                        <div
+                          class="product-banner__slider slider slider-init"
+                          data-current-slide="0">
+                          <div class="slider-wrapper">
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                          </div>
+
+                          <div class="product-banner__bullets"></div>
+                        </div>
 
                         <div class="product-actions">
                           <button class="product-actions__button fav-button">
@@ -465,7 +538,7 @@
                               viewBox="0 0 20 21"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg">
-                              <g >
+                              <g>
                                 <rect
                                   y="4.03986"
                                   width="5.45455"
@@ -489,24 +562,23 @@
                               </g>
                             </svg>
                           </button>
-                        </div>                      
+                        </div>
                       </div>
                       <div class="product-banner__main">
                         <h3 class="product-banner__headline">
-                          <a href="#" class="product-banner__title"><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a>
-                          <span class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                          <a href="#" class="product-banner__title"><span>Наушники Honor Earbuds X3 белый</span></a>
+                          <span class="product-rate">
                             <img
                               src="./img/icons/star-rate.svg"
                               alt=""
                               class="product-rate__icon" >
-                            <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
-                            <span class="product-rate__rating-max" itemprop="bestRating">5</span>
+                            <span class="product-rate__rating">4.8</span>
                           </span>
                         </h3>
 
                         <div class="product-banner__info">
-                          <span class="product-banner__price" itemscope itemtype="https://schema.org/Offer">
-                            от <span itemprop="price">30 000</span> <span itemprop="priceCurrency">₽</span>
+                          <span class="product-banner__price">
+                            от <span>30 000</span> <span>₽</span>
                           </span>
 
                           <div class="product-actions">
@@ -559,26 +631,47 @@
                       </div>
                     </div>
 
-                    <div class="product-banner product-banner_small" itemscope itemtype="https://schema.org/Product">
+                    <div class="product-banner product-slides product-banner_small">
                       <div class="product-banner__preview">
-                        <div class="product-banner__slider slider slider-init" data-current-slide="0">
-                          <div class="slider-wrapper">
-                            <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                            </a>
-                            <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                            </a>
-                            <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                            </a>
-                            <a href="#" class="slider-slide product-banner__preview-img">
-                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                            </a>
+                        <div class="product-status">
+                          <div
+                            class="product-status__label product-status__label_green">
+                            new
+                          </div>
+                          <div
+                            class="product-status__label product-status__label_orange">
+                            хит
                           </div>
                         </div>
 
-                        <div class="product-banner__bullets"></div>
+                        <div
+                          class="product-banner__slider slider slider-init"
+                          data-current-slide="0">
+                          <div class="slider-wrapper">
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                            <a
+                              href="#"
+                              class="slider-slide product-banner__preview-img">
+                              <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                            </a>
+                          </div>
+
+                          <div class="product-banner__bullets"></div>
+                        </div>
 
                         <div class="product-actions">
                           <button class="product-actions__button fav-button">
@@ -601,7 +694,7 @@
                               viewBox="0 0 20 21"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg">
-                              <g >
+                              <g>
                                 <rect
                                   y="4.03986"
                                   width="5.45455"
@@ -625,24 +718,23 @@
                               </g>
                             </svg>
                           </button>
-                        </div>                      
+                        </div>
                       </div>
                       <div class="product-banner__main">
                         <h3 class="product-banner__headline">
-                          <a href="#" class="product-banner__title"><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a>
-                          <span class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                          <a href="#" class="product-banner__title"><span>Наушники Honor Earbuds X3 белый</span></a>
+                          <span class="product-rate">
                             <img
                               src="./img/icons/star-rate.svg"
                               alt=""
                               class="product-rate__icon" >
-                            <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
-                            <span class="product-rate__rating-max" itemprop="bestRating">5</span>
+                            <span class="product-rate__rating">4.8</span>
                           </span>
                         </h3>
 
                         <div class="product-banner__info">
-                          <span class="product-banner__price" itemscope itemtype="https://schema.org/Offer">
-                            от <span itemprop="price">30 000</span> <span itemprop="priceCurrency">₽</span>
+                          <span class="product-banner__price">
+                            от <span>30 000</span> <span>₽</span>
                           </span>
 
                           <div class="product-actions">
@@ -697,8 +789,8 @@
                   </div>
                 </div>
               </div>
-              <div class="article-blog-main">
-                <div class="article-blog-main__header">
+              <div class="article-blog-main" itemscope itemtype="https://schema.org/Article">
+                <div class="article-blog__header">
                   <div class="article-blog__article-marker"></div>
 
                   <div class="article-blog__preview">
@@ -710,7 +802,7 @@
                   </h1>
                 </div>
 
-                <div class="article-blog__article" itemscope itemtype="https://schema.org/Article">
+                <div class="article-blog__article">
                   <div class="article-blog__article-marker"></div>
 
                   <h2 class="article-blog__title title title_second" itemprop="headline">Игровой ультрабук-трансформер</h2>
@@ -719,7 +811,7 @@
                   </p>
                 </div>
 
-                <div class="article-blog__article" itemscope itemtype="https://schema.org/Article">
+                <div class="article-blog__article">
                   <div class="article-blog__article-marker"></div>
 
                   <h2 class="article-blog__title title title_second" itemprop="headline">Игровой ультрабук-трансформер</h2>
@@ -731,7 +823,7 @@
                   </div>
                 </div>
 
-                <div class="article-blog__article" itemscope itemtype="https://schema.org/Article">
+                <div class="article-blog__article">
                   <div class="article-blog__article-marker"></div>
 
                   <h2 class="article-blog__title title title_third" itemprop="headline">Игровой ультрабук-трансформер</h2>
@@ -740,26 +832,47 @@
                   </p>
                 </div>
 
-                <div class="product-banner" itemscope itemtype="https://schema.org/Product">
+                <div class="product-banner product-slides">
                   <div class="product-banner__preview">
-                    <div class="product-banner__slider slider slider-init" data-current-slide="0">
-                      <div class="slider-wrapper">
-                        <a href="#" class="slider-slide product-banner__preview-img">
-                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                        </a>
-                        <a href="#" class="slider-slide product-banner__preview-img">
-                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                        </a>
-                        <a href="#" class="slider-slide product-banner__preview-img">
-                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                        </a>
-                        <a href="#" class="slider-slide product-banner__preview-img">
-                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
-                        </a>
+                    <div class="product-status">
+                      <div
+                        class="product-status__label product-status__label_green">
+                        new
+                      </div>
+                      <div
+                        class="product-status__label product-status__label_orange">
+                        хит
                       </div>
                     </div>
 
-                    <div class="product-banner__bullets"></div>
+                    <div
+                      class="product-banner__slider slider slider-init"
+                      data-current-slide="0">
+                      <div class="slider-wrapper">
+                        <a
+                          href="#"
+                          class="slider-slide product-banner__preview-img">
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                        </a>
+                        <a
+                          href="#"
+                          class="slider-slide product-banner__preview-img">
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                        </a>
+                        <a
+                          href="#"
+                          class="slider-slide product-banner__preview-img">
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                        </a>
+                        <a
+                          href="#"
+                          class="slider-slide product-banner__preview-img">
+                          <img src="./img/imgs/prod-preview.png" alt="" itemprop="image">
+                        </a>
+                      </div>
+
+                      <div class="product-banner__bullets"></div>
+                    </div>
 
                     <div class="product-actions">
                       <button class="product-actions__button fav-button">
@@ -782,7 +895,7 @@
                           viewBox="0 0 20 21"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg">
-                          <g >
+                          <g>
                             <rect
                               y="4.03986"
                               width="5.45455"
@@ -811,14 +924,13 @@
 
                   <div class="product-banner__main">
                     <h3 class="product-banner__headline">
-                      <a href="#" class="product-banner__title"><span itemprop="name">Наушники Honor Earbuds X3 белый</span></a>
-                      <span class="product-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                      <a href="#" class="product-banner__title"><span>Наушники Honor Earbuds X3 белый</span></a>
+                      <span class="product-rate">
                         <img
                           src="./img/icons/star-rate.svg"
                           alt=""
                           class="product-rate__icon" >
-                        <span class="product-rate__rating" itemprop="ratingValue">4.8</span>
-                        <span class="product-rate__rating-max" itemprop="bestRating">5</span>
+                        <span class="product-rate__rating">4.8</span>
                       </span>
                     </h3>
 
@@ -836,8 +948,8 @@
                   </div>
 
                   <div class="product-banner__info">
-                    <span class="product-banner__price" itemscope itemtype="https://schema.org/Offer">
-                      от <span itemprop="price">30 000</span> <span itemprop="priceCurrency">₽</span>
+                    <span class="product-banner__price">
+                      от <span>30 000</span> <span>₽</span>
                     </span>
 
                     <div class="product-banner__info-actions">
@@ -892,7 +1004,7 @@
                   </div>
                 </div>
 
-                <div class="article-blog__article" itemscope itemtype="https://schema.org/Article">
+                <div class="article-blog__article">
                   <div class="article-blog__article-marker"></div>
 
                   <h2 class="article-blog__title title title_second" itemprop="headline">Заголовок 2</h2>
@@ -908,52 +1020,49 @@
         <section class="main__blog blog">
           <div class="blog__wrapper">
             <div class="blog__container">
-              <h2 class="blog__title title title_second main__title" itemprop="headline">Блог</h2>
+              <h2 class="blog__title title title_second main__title">Блог</h2>
             </div>
             <div class="blog__main">
               <div class="blog-list slider">
                 <div class="slider-wrapper">
-                  <div class="slider-slide blog-card" itemscope itemtype="http://schema.org/BlogPosting">
+                  <div class="slider-slide blog-card">
                     <a href="#" class="blog-card__preview">
-                      <img src="./img/imgs/blog-preview.png" alt="blog" itemprop="image" >
+                      <img src="./img/imgs/blog-preview.png" alt="blog" >
                     </a>
                     <a href="#" class="blog-card__title"
-                      ><span itemprop="headline">Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                      ><span>Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
                       впечатления</span></a
                     >
-                    <p class="blog-card__paragraph paragraph" itemprop="description">
+                    <p class="blog-card__paragraph paragraph">
                       ASUS бодро начала год и представила на CES 2021 кучу новых
                       устройств, в том...
                     </p>
-                    <meta itemprop="url" content="#">
                   </div>
-                  <div class="slider-slide blog-card" itemscope itemtype="http://schema.org/BlogPosting">
+                  <div class="slider-slide blog-card">
                     <a href="#" class="blog-card__preview">
-                      <img src="./img/imgs/blog-preview.png" alt="blog" itemprop="image" >
+                      <img src="./img/imgs/blog-preview.png" alt="blog" >
                     </a>
                     <a href="#" class="blog-card__title"
-                      ><span itemprop="headline">Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                      ><span>Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
                       впечатления</span></a
                     >
-                    <p class="blog-card__paragraph paragraph" itemprop="description">
+                    <p class="blog-card__paragraph paragraph">
                       ASUS бодро начала год и представила на CES 2021 кучу новых
                       устройств, в том...
                     </p>
-                    <meta itemprop="url" content="#">
                   </div>
-                  <div class="slider-slide blog-card" itemscope itemtype="http://schema.org/BlogPosting">
+                  <div class="slider-slide blog-card">
                     <a href="#" class="blog-card__preview">
-                      <img src="./img/imgs/blog-preview.png" alt="blog" itemprop="image" >
+                      <img src="./img/imgs/blog-preview.png" alt="blog" >
                     </a>
                     <a href="#" class="blog-card__title"
-                      ><span itemprop="headline">Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
+                      ><span>Игровой ультрабук-трансформер ASUS ROG Flow X13: первые
                       впечатления</span></a
                     >
-                    <p class="blog-card__paragraph paragraph" itemprop="description">
+                    <p class="blog-card__paragraph paragraph">
                       ASUS бодро начала год и представила на CES 2021 кучу новых
                       устройств, в том...
                     </p>
-                    <meta itemprop="url" content="#">
                   </div>
                 </div>
               </div>
