@@ -36,7 +36,6 @@ window.addEventListener("resize", () => {
   }
 });
 
-
 document.addEventListener("scroll", () => {
   let scrollPos = window.scrollY;
 
@@ -121,39 +120,46 @@ document.addEventListener("scroll", () => {
       if (scrollBottom) {
         startPoint = parseInt(sidebar.offsetTop);
       }
-      let pointMarker = parseInt(sidebar.getAttribute("data-last-pos"));
+      let pointMarker = parseInt(sidebar.getAttribute("data-last-pos")) ? parseInt(sidebar.getAttribute("data-last-pos")) : 0;
       scrollBottom = false;
       sidebar.style.top = `${pointTop}px`;
-      sidebar.style.position = "absolute";
+      sidebar.classList.remove("sticky");
+      sidebar.classList.add("absolute");
 
       if (
         scrollPos - pointMarker - 99 >
         parseInt(sidebarHeight - parseInt(window.innerHeight)) - 0
       ) {
-        sidebar.style.position = "sticky";
+        sidebar.classList.remove("absolute");
+        sidebar.classList.add("sticky");
         sidebar.style.top = `${parseInt(
           -(sidebarHeight - parseInt(window.innerHeight))
         )}px`;
       } else {
-        sidebar.style.position = "absolute";
+        sidebar.classList.remove("sticky");
+        sidebar.classList.add("absolute");
+
         sidebar.style.top = `${parseInt(pointTopControl)}px`;
       }
     } else if (scrollPos < prevScrollPos) {
       let pointTop = parseInt(sidebar.getBoundingClientRect().top);
       let pointTopControl = parseInt(sidebar.offsetTop);
       sidebar.style.top = `${pointTopControl}px`;
-      sidebar.style.position = "absolute";
+      sidebar.classList.remove("sticky");
+      sidebar.classList.add("absolute");
 
       if (99 < pointTop) {
-        sidebar.style.position = "sticky";
+        sidebar.classList.remove("absolute");
+        sidebar.classList.add("sticky");
         sidebar.style.top = "100px";
         pointTop = parseInt(sidebar.offsetTop);
       } else {
         sidebar.style.top = `${pointTopControl}px`;
-        sidebar.style.position = "absolute";
+        sidebar.classList.remove("sticky");
+        sidebar.classList.add("absolute");
       }
       pointTop = pointTopControl;
-      sidebar.setAttribute("data-last-pos", scrollPos)
+      sidebar.setAttribute("data-last-pos", scrollPos);
     }
   }
 

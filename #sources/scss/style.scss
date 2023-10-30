@@ -2912,6 +2912,16 @@
       z-index: 99;
       //bottom: 20px;
     }
+    &.absolute {
+      @media (min-width: 991.98px) {
+        position: absolute !important;
+      }
+    }
+    &.sticky {
+      @media (min-width: 991.98px) {
+        position: sticky !important;
+      }
+    }
   }
 
   // .article-blog-aside__navigate
@@ -2990,6 +3000,11 @@
       flex-direction: column;
       gap: 30px;
     }
+  }
+  &__product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
 
   // .article-blog-aside__navigate-header
