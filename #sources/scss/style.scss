@@ -124,20 +124,13 @@
   }
 
   &.active {
-    border-radius: 5px;
-    background-color: #ffcc00;
 
     &:hover {
       background-color: #ffd739;
     }
 
-    .button__text {
-      color: $dark !important;
-      font-weight: 700;
-    }
     .open-catalog__icon {
       span {
-        background-color: $dark;
         border-radius: 0px;
 
         &:nth-child(1) {
@@ -566,7 +559,7 @@
 }
 
 .catalog {
-  z-index: 99;
+  z-index: 150;
   position: fixed;
   left: 0;
   top: 78px;
@@ -575,6 +568,7 @@
     height: calc(100dvh - 60px);
     top: 60px;
   }
+  overflow: hidden;
   width: 100vw;
 
   background-color: #fff;

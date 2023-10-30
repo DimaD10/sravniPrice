@@ -2065,19 +2065,10 @@ input[type=number]::-webkit-inner-spin-button {
   transition: width ease 0.3s, transform ease 0.3s, background-color ease 0.3s;
   transition: width ease 0.3s, transform ease 0.3s, background-color ease 0.3s, -webkit-transform ease 0.3s;
 }
-.header__button.open-catalog.active {
-  border-radius: 5px;
-  background-color: #ffcc00;
-}
 .header__button.open-catalog.active:hover {
   background-color: #ffd739;
 }
-.header__button.open-catalog.active .button__text {
-  color: #363436 !important;
-  font-weight: 700;
-}
 .header__button.open-catalog.active .open-catalog__icon span {
-  background-color: #363436;
   border-radius: 0px;
 }
 .header__button.open-catalog.active .open-catalog__icon span:nth-child(1) {
@@ -2573,11 +2564,12 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .catalog {
-  z-index: 99;
+  z-index: 150;
   position: fixed;
   left: 0;
   top: 78px;
   height: calc(100dvh - 78px);
+  overflow: hidden;
   width: 100vw;
   background-color: #fff;
   -webkit-transform: translateY(-110vh);

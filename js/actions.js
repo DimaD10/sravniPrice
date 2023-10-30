@@ -32,11 +32,17 @@ document.addEventListener("click", (e) => {
   }
 
   if (e.target.closest(".dropdown__header")) {
-    document.querySelectorAll(".dropdown").forEach((el) => {
-      el.classList.remove("active");
-    });
-    let dropdown = e.target.closest(".dropdown");
-    dropdown.classList.toggle("active");
+    if (!e.target.closest(".active")) {
+      document.querySelectorAll(".dropdown").forEach((el) => {
+        el.classList.remove("active");
+      });
+      let dropdown = e.target.closest(".dropdown");
+      dropdown.classList.add("active");
+    } else {
+      let dropdown = e.target.closest(".dropdown");
+
+      dropdown.classList.remove("active");
+    }
   }
   if (e.target.classList.contains("dropdown__item")) {
     let dropdown = e.target.closest(".dropdown");
