@@ -3,6 +3,40 @@ let prevScrollPos = window.scrollY;
 const header = document.querySelector(".header");
 const prodNav = document.querySelector(".product-nav");
 
+window.addEventListener("load", () => {
+  if (document.querySelector(".article-blog-aside__wrapper")) {
+    document
+      .querySelector(".article-blog-aside__wrapper")
+      .setAttribute(
+        "data-pos",
+        parseInt(
+          document
+            .querySelector(".article-blog-aside__wrapper")
+            .getBoundingClientRect().top
+        )
+      );
+  }
+});
+window.addEventListener("resize", () => {
+  if (document.querySelector(".article-blog-aside__wrapper")) {
+    document
+      .querySelector(".article-blog-aside__wrapper")
+      .setAttribute(
+        "data-pos",
+        parseInt(
+          document
+            .querySelector(".article-blog-aside__wrapper")
+            .getBoundingClientRect().top
+        )
+      );
+
+    document.querySelector(".article-blog-aside__wrapper").style.position =
+      "static";
+    document.querySelector(".article-blog-aside__wrapper").style.top = `0px`;
+  }
+});
+
+
 document.addEventListener("scroll", () => {
   let scrollPos = window.scrollY;
 
@@ -70,6 +104,56 @@ document.addEventListener("scroll", () => {
       });
 
       points[3].classList.add("product-nav__point_current");
+    }
+  }
+
+  if (document.querySelector(".article-blog-aside__wrapper")) {
+    let sidebar = document.querySelector(".article-blog-aside__wrapper");
+    let sidebarHeight = parseInt(sidebar.offsetHeight);
+
+    let pointTop = 0;
+    let startPoint;
+    let scrollBottom = false;
+
+    if (scrollPos > prevScrollPos) {
+      let pointTopControl = parseInt(sidebar.offsetTop);
+      scrollBottom = true;
+      if (scrollBottom) {
+        startPoint = parseInt(sidebar.offsetTop);
+      }
+      let pointMarker = parseInt(sidebar.getAttribute("data-last-pos"));
+      scrollBottom = false;
+      sidebar.style.top = `${pointTop}px`;
+      sidebar.style.position = "absolute";
+
+      if (
+        scrollPos - pointMarker - 99 >
+        parseInt(sidebarHeight - parseInt(window.innerHeight)) - 0
+      ) {
+        sidebar.style.position = "sticky";
+        sidebar.style.top = `${parseInt(
+          -(sidebarHeight - parseInt(window.innerHeight))
+        )}px`;
+      } else {
+        sidebar.style.position = "absolute";
+        sidebar.style.top = `${parseInt(pointTopControl)}px`;
+      }
+    } else if (scrollPos < prevScrollPos) {
+      let pointTop = parseInt(sidebar.getBoundingClientRect().top);
+      let pointTopControl = parseInt(sidebar.offsetTop);
+      sidebar.style.top = `${pointTopControl}px`;
+      sidebar.style.position = "absolute";
+
+      if (99 < pointTop) {
+        sidebar.style.position = "sticky";
+        sidebar.style.top = "100px";
+        pointTop = parseInt(sidebar.offsetTop);
+      } else {
+        sidebar.style.top = `${pointTopControl}px`;
+        sidebar.style.position = "absolute";
+      }
+      pointTop = pointTopControl;
+      sidebar.setAttribute("data-last-pos", scrollPos)
     }
   }
 

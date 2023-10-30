@@ -24,6 +24,18 @@ document.addEventListener("click", (e) => {
       e.target.closest(".fav-button").classList.toggle("active");
     }
   }
+  if (e.target.closest(".comprasion-button")) {
+    if (e.target.closest(".product-banner")) {
+      e.target
+        .closest(".product-banner")
+        .querySelectorAll(".comprasion-button")
+        .forEach((el) => {
+          el.classList.toggle("active");
+        });
+    } else {
+      e.target.closest(".comprasion-button").classList.toggle("active");
+    }
+  }
   if (e.target.classList.contains("article-blog-aside__navigate-btn")) {
     e.target.classList.toggle("active");
     e.target
