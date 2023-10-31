@@ -123,8 +123,8 @@ document.addEventListener("scroll", () => {
       let pointMarker = parseInt(sidebar.getAttribute("data-last-pos")) ? parseInt(sidebar.getAttribute("data-last-pos")) : 0;
       scrollBottom = false;
       sidebar.style.top = `${pointTop}px`;
-      sidebar.classList.remove("sticky");
-      sidebar.classList.add("absolute");
+      //sidebar.classList.remove("sticky");
+      //sidebar.classList.add("absolute");
 
       if (
         scrollPos - pointMarker - 99 >
@@ -145,8 +145,8 @@ document.addEventListener("scroll", () => {
       let pointTop = parseInt(sidebar.getBoundingClientRect().top);
       let pointTopControl = parseInt(sidebar.offsetTop);
       sidebar.style.top = `${pointTopControl}px`;
-      sidebar.classList.remove("sticky");
-      sidebar.classList.add("absolute");
+      //sidebar.classList.remove("sticky");
+      //sidebar.classList.add("absolute");
 
       if (99 < pointTop) {
         sidebar.classList.remove("absolute");
