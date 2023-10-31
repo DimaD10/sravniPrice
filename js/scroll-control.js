@@ -110,56 +110,64 @@ document.addEventListener("scroll", () => {
     let sidebar = document.querySelector(".article-blog-aside__wrapper");
     let sidebarHeight = parseInt(sidebar.offsetHeight);
 
-    let pointTop = 0;
-    let startPoint;
-    let scrollBottom = false;
+    if (sidebarHeight > parseInt(window.innerHeight) - 100) {
+      let pointTop = 0;
+      let startPoint;
+      let scrollBottom = false;
 
-    if (scrollPos > prevScrollPos) {
-      let pointTopControl = parseInt(sidebar.offsetTop);
-      scrollBottom = true;
-      if (scrollBottom) {
-        startPoint = parseInt(sidebar.offsetTop);
-      }
-      let pointMarker = parseInt(sidebar.getAttribute("data-last-pos")) ? parseInt(sidebar.getAttribute("data-last-pos")) : 0;
-      scrollBottom = false;
-      sidebar.style.top = `${pointTop}px`;
-      //sidebar.classList.remove("sticky");
-      //sidebar.classList.add("absolute");
+      if (scrollPos > prevScrollPos) {
+        let pointTopControl = parseInt(sidebar.offsetTop);
+        scrollBottom = true;
+        if (scrollBottom) {
+          startPoint = parseInt(sidebar.offsetTop);
+        }
+        let pointMarker = parseInt(sidebar.getAttribute("data-last-pos"))
+          ? parseInt(sidebar.getAttribute("data-last-pos"))
+          : 0;
+        scrollBottom = false;
+        sidebar.style.top = `${pointTop}px`;
+        //sidebar.classList.remove("sticky");
+        //sidebar.classList.add("absolute");
 
-      if (
-        scrollPos - pointMarker - 99 >
-        parseInt(sidebarHeight - parseInt(window.innerHeight)) - 0
-      ) {
-        sidebar.classList.remove("absolute");
-        sidebar.classList.add("sticky");
-        sidebar.style.top = `${parseInt(
-          -(sidebarHeight - parseInt(window.innerHeight))
-        )}px`;
-      } else {
-        sidebar.classList.remove("sticky");
-        sidebar.classList.add("absolute");
+        if (
+          scrollPos - pointMarker - 99 >
+          parseInt(sidebarHeight - parseInt(window.innerHeight)) - 0
+        ) {
+          sidebar.classList.remove("absolute");
+          sidebar.classList.add("sticky");
+          sidebar.style.top = `${parseInt(
+            -(sidebarHeight - parseInt(window.innerHeight))
+          )}px`;
+        } else {
+          sidebar.classList.remove("sticky");
+          sidebar.classList.add("absolute");
 
-        sidebar.style.top = `${parseInt(pointTopControl)}px`;
-      }
-    } else if (scrollPos < prevScrollPos) {
-      let pointTop = parseInt(sidebar.getBoundingClientRect().top);
-      let pointTopControl = parseInt(sidebar.offsetTop);
-      sidebar.style.top = `${pointTopControl}px`;
-      //sidebar.classList.remove("sticky");
-      //sidebar.classList.add("absolute");
-
-      if (99 < pointTop) {
-        sidebar.classList.remove("absolute");
-        sidebar.classList.add("sticky");
-        sidebar.style.top = "100px";
-        pointTop = parseInt(sidebar.offsetTop);
-      } else {
+          sidebar.style.top = `${parseInt(pointTopControl)}px`;
+        }
+      } else if (scrollPos < prevScrollPos) {
+        let pointTop = parseInt(sidebar.getBoundingClientRect().top);
+        let pointTopControl = parseInt(sidebar.offsetTop);
         sidebar.style.top = `${pointTopControl}px`;
-        sidebar.classList.remove("sticky");
-        sidebar.classList.add("absolute");
+        //sidebar.classList.remove("sticky");
+        //sidebar.classList.add("absolute");
+
+        if (99 < pointTop) {
+          sidebar.classList.remove("absolute");
+          sidebar.classList.add("sticky");
+          sidebar.style.top = "100px";
+          pointTop = parseInt(sidebar.offsetTop);
+        } else {
+          sidebar.style.top = `${pointTopControl}px`;
+          sidebar.classList.remove("sticky");
+          sidebar.classList.add("absolute");
+        }
+        pointTop = pointTopControl;
+        sidebar.setAttribute("data-last-pos", scrollPos);
       }
-      pointTop = pointTopControl;
-      sidebar.setAttribute("data-last-pos", scrollPos);
+    } else {
+      sidebar.classList.remove("absolute");
+      sidebar.classList.add("sticky");
+      sidebar.style.top = "100px";
     }
   }
 
