@@ -2,8 +2,11 @@ const scrollToTopBtn = document.querySelector(".scroll-to-top");
 let prevScrollPos = window.scrollY;
 const header = document.querySelector(".header");
 const prodNav = document.querySelector(".product-nav");
+const prodListHeader = document.querySelector(".equal__header");
 
 window.addEventListener("load", () => {
+  let scrollPos = window.scrollY;
+
   if (document.querySelector(".article-blog-aside__wrapper")) {
     document
       .querySelector(".article-blog-aside__wrapper")
@@ -15,6 +18,16 @@ window.addEventListener("load", () => {
             .getBoundingClientRect().top
         )
       );
+  }
+
+  if (document.querySelector(".equal-scroll-marker")) {
+    let marker = document.querySelector(".equal-scroll-marker");
+
+    if (scrollPos + 100 > marker.offsetTop) {
+      prodListHeader.classList.add("fixed");
+    } else {
+      prodListHeader.classList.remove("fixed");
+    }
   }
 });
 window.addEventListener("resize", () => {
@@ -59,10 +72,16 @@ document.addEventListener("scroll", () => {
         prodNav.classList.remove("hidden");
       }
     }
+    if (prodListHeader) {
+      prodListHeader.classList.add("transformed");
+    }
   } else if (scrollPos < prevScrollPos) {
     header.classList.remove("hidden");
     if (prodNav) {
       prodNav.classList.remove("hidden");
+    }
+    if (prodListHeader) {
+      prodListHeader.classList.remove("transformed");
     }
   }
 
@@ -126,8 +145,6 @@ document.addEventListener("scroll", () => {
           : 0;
         scrollBottom = false;
         sidebar.style.top = `${pointTop}px`;
-        //sidebar.classList.remove("sticky");
-        //sidebar.classList.add("absolute");
 
         if (
           scrollPos - pointMarker - 99 >
@@ -148,8 +165,6 @@ document.addEventListener("scroll", () => {
         let pointTop = parseInt(sidebar.getBoundingClientRect().top);
         let pointTopControl = parseInt(sidebar.offsetTop);
         sidebar.style.top = `${pointTopControl}px`;
-        //sidebar.classList.remove("sticky");
-        //sidebar.classList.add("absolute");
 
         if (99 < pointTop) {
           sidebar.classList.remove("absolute");
@@ -168,6 +183,16 @@ document.addEventListener("scroll", () => {
       sidebar.classList.remove("absolute");
       sidebar.classList.add("sticky");
       sidebar.style.top = "100px";
+    }
+  }
+
+  if (document.querySelector(".equal-scroll-marker")) {
+    let marker = document.querySelector(".equal-scroll-marker");
+
+    if (scrollPos + 100 > marker.offsetTop) {
+      prodListHeader.classList.add("fixed");
+    } else {
+      prodListHeader.classList.remove("fixed");
     }
   }
 

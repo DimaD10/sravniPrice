@@ -1,6 +1,9 @@
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("popup-close")) {
     e.target.closest(".popup").classList.remove("popup_opened");
+    if (e.target.closest(".clear-eq-list")) {
+      document.querySelector("body").style.overflow = "visible";
+    }
 
     if (e.target.closest(".change-location-parrent")) {
       closeLocModal();
@@ -58,6 +61,18 @@ document.addEventListener("click", (e) => {
     document.querySelector(".leave-review").classList.remove("popup_opened");
     document.querySelector("body").style.overflow = "visible";
   }
+
+  if (e.target.closest(".call-popup-clear")) {
+    document.querySelector(".clear-eq-list").classList.add("popup_opened");
+    document.querySelector("body").style.overflow = "hidden";
+  }
+  if (
+    e.target.closest(".clear-eq-list") &&
+    !e.target.closest(".clear-eq-list__wrapper")
+  ) {
+    document.querySelector(".clear-eq-list").classList.remove("popup_opened");
+    document.querySelector("body").style.overflow = "visible";
+  }
 });
 
 window.addEventListener("load", () => {
@@ -81,6 +96,15 @@ document.addEventListener("keydown", function (event) {
   ) {
     if (event.key == "Escape") {
       document.querySelector(".leave-review").classList.remove("popup_opened");
+      document.querySelector("body").style.overflow = "visible";
+    }
+  }
+  if (
+    document.querySelector(".clear-eq-list") &&
+    document.querySelector(".clear-eq-list").classList.contains("popup_opened")
+  ) {
+    if (event.key == "Escape") {
+      document.querySelector(".clear-eq-list").classList.remove("popup_opened");
       document.querySelector("body").style.overflow = "visible";
     }
   }

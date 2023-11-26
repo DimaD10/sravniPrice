@@ -81,7 +81,9 @@ input,
 .spoiler__header,
 .product-nav__point,
 .product-colors__color,
-.product-options__option {
+.product-options__option,
+.categories-eq__category,
+.equal-descr__info, .equal-clear-btn {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -1051,7 +1053,7 @@ input,
 
     .product-status {
       opacity: 1;
-      z-index: 5;
+      z-index: 10;
       left: -22px;
       top: -4px;
     }
@@ -1499,4 +1501,40 @@ input[type="number"]::-webkit-inner-spin-button {
 .rating > label:hover ~ input:checked ~ label,
 .rating > input:checked ~ label:hover ~ label {
   color: #f6eaa5;
+}
+
+.equal-clear-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+  @media (max-width: 767.98px) {
+    margin-top: 20px;
+  }
+  transition: opacity ease $animSpeed;
+
+  &:hover {
+    opacity: .6;
+  }
+
+  &__icon {
+    width: 15px;
+    height: 15px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__text {
+    color: #363436;
+
+    font-family: Gilroy;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 150%;
+  }
 }
