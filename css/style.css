@@ -7913,12 +7913,12 @@ input[type=number]::-webkit-inner-spin-button {
   gap: 30px;
   padding-bottom: 30px;
   background-color: #fff;
-  z-index: 99;
   padding-top: 18px;
   -webkit-transition: -webkit-transform ease 0.3s;
   transition: -webkit-transform ease 0.3s;
   transition: transform ease 0.3s;
   transition: transform ease 0.3s, -webkit-transform ease 0.3s;
+  z-index: 9991;
 }
 @media (max-width: 991.98px) {
   .equal__header {
@@ -8148,6 +8148,7 @@ input[type=number]::-webkit-inner-spin-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 9999;
 }
 @media (max-width: 991.98px) {
   .equal-prod-list {
@@ -8267,6 +8268,7 @@ input[type=number]::-webkit-inner-spin-button {
   display: flex;
   gap: 30px;
   padding: 18px 0;
+  padding-bottom: 0;
   border-bottom: 1px solid rgba(165, 171, 183, 0.1);
 }
 @media (max-width: 991.98px) {
@@ -8275,6 +8277,12 @@ input[type=number]::-webkit-inner-spin-button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .equal-descr__row {
+    gap: 10px;
   }
 }
 .equal-descr__descr-name {
@@ -8294,6 +8302,16 @@ input[type=number]::-webkit-inner-spin-button {
             flex: 0 0 280px;
   }
 }
+@media (max-width: 991.98px) {
+  .equal-descr__head {
+    margin-bottom: -62px;
+  }
+}
+@media (max-width: 767.98px) {
+  .equal-descr__head {
+    margin-bottom: -52px;
+  }
+}
 .equal-descr__head-block {
   width: 210px;
   min-width: 210px;
@@ -8308,6 +8326,7 @@ input[type=number]::-webkit-inner-spin-button {
 .equal-descr__info {
   display: block;
   margin-left: auto;
+  z-index: 999;
 }
 .equal-descr__info::before {
   content: "";
@@ -8394,11 +8413,19 @@ input[type=number]::-webkit-inner-spin-button {
   position: relative;
   overflow: hidden;
   max-width: 890px;
+  padding-bottom: 18px;
 }
 @media (max-width: 991.98px) {
   .equal-descr__descr-line {
     max-width: calc(100vw - 20px);
     overflow: auto;
+    padding-top: 62px;
+    z-index: 99;
+  }
+}
+@media (max-width: 767.98px) {
+  .equal-descr__descr-line {
+    padding-top: 52px;
   }
 }
 .equal-descr__descr-line::-webkit-scrollbar {

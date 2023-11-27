@@ -4966,9 +4966,9 @@
     gap: 30px;
     padding-bottom: 30px;
     background-color: #fff;
-    z-index: 99;
     padding-top: 18px;
     transition: transform ease $animSpeed;
+    z-index: 9991;
 
     @media (max-width: 991.98px) {
       flex-direction: column;
@@ -5175,6 +5175,8 @@
   }
   display: flex;
 
+  z-index: 9999;
+
   &__wrapper {
     display: flex;
     gap: 30px;
@@ -5251,10 +5253,15 @@
     display: flex;
     gap: 30px;
     padding: 18px 0;
+    padding-bottom: 0;
     border-bottom: 1px solid rgba(165, 171, 183, 0.1);
 
     @media (max-width: 991.98px) {
       flex-direction: column;
+      gap: 20px;
+    }
+    @media (max-width: 767.98px) {
+      gap: 10px;
     }
   }
 
@@ -5272,6 +5279,13 @@
       flex: 0 0 280px;
     }
     position: relative;
+    @media (max-width: 991.98px) {
+      margin-bottom: -62px;
+      //pointer-events: none;
+    }
+    @media (max-width: 767.98px) {
+      margin-bottom: -52px;
+    }
 
     &-block {
       width: 210px;
@@ -5311,6 +5325,7 @@
     }
     display: block;
     margin-left: auto;
+    z-index: 999;
 
     &-icon {
       width: 20px;
@@ -5375,10 +5390,16 @@
       position: relative;
       overflow: hidden;
       max-width: calc(1200px - 310px);
+      padding-bottom: 18px;
       //pointer-events: none;
       @media (max-width: 991.98px) {
         max-width: calc(100vw - 20px);
         overflow: auto;
+        padding-top: 62px;
+        z-index: 99;
+      }
+      @media (max-width: 767.98px) {
+        padding-top: 52px;
       }
       &::-webkit-scrollbar {
         height: 0px;
